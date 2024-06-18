@@ -8,9 +8,9 @@ banner:
 ######################## call to action ###############################
 call_to_action:
   enable: true
-  title: "Get the best jekyll templates"
+  title: "Have a look at the experiments"
   image: "/assets/images/jekyll-muscot.svg"
-  description: "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+  description: "Slowly building a sandbox."
   button:
     enable: true
     label: "Visit Here"
