@@ -1,7 +1,7 @@
 ####################### banner #######################################
 banner:
   enable: true
-  title: "Welcome to WASHWays. <br> Data experiments for Water, Sanitation & Hygien (WASH)"
+  title: "Welcome to WASHWays. <br> Data experiments for Water, Sanitation & Hygiene (WASH)"
   image: "/assets/images/banner/illustration.svg"
   bg_image: "/assets/images/banner/banner-bg.svg"
 
@@ -14,4 +14,4 @@ call_to_action:
   button:
     enable: true
     label: "Visit Here"
-    link: "https://themefisher.com/jekyll-themes/"
+    link: "https://washways.org"
