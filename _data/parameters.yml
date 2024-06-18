@@ -28,14 +28,14 @@ menu:
 # logo
 logo: "/assets/images/logo.svg"
 # meta data
-author: "Themefisher"
+author: "WASHWays"
 description: "This is meta description"
 # google analitycs ID
 google_analitycs_id: "" # your id
 # contact form action
 contact_form_action: "#" # contact form works with : https://formspree.io
 # copyright
-copyright: "Copyright &copy; 2022 Designed and Developed by [Themefisher](https://themefisher.com)"
+copyright: "Copyright &copy; 2024 Developed by [washways](https://washways.org) bsed on theme by [Themefisher](https://themefisher.com)"
 
 # preloader
 preloader:
