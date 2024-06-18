@@ -1,7 +1,7 @@
 ####################### banner #######################################
 banner:
   enable: true
-  title: "Hi, I'm John Smith Doe. <br> I help people make the  worlds best software"
+  title: "Welcome to WASHWays. <br> Data experiments for Water, Sanitation & Hygien (WASH)"
   image: "/assets/images/banner/illustration.svg"
   bg_image: "/assets/images/banner/banner-bg.svg"
 
