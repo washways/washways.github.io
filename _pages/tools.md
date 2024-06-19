@@ -9,11 +9,11 @@ tools:
   tool:
   # tool loop in tool category
   - name: Atoll groundwater
-    image: "/assets/images/tools/Git.png"
+    image: "/assets/images/tools/toolboxScreenshot.png"
     link: https://git-scm.com/
   # tool loop in tool category
   - name: Atoll Rainfall
-    image: "/assets/images/tools/Atom.png"
+    image: "/assets/images/tools/toolboxScreenshot.png"
     link: https://atom.io/
 
 

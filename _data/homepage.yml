@@ -1,17 +1,17 @@
 ####################### banner #######################################
 banner:
   enable: true
-  title: "Welcome to WASHWays. <br> Building a data toolbox for Water, Sanitation & Hygiene (WASH)"
+  title: "Welcome to WASHWays. <br> Data experiments for Water, Sanitation & Hygiene (WASH)"
   image: "/assets/images/banner/illustration.svg"
   bg_image: "/assets/images/banner/banner-bg.svg"
 
 ######################## call to action ###############################
 call_to_action:
   enable: true
-  title: "Have a look at the tools"
-  image: "/assets/images/jekyll-muscot.svg"
-  description: "Watch this space... transfering projects slowly across."
+  title: "Have a look at the experiments"
+  image: "/assets/images/toolboxSquare.svg"
+  description: "Slowly building a sandbox."
   button:
     enable: true
     label: "Visit Here"
-    link: "https://washways.org/tools.html"
+    link: "https://washways.org"
