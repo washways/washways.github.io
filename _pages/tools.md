@@ -8,11 +8,11 @@ tools:
 - title: Water Security
   tool:
   # tool loop in tool category
-  - name: Git
+  - name: Atoll groundwater
     image: "/assets/images/tools/Git.png"
     link: https://git-scm.com/
   # tool loop in tool category
-  - name: Atom
+  - name: Atoll Rainfall
     image: "/assets/images/tools/Atom.png"
     link: https://atom.io/
 
@@ -21,24 +21,35 @@ tools:
 - title: Exposure Analysis
   tool:
   # tool loop in tool category
-  - name: Sketch
+  - name: High wind risks
     image: "/assets/images/tools/sketch.png"
     link: https://www.sketch.com/
   # tool loop in tool category
-  - name: Adobe Illustrator
+  - name: Heavy rain risks
     image: "/assets/images/tools/illustrator.png"
     link: https://www.adobe.com/products/illustrator.html
-
+  # tool loop in tool category
+  - name: Riverine Flooding
+    image: "/assets/images/tools/illustrator.png"
+    link: https://www.adobe.com/products/illustrator.html
+  # tool loop in tool category
+  - name: Coastal Flooding
+    image: "/assets/images/tools/illustrator.png"
+    link: https://www.adobe.com/products/illustrator.html
 
 # tool category
 - title: Vulnerability Analysis
   tool:
   # tool loop in tool category
-  - name: Mailchimp
+  - name: Connectivity
     image: "/assets/images/tools/MailChimp.jpg"
     link: https://mailchimp.com/
   # tool loop in tool category
-  - name: Buffer
+  - name: Electricity
+    image: "/assets/images/tools/Buffer.jpg"
+    link: https://buffer.com/
+  # tool loop in tool category
+  - name: Proximity to ports
     image: "/assets/images/tools/Buffer.jpg"
     link: https://buffer.com/
 
