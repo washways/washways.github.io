@@ -35,7 +35,7 @@ google_analitycs_id: "" # your id
 # contact form action
 contact_form_action: "#" # contact form works with : https://formspree.io
 # copyright
-copyright: "Copyright &copy; 2024 [washways](https://washways.org)"
+copyright: "Copyright &copy; 2024 [washways](https://washways.org) based on theme by [themfisher](https://themfisher.com)"
 
 # preloader
 preloader:
