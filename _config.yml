@@ -2,7 +2,7 @@ baseurl: "" # the subpath of your site, e.g. blog/
 url: "https://washways.github.io" # the base hostname & protocol for your site, e.g. http://example.com/
 
 title: WASHways
-description: >- # this means to ignore newlines untill "baseurl:"
+description: >- # this meanss to ignore newlines untill "baseurl:"
   WASH, data, code, experiments 
 
 #################### Comment Section (Disqus) ################
