@@ -88,40 +88,10 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
-- repo_name: washways/SPWS3
-  app_name: SPWS3
-  app_url: /SPWS3/
-  short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
 - repo_name: washways/SolarPoweredWaterSystems
   app_name: SolarPoweredWaterSystems
   app_url: /SolarPoweredWaterSystems/
   short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
-- repo_name: washways/SPWS2
-  app_name: SPWS2
-  app_url: /SPWS2/
-  short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
-- repo_name: washways/SPWS
-  app_name: SPWS
-  app_url: /SPWS/
-  short_description: >-
-    Experimental app to provide preliminary design of solar powered water
-    systems (SPWS) and do a detailed analysis on economics compared to
-    handpumps. Malawian context
   category: ''
   last_updated: '2026-03-07'
   analytics_installed: false
@@ -154,24 +124,6 @@
   category: ''
   last_updated: '2026-03-07'
   analytics_installed: true
-  seo_configured: false
-  blog_count: 0
-- repo_name: washways/portfolio
-  app_name: portfolio
-  app_url: /portfolio/
-  short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
-- repo_name: washways/testsite
-  app_name: testsite
-  app_url: /testsite/
-  short_description: testing out gatsby page deployments
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
   seo_configured: false
   blog_count: 0
 - repo_name: washways/networked-aframe
