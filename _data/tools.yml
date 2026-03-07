@@ -6,6 +6,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/CholeraCoster
   app_name: CholeraCoster
   app_url: /CholeraCoster/
@@ -13,7 +14,8 @@
   category: ''
   last_updated: '2026-03-07'
   analytics_installed: false
-  seo_configured: false
+  seo_configured: true
+  blog_count: 0
 - repo_name: washways/washways.github.io
   app_name: washways.github.io
   app_url: /washways.github.io/
@@ -22,6 +24,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 3
 - repo_name: washways/SiteMonitor
   app_name: SiteMonitor
   app_url: /SiteMonitor/
@@ -30,6 +33,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/CO2SavingsCalculator
   app_name: CO2SavingsCalculator
   app_url: /CO2SavingsCalculator/
@@ -37,7 +41,8 @@
   category: ''
   last_updated: '2026-03-07'
   analytics_installed: false
-  seo_configured: false
+  seo_configured: true
+  blog_count: 0
 - repo_name: washways/sanitation-fund-model
   app_name: sanitation-fund-model
   app_url: /sanitation-fund-model/
@@ -46,6 +51,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/wash-dashboard
   app_name: wash-dashboard
   app_url: /wash-dashboard/
@@ -54,6 +60,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/sanitation-model
   app_name: sanitation-model
   app_url: /sanitation-model/
@@ -62,14 +69,16 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
   short_description: test app to design and evaluate SPWS
   category: ''
   last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
+  analytics_installed: true
+  seo_configured: true
+  blog_count: 0
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: ChildWASHHealthImpacts
   app_url: /ChildWASHHealthImpacts/
@@ -78,6 +87,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/SPWS3
   app_name: SPWS3
   app_url: /SPWS3/
@@ -86,6 +96,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/SolarPoweredWaterSystems
   app_name: SolarPoweredWaterSystems
   app_url: /SolarPoweredWaterSystems/
@@ -94,6 +105,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/SPWS2
   app_name: SPWS2
   app_url: /SPWS2/
@@ -102,6 +114,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/SPWS
   app_name: SPWS
   app_url: /SPWS/
@@ -113,6 +126,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/experiments
   app_name: experiments
   app_url: /experiments/
@@ -121,6 +135,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/PacificRegions
   app_name: PacificRegions
   app_url: /PacificRegions/
@@ -131,14 +146,16 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/WaterPopFiji
   app_name: WaterPopFiji
   app_url: /WaterPopFiji/
   short_description: GEE testing
   category: ''
   last_updated: '2026-03-07'
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/portfolio
   app_name: portfolio
   app_url: /portfolio/
@@ -147,6 +164,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/testsite
   app_name: testsite
   app_url: /testsite/
@@ -155,6 +173,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/networked-aframe
   app_name: networked-aframe
   app_url: http://haydenlee.io/networked-aframe
@@ -163,6 +182,7 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
 - repo_name: washways/aframevr
   app_name: aframevr
   app_url: /aframevr/
@@ -171,3 +191,4 @@
   last_updated: '2026-03-07'
   analytics_installed: false
   seo_configured: false
+  blog_count: 0
