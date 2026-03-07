@@ -1,18 +1,40 @@
 ---
-permalink: /404.html
 layout: default
+title: Page Not Found (404)
+permalink: /404.html
 ---
+<div style="text-align: center; margin-top: 5rem; min-height: 50vh;">
+    <h1>404</h1>
+    <p><strong>Page not found :(</strong></p>
+    <p id="redirect-msg">Checking for typos...</p>
+</div>
 
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <div class="bg-white shadow block text-center">
-          <h1 class="display-1">404</h1>
-          <p><strong>Page not found :(</strong></p>
-          <p>The requested page could not be found.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<script>
+(async function() {
+    try {
+        const res = await fetch('/_data/aliases.json');
+        if (res.ok) {
+            const aliases = await res.json();
+            const currentPath = window.location.pathname.toLowerCase().replace(/\/+$/, '');
+            const urlSegs = currentPath.split('/');
+            const lastSeg = urlSegs[urlSegs.length - 1]; // e.g. /WashWayApp -> washwayapp
+
+            // Find match
+            for (const [targetApp, typoList] of Object.entries(aliases)) {
+                if (typoList.includes(lastSeg)) {
+                    document.getElementById('redirect-msg').innerHTML = "Did you mean <strong>" + targetApp + "</strong>? Redirecting...";
+                    setTimeout(() => {
+                        window.location.replace('/' + targetApp + '/');
+                    }, 1000);
+                    return;
+                }
+            }
+            
+            document.getElementById('redirect-msg').innerText = "The requested page could not be found. Please check the URL or return to the homepage.";
+        }
+    } catch(e) {
+        console.error("Smart 404 Error", e);
+        document.getElementById('redirect-msg').innerText = "The requested page could not be found.";
+    }
+})();
+</script>
