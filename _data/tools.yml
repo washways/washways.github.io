@@ -19,7 +19,8 @@
   analytics_installed: true
   seo_configured: true
   blog_count: 0
-  image: https://washways.org/assets/images/choleracoster-preview.jpg
+  image: >-
+    https://raw.githubusercontent.com/washways/CholeraCoster/master/social-preview.png
   seo_title: 'Global Cholera Cost Calculator: Analyze Interventions'
   seo_description: Calculate real-time cost-benefit of various cholera interventions worldwide.
   tracking_id: G-64GCB9QDB5
