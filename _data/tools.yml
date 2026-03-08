@@ -14,7 +14,7 @@
   app_name: CholeraCoster
   app_url: /CholeraCoster/
   short_description: Calculate real-time cost-benefit of various cholera interventions worldwide.
-  category: data
+  category: VFM
   last_updated: '2026-03-07'
   analytics_installed: true
   seo_configured: true
@@ -27,6 +27,9 @@
   categories:
     - cholera
     - data
+    - CBA
+    - WASH
+    - VFM
   image_size: 1200x630
   canonical_url: https://washways.org/CholeraCoster/
   published: true
