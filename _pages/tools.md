@@ -6,71 +6,87 @@
 
 <section class="tools-registry-managed">
   <style>
-    .tools-registry-managed { margin: 2rem 0; }
-    .tools-registry-managed .tools-subtitle { margin-top: -0.35rem; opacity: 0.8; }
+    .tools-registry-managed { margin: 2.2rem 0; }
+    .tools-registry-managed .tools-subtitle {
+      margin-top: -0.2rem;
+      margin-bottom: 1.2rem;
+      color: var(--text-muted, #666);
+      max-width: 760px;
+    }
     .tools-registry-managed .tools-registry-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.25rem;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.4rem;
     }
     .tools-registry-managed .tool-card {
-      border: 1px solid rgba(0,0,0,0.12);
-      border-radius: 14px;
+      border: 1px solid var(--border-color, rgba(0,0,0,0.12));
+      border-radius: 12px;
       overflow: hidden;
-      background: #fff;
+      background: var(--bg-primary, #fff);
+      color: var(--text-primary, inherit);
       display: flex;
       flex-direction: column;
       min-height: 100%;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
     }
     .tools-registry-managed .tool-thumb {
       width: 100%;
       aspect-ratio: 1200 / 630;
       object-fit: cover;
-      background: #f5f7fb;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
+      background: var(--bg-secondary, #f5f7fb);
+      border-bottom: 1px solid var(--border-color, rgba(0,0,0,0.08));
     }
-    .tools-registry-managed .tool-content { padding: 0.95rem 1rem 1rem; }
+    .tools-registry-managed .tool-content { padding: 1rem 1.05rem 1.1rem; }
     .tools-registry-managed .tool-title {
-      margin: 0;
-      font-size: 1.05rem;
+      margin: 0 0 0.45rem;
+      font-size: 1.07rem;
       line-height: 1.3;
     }
-    .tools-registry-managed .tool-title a { text-decoration: none; }
+    .tools-registry-managed .tool-title a {
+      text-decoration: none;
+      color: var(--text-primary, inherit);
+    }
     .tools-registry-managed .tool-meta {
-      margin: 0.5rem 0 0.65rem;
+      margin: 0.2rem 0 0.75rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.35rem;
     }
     .tools-registry-managed .tool-badge {
       display: inline-block;
-      padding: 0.16rem 0.55rem;
+      padding: 0.18rem 0.58rem;
       border-radius: 999px;
-      font-size: 0.73rem;
-      border: 1px solid rgba(0,0,0,0.14);
-      background: #f8f9fc;
+      font-size: 0.72rem;
+      border: 1px solid var(--border-color, rgba(0,0,0,0.14));
+      background: var(--bg-secondary, #f8f9fc);
+      color: var(--text-secondary, #4b5563);
     }
     .tools-registry-managed .tool-desc {
       margin: 0;
-      font-size: 0.93rem;
-      line-height: 1.45;
-      opacity: 0.92;
+      font-size: 0.94rem;
+      line-height: 1.52;
+      color: var(--text-secondary, #4b5563);
     }
-    .tools-registry-managed .tool-footer { margin-top: 0.9rem; }
+    .tools-registry-managed .tool-footer { margin-top: 1rem; }
     .tools-registry-managed .tool-link {
       display: inline-block;
       text-decoration: none;
       font-weight: 600;
       font-size: 0.9rem;
+      color: var(--accent-primary, #2563eb);
+    }
+    @media (max-width: 760px) {
+      .tools-registry-managed .tools-registry-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
     }
   </style>
   <h2>Tools</h2>
-  <p class="tools-subtitle">Curated applications generated from site.data.tools.</p>
+  <p class="tools-subtitle">Curated applications generated from site.data.tools. Only published tools are shown.</p>
   <div class="tools-registry-grid">
     {% for tool in sorted_tools %}
-      {% if tool.published != false and tool.hide != true and tool.demo != true and tool.is_demo != true and tool.isDemo != true and tool.sample != true and tool.template != true and tool.placeholder != true %}
+      {% if tool.listed_on_tools == true and tool.published != false and tool.hide != true and tool.demo != true and tool.is_demo != true and tool.isDemo != true and tool.sample != true and tool.template != true and tool.placeholder != true %}
       <article class="tool-card">
         <a href="{{ tool.app_url | default: '/' }}">
           <img class="tool-thumb" src="{{ tool.image | default: '/assets/images/tool-preview.jpg' }}" alt="{{ tool.app_name | default: tool.repo_name | escape }} preview image" loading="lazy" />
@@ -87,8 +103,6 @@
           {% endif %}
           <div class="tool-meta">
             <span class="tool-badge">{{ primary_category | default: 'General' }}</span>
-            {% if tool.seo_configured == true %}<span class="tool-badge">SEO Ready</span>{% endif %}
-            {% if tool.analytics_installed == true %}<span class="tool-badge">Analytics</span>{% endif %}
           </div>
           <p class="tool-desc">{{ tool.short_description | default: '' }}</p>
           <div class="tool-footer">
