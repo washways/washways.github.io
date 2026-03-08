@@ -13,7 +13,7 @@
   short_description: ''
   category: ''
   last_updated: '2026-03-07'
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: true
   blog_count: 0
 - repo_name: washways/washways.github.io
