@@ -7,6 +7,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/groundwaterdiscoveryportal-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/CholeraCoster
   app_name: CholeraCoster
   app_url: /CholeraCoster/
@@ -32,6 +35,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 3
+  categories: []
+  image: https://washways.org/assets/images/washways-github-io-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/SiteMonitor
   app_name: SiteMonitor
   app_url: /SiteMonitor/
@@ -41,6 +47,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/sitemonitor-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/CO2SavingsCalculator
   app_name: CO2SavingsCalculator
   app_url: /CO2SavingsCalculator/
@@ -50,6 +59,9 @@
   analytics_installed: false
   seo_configured: true
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/co2savingscalculator-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/sanitation-fund-model
   app_name: sanitation-fund-model
   app_url: /sanitation-fund-model/
@@ -59,6 +71,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/sanitation-fund-model-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/wash-dashboard
   app_name: wash-dashboard
   app_url: /wash-dashboard/
@@ -68,6 +83,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/wash-dashboard-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/sanitation-model
   app_name: sanitation-model
   app_url: /sanitation-model/
@@ -77,6 +95,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/sanitation-model-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
@@ -86,6 +107,9 @@
   analytics_installed: true
   seo_configured: true
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/spws1-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: ChildWASHHealthImpacts
   app_url: /ChildWASHHealthImpacts/
@@ -95,6 +119,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/childwashhealthimpacts-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/SolarPoweredWaterSystems
   app_name: SolarPoweredWaterSystems
   app_url: /SolarPoweredWaterSystems/
@@ -104,6 +131,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/solarpoweredwatersystems-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/experiments
   app_name: experiments
   app_url: /experiments/
@@ -113,6 +143,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/experiments-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/PacificRegions
   app_name: PacificRegions
   app_url: /PacificRegions/
@@ -124,6 +157,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/pacificregions-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/WaterPopFiji
   app_name: WaterPopFiji
   app_url: /WaterPopFiji/
@@ -133,6 +169,9 @@
   analytics_installed: true
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/waterpopfiji-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/networked-aframe
   app_name: networked-aframe
   app_url: http://haydenlee.io/networked-aframe
@@ -142,6 +181,9 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/networked-aframe-preview.jpg
+  image_size: 1200x630
 - repo_name: washways/aframevr
   app_name: aframevr
   app_url: /aframevr/
@@ -151,3 +193,6 @@
   analytics_installed: false
   seo_configured: false
   blog_count: 0
+  categories: []
+  image: https://washways.org/assets/images/aframevr-preview.jpg
+  image_size: 1200x630
