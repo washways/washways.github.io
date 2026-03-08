@@ -68,15 +68,36 @@
 - repo_name: washways/CO2SavingsCalculator
   app_name: CO2SavingsCalculator
   app_url: /CO2SavingsCalculator/
-  short_description: ''
-  category: ''
+  short_description: >-
+    CO₂ savings calculator for WASH/energy projects in Least Developed Countries
+    using Gold Standard methodology
+  category: CO2
   last_updated: '2026-03-07'
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: true
   blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/co2savingscalculator-preview.jpg
+  categories:
+    - CO2
+    - WASH
+    - Carbon
+    - Energy
+  image: https://washways.org/CO2SavingsCalculator/social-preview.png
   image_size: 1200x630
+  seo_title: CO₂ Savings Calculator | Gold Standard
+  seo_description: >-
+    CO₂ savings calculator for WASH/energy projects in Least Developed Countries
+    using Gold Standard methodology
+  canonical_url: https://washways.org/CO2SavingsCalculator/
+  tracking_id: G-64GCB9QDB5
+  published: true
+  listed_on_tools: true
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
 - repo_name: washways/sanitation-fund-model
   app_name: sanitation-fund-model
   app_url: /sanitation-fund-model/
