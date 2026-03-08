@@ -6,12 +6,18 @@
 
 <section class="tools-registry-managed">
   <style>
-    .tools-registry-managed { margin: 2.2rem 0; }
+    .tools-registry-managed {
+      margin: 2.2rem auto;
+      max-width: 1240px;
+      padding-inline: clamp(0.95rem, 2.8vw, 2.4rem);
+      box-sizing: border-box;
+    }
     .tools-registry-managed .tools-subtitle {
       margin-top: -0.2rem;
       margin-bottom: 1.2rem;
       color: var(--text-muted, #666);
       max-width: 760px;
+      line-height: 1.5;
     }
     .tools-registry-managed .tools-registry-grid {
       display: grid;
@@ -76,14 +82,25 @@
       color: var(--accent-primary, #2563eb);
     }
     @media (max-width: 760px) {
+      .tools-registry-managed {
+        margin: 1.5rem auto;
+        padding-inline: 0.85rem;
+      }
+      .tools-registry-managed .tools-subtitle {
+        margin-bottom: 0.95rem;
+        font-size: 0.95rem;
+      }
       .tools-registry-managed .tools-registry-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
       }
+      .tools-registry-managed .tool-content {
+        padding: 0.9rem 0.9rem 1rem;
+      }
     }
   </style>
   <h2>Tools</h2>
-  <p class="tools-subtitle">Curated applications generated from site.data.tools. Only published tools are shown.</p>
+  <p class="tools-subtitle">Selected Washways tools, maintained from the central tools registry and optimized for discoverability.</p>
   <div class="tools-registry-grid">
     {% for tool in sorted_tools %}
       {% if tool.listed_on_tools == true and tool.published != false and tool.hide != true and tool.demo != true and tool.is_demo != true and tool.isDemo != true and tool.sample != true and tool.template != true and tool.placeholder != true %}
