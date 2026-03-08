@@ -14,7 +14,7 @@
   app_name: CholeraCoster
   app_url: /CholeraCoster/
   short_description: Calculate real-time cost-benefit of various cholera interventions worldwide.
-  category: ''
+  category: data
   last_updated: '2026-03-07'
   analytics_installed: true
   seo_configured: true
@@ -24,7 +24,9 @@
   seo_title: 'Global Cholera Cost Calculator: Analyze Interventions'
   seo_description: Calculate real-time cost-benefit of various cholera interventions worldwide.
   tracking_id: G-64GCB9QDB5
-  categories: []
+  categories:
+    - cholera
+    - data
   image_size: 1200x630
   canonical_url: https://washways.org/CholeraCoster/
   published: true
@@ -35,6 +37,7 @@
   sample: false
   template: false
   placeholder: false
+  listed_on_tools: true
 - repo_name: washways/washways.github.io
   app_name: washways.github.io
   app_url: /washways.github.io/
