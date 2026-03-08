@@ -3,15 +3,102 @@ layout: default
 title: Page Not Found (404)
 permalink: /404.html
 ---
-<div style="text-align: center; margin-top: 5rem; min-height: 50vh;">
-    <h1>404</h1>
-    <p><strong>Page not found :(</strong></p>
-    <p id="redirect-msg">Checking for typos...</p>
+<!-- smart404-managed-by:washways-manager:v2 -->
+<style>
+    :root {
+        color-scheme: light;
+    }
+    body {
+        margin: 0;
+        background:
+            radial-gradient(circle at 10% 20%, rgba(232, 80, 91, 0.12), transparent 45%),
+            radial-gradient(circle at 90% 15%, rgba(154, 196, 248, 0.18), transparent 45%),
+            #f8fafc;
+        color: #0f172a;
+        font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    }
+    .smart404-shell {
+        min-height: 72vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem 1rem;
+    }
+    .smart404-card {
+        width: min(680px, 94vw);
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 18px;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        padding: 2rem;
+        text-align: center;
+    }
+    .smart404-kicker {
+        margin: 0 0 0.5rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #64748b;
+    }
+    .smart404-title {
+        margin: 0 0 0.6rem;
+        font-size: clamp(1.7rem, 3vw, 2.4rem);
+        line-height: 1.15;
+        color: #0b1220;
+    }
+    .smart404-message {
+        margin: 0.6rem 0 1.2rem;
+        color: #334155;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .smart404-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin-top: 1rem;
+    }
+    .smart404-link {
+        display: inline-block;
+        text-decoration: none;
+        color: #0f172a;
+        border: 1px solid #cbd5e1;
+        border-radius: 999px;
+        padding: 0.55rem 0.9rem;
+        font-weight: 600;
+    }
+</style>
+
+<div class="smart404-shell">
+    <main class="smart404-card">
+        <p class="smart404-kicker">Washways</p>
+        <h1 class="smart404-title">Page not found</h1>
+        <p id="redirect-msg" class="smart404-message">Checking for typo-based redirects...</p>
+        <div class="smart404-actions">
+            <a class="smart404-link" href="/">Go to Homepage</a>
+        </div>
+    </main>
 </div>
 
 <script>
 (async function() {
     try {
+        const messageEl = document.getElementById('redirect-msg');
+        const escapeHtml = (value) => String(value || '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+        const setMessage = (message, allowHtml) => {
+            if (!messageEl) return;
+            if (allowHtml) {
+                messageEl.innerHTML = message;
+            } else {
+                messageEl.textContent = message;
+            }
+        };
+
         const normalizeSeg = (value) => String(value || '')
             .toLowerCase()
             .replace(/^\/+|\/+$/g, '');
@@ -21,7 +108,7 @@ permalink: /404.html
         const lastSeg = normalizeSeg(pathSegs[pathSegs.length - 1]);
 
         if (!lastSeg) {
-            document.getElementById('redirect-msg').innerText = "The requested page could not be found. Please check the URL or return to the homepage.";
+            setMessage('The requested page could not be found. Check the URL or return to the homepage.');
             return;
         }
 
@@ -48,7 +135,7 @@ permalink: /404.html
         }
 
         if (!aliases || typeof aliases !== 'object') {
-            document.getElementById('redirect-msg').innerText = "The requested page could not be found. Please check the URL or return to the homepage.";
+            setMessage('The requested page could not be found. Check the URL or return to the homepage.');
             return;
         }
 
@@ -59,7 +146,7 @@ permalink: /404.html
             if (normalizedTypos.includes(lastSeg)) {
                 const targetSeg = String(targetApp || '').replace(/^\/+|\/+$/g, '');
                 if (!targetSeg) continue;
-                document.getElementById('redirect-msg').innerHTML = "Did you mean <strong>" + targetApp + "</strong>? Redirecting...";
+                setMessage("Did you mean <strong>/" + escapeHtml(targetSeg) + "/</strong>? Redirecting...", true);
                 setTimeout(() => {
                     window.location.replace(basePrefix + '/' + targetSeg + '/');
                 }, 1000);
@@ -67,10 +154,13 @@ permalink: /404.html
             }
         }
 
-        document.getElementById('redirect-msg').innerText = "The requested page could not be found. Please check the URL or return to the homepage.";
+        setMessage('No matching alias was found. Check the URL or return to the homepage.');
     } catch(e) {
         console.error("Smart 404 Error", e);
-        document.getElementById('redirect-msg').innerText = "The requested page could not be found.";
+        const messageEl = document.getElementById('redirect-msg');
+        if (messageEl) {
+            messageEl.textContent = 'The requested page could not be found.';
+        }
     }
 })();
 </script>
