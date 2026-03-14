@@ -45,6 +45,18 @@ permalink: /404.html
         line-height: 1.15;
         color: #0b1220;
     }
+    .smart404-mascot {
+        font-size: 2.1rem;
+        margin-bottom: 0.7rem;
+        animation: smart404-pop-wiggle 1.1s ease-out 1;
+        display: inline-block;
+    }
+    @keyframes smart404-pop-wiggle {
+        0% { transform: translateY(8px) scale(0.8) rotate(0deg); opacity: 0; }
+        30% { transform: translateY(0) scale(1.05) rotate(-8deg); opacity: 1; }
+        60% { transform: scale(1.05) rotate(8deg); }
+        100% { transform: scale(1) rotate(0deg); }
+    }
     .smart404-message {
         margin: 0.6rem 0 1.2rem;
         color: #334155;
@@ -67,13 +79,48 @@ permalink: /404.html
         padding: 0.55rem 0.9rem;
         font-weight: 600;
     }
+    .smart404-search {
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .smart404-search input {
+        min-width: min(420px, 90%);
+        border: 1px solid #cbd5e1;
+        border-radius: 999px;
+        padding: 0.6rem 0.85rem;
+        font: inherit;
+    }
+    .smart404-search button {
+        border: 1px solid #cbd5e1;
+        background: #f8fafc;
+        color: #0f172a;
+        border-radius: 999px;
+        padding: 0.6rem 0.95rem;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .smart404-hint {
+        margin: 0.7rem 0 0;
+        color: #64748b;
+        font-size: 0.86rem;
+    }
 </style>
 
 <div class="smart404-shell">
     <main class="smart404-card">
+        <div class="smart404-mascot" aria-hidden="true">(o_O)</div>
         <p class="smart404-kicker">Washways</p>
         <h1 class="smart404-title">Page not found</h1>
         <p id="redirect-msg" class="smart404-message">Checking for typo-based redirects...</p>
+        <form id="smart404-search" class="smart404-search">
+            <input id="smart404-query" type="search" placeholder="Search the site or jump to an app name..." />
+            <button type="submit">Search</button>
+        </form>
+        <p class="smart404-hint">No alias match? Try a quick site search.</p>
         <div class="smart404-actions">
             <a class="smart404-link" href="/">Go to Homepage</a>
         </div>
@@ -84,12 +131,38 @@ permalink: /404.html
 (async function() {
     try {
         const messageEl = document.getElementById('redirect-msg');
+        const queryInput = document.getElementById('smart404-query');
+        const searchForm = document.getElementById('smart404-search');
+        let aliases = null;
+        let basePrefix = '';
         const escapeHtml = (value) => String(value || '')
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#39;');
+        const normalizeSeg = (value) => String(value || '')
+            .toLowerCase()
+            .replace(/^\/+|\/+$/g, '')
+            .trim();
+        const findTarget = (query, aliasMap) => {
+            const q = normalizeSeg(query);
+            if (!q || !aliasMap || typeof aliasMap !== 'object') return '';
+
+            for (const [targetApp, typoList] of Object.entries(aliasMap)) {
+                const targetSeg = normalizeSeg(targetApp);
+                if (!targetSeg) continue;
+                if (targetSeg === q) return targetSeg;
+                if (Array.isArray(typoList) && typoList.map(normalizeSeg).includes(q)) {
+                    return targetSeg;
+                }
+            }
+            for (const [targetApp] of Object.entries(aliasMap)) {
+                const targetSeg = normalizeSeg(targetApp);
+                if (targetSeg && targetSeg.includes(q)) return targetSeg;
+            }
+            return '';
+        };
         const setMessage = (message, allowHtml) => {
             if (!messageEl) return;
             if (allowHtml) {
@@ -98,10 +171,25 @@ permalink: /404.html
                 messageEl.textContent = message;
             }
         };
+        const attachSearchHandler = () => {
+            if (!searchForm || !queryInput) return;
+            searchForm.addEventListener('submit', function(evt) {
+                evt.preventDefault();
+                const q = queryInput.value || '';
+                if (!q.trim()) return;
 
-        const normalizeSeg = (value) => String(value || '')
-            .toLowerCase()
-            .replace(/^\/+|\/+$/g, '');
+                const matchedTarget = findTarget(q, aliases);
+                if (matchedTarget) {
+                    window.location.assign(basePrefix + '/' + matchedTarget + '/');
+                    return;
+                }
+
+                const host = window.location.hostname || 'washways.org';
+                const searchUrl = 'https://www.google.com/search?q=' + encodeURIComponent('site:' + host + ' ' + q);
+                window.location.assign(searchUrl);
+            });
+        };
+        attachSearchHandler();
 
         const currentPath = window.location.pathname.toLowerCase().replace(/\/+$/, '');
         const pathSegs = currentPath.split('/').filter(Boolean);
@@ -118,8 +206,6 @@ permalink: /404.html
             aliasCandidates.push('/' + pathSegs[0] + '/aliases.json');
         }
 
-        let aliases = null;
-        let basePrefix = '';
         for (const candidate of aliasCandidates) {
             try {
                 const res = await fetch(candidate, { cache: 'no-store' });
