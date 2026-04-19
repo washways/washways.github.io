@@ -73,13 +73,26 @@
       line-height: 1.52;
       color: var(--text-secondary, #4b5563);
     }
-    .tools-registry-managed .tool-footer { margin-top: 1rem; }
+    .tools-registry-managed .tool-footer {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+    .tools-registry-managed .tool-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
     .tools-registry-managed .tool-link {
       display: inline-block;
       text-decoration: none;
       font-weight: 600;
       font-size: 0.9rem;
       color: var(--accent-primary, #2563eb);
+    }
+    .tools-registry-managed .tool-link.secondary {
+      color: var(--text-secondary, #4b5563);
+      font-weight: 500;
     }
     @media (max-width: 760px) {
       .tools-registry-managed {
@@ -120,10 +133,18 @@
           {% endif %}
           <div class="tool-meta">
             <span class="tool-badge">{{ primary_category | default: 'General' }}</span>
+            {% if tool.status %}<span class="tool-badge">{{ tool.status }}</span>{% endif %}
+            {% if tool.license %}<span class="tool-badge">License: {{ tool.license }}</span>{% endif %}
+            {% if tool.last_updated %}<span class="tool-badge">Updated {{ tool.last_updated }}</span>{% endif %}
           </div>
           <p class="tool-desc">{{ tool.short_description | default: '' }}</p>
           <div class="tool-footer">
-            <a class="tool-link" href="{{ tool.app_url | default: '/' }}">Open tool</a>
+            <div class="tool-links">
+              <a class="tool-link" href="{{ tool.app_url | default: '/' }}">Open tool</a>
+              {% if tool.source_url %}<a class="tool-link secondary" href="{{ tool.source_url }}">Source</a>{% endif %}
+              {% if tool.docs_url %}<a class="tool-link secondary" href="{{ tool.docs_url }}">Docs</a>{% endif %}
+            </div>
+            {% if tool.maintainer %}<div class="tool-desc" style="font-size:0.8rem;">Maintained by {{ tool.maintainer }}</div>{% endif %}
           </div>
         </div>
       </article>
