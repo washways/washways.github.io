@@ -128,7 +128,7 @@
   short_description: economics of sanitation
   category: Economics
   last_updated: '2026-03-07'
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: true
   blog_count: 0
   categories:
@@ -148,7 +148,7 @@
   seo_title: Sanitation Impact Modeler
   seo_description: economics of sanitation
   canonical_url: https://washways.org/sanitation-model/
-  tracking_id: ''
+  tracking_id: G-64GCB9QDB5
   published: true
   listed_on_tools: true
   hide: false
