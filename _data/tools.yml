@@ -126,14 +126,38 @@
   app_name: sanitation-model
   app_url: /sanitation-model/
   short_description: economics of sanitation
-  category: ''
+  category: Economics
   last_updated: '2026-03-07'
   analytics_installed: false
-  seo_configured: false
+  seo_configured: true
   blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/sanitation-model-preview.jpg
+  categories:
+    - Public Health
+    - Economics
+    - Data Visualization
+    - Advocacy
+    - Sustainable Development
+    - Policy Analysis
+  image: https://washways.github.io/sanitation-model/assets/og-preview.png
   image_size: 1200x630
+  source_url: https://github.com/washways/sanitation-model
+  docs_url: https://github.com/washways/sanitation-model#readme
+  license: Apache-2.0
+  status: active
+  maintainer: washways
+  seo_title: Sanitation Impact Modeler
+  seo_description: economics of sanitation
+  canonical_url: https://washways.org/sanitation-model/
+  tracking_id: ''
+  published: true
+  listed_on_tools: true
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
