@@ -1,15 +1,29 @@
 - repo_name: washways/GroundwaterDiscoveryPortal
   app_name: GroundwaterDiscoveryPortal
   app_url: /GroundwaterDiscoveryPortal/
-  short_description: ''
-  category: ''
+  short_description: >-
+    This tool helps manage GroundwaterDiscoveryPortal and publish site updates
+    for the project.
+  category: General
   last_updated: '2026-03-07'
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: false
   blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/groundwaterdiscoveryportal-preview.jpg
+  categories:
+    - General
+  image: >-
+    https://raw.githubusercontent.com/washways/GroundwaterDiscoveryPortal/main/site/social-preview.png
   image_size: 1200x630
+  seo_description: >-
+    This tool helps manage GroundwaterDiscoveryPortal and publish site updates
+    for the project.
+  source_url: https://github.com/washways/GroundwaterDiscoveryPortal
+  docs_url: https://github.com/washways/GroundwaterDiscoveryPortal/blob/main/README.md
+  license: MIT
+  status: active
+  maintainer: washways
+  tracking_id: G-64GCB9QDB5
+  listed_on_tools: true
 - repo_name: washways/CholeraCoster
   app_name: CholeraCoster
   app_url: /CholeraCoster/
