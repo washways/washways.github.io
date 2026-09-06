@@ -144,7 +144,6 @@
               {% if tool.source_url %}<a class="tool-link secondary" href="{{ tool.source_url }}">Source</a>{% endif %}
               {% if tool.docs_url %}<a class="tool-link secondary" href="{{ tool.docs_url }}">Docs</a>{% endif %}
             </div>
-            {% if tool.maintainer %}<div class="tool-desc" style="font-size:0.8rem;">Maintained by {{ tool.maintainer }}</div>{% endif %}
           </div>
         </div>
       </article>
