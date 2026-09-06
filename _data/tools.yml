@@ -176,12 +176,14 @@
   short_description: ''
   category: ''
   last_updated: '2026-03-07'
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: false
   blog_count: 0
   categories: []
   image: https://washways.org/assets/images/childwashhealthimpacts-preview.jpg
   image_size: 1200x630
+  tracking_id: G-64GCB9QDB5
+  listed_on_tools: false
 - repo_name: washways/SolarPoweredWaterSystems
   app_name: SolarPoweredWaterSystems
   app_url: /SolarPoweredWaterSystems/
