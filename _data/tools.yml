@@ -181,7 +181,8 @@
   blog_count: 0
   categories:
     - General
-  image: https://washways.github.io/ChildWASHHealthImpacts/assets/og-preview.png
+  image: >-
+    https://washways.github.io/ChildWASHHealthImpacts/assets/og-preview.png?v=1788704569208
   image_size: 1200x630
   tracking_id: G-64GCB9QDB5
   listed_on_tools: true
