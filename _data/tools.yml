@@ -173,7 +173,7 @@
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: ChildWASHHealthImpacts
   app_url: /ChildWASHHealthImpacts/
-  short_description: ChildWASHHealthImpacts — a Washways tool.
+  short_description: ChildWASHHealthImpacts
   category: General
   last_updated: '2026-03-07'
   analytics_installed: true
@@ -182,7 +182,7 @@
   categories:
     - General
   image: >-
-    https://washways.github.io/ChildWASHHealthImpacts/assets/og-preview.png?v=1788706435329
+    https://washways.github.io/ChildWASHHealthImpacts/assets/og-preview.png?v=1788709894221
   image_size: 1200x630
   tracking_id: G-64GCB9QDB5
   listed_on_tools: true
@@ -191,6 +191,7 @@
   license: ''
   status: active
   maintainer: washways
+  seo_description: ChildWASHHealthImpacts
 - repo_name: washways/SolarPoweredWaterSystems
   app_name: SolarPoweredWaterSystems
   app_url: /SolarPoweredWaterSystems/
