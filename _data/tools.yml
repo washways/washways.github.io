@@ -60,7 +60,7 @@
   category: ''
   last_updated: '2026-03-07'
   analytics_installed: false
-  seo_configured: false
+  seo_configured: true
   blog_count: 0
   categories: []
   image: https://washways.org/assets/images/sitemonitor-preview.jpg
@@ -128,8 +128,8 @@
   short_description: economics of sanitation
   category: Economics
   last_updated: '2026-03-07'
-  analytics_installed: true
-  seo_configured: true
+  analytics_installed: false
+  seo_configured: false
   blog_count: 0
   categories:
     - Public Health
