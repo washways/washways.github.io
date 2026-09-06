@@ -169,7 +169,7 @@
   blog_count: 0
   categories:
     - General
-  image: https://washways.org/SPWS1/assets/og-preview.png?v=1788725245407
+  image: https://raw.githubusercontent.com/washways/SPWS1/main/assets/og-preview.png
   image_size: 1200x630
   seo_description: Test app to design and evaluate SPWS.
   source_url: https://github.com/washways/SPWS1
@@ -191,7 +191,7 @@
   categories:
     - General
   image: >-
-    https://washways.org/ChildWASHHealthImpacts/assets/og-preview.png?v=1788725263512
+    https://raw.githubusercontent.com/washways/ChildWASHHealthImpacts/main/assets/og-preview.png
   image_size: 1200x630
   tracking_id: G-64GCB9QDB5
   listed_on_tools: true
