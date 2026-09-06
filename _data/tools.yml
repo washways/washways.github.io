@@ -128,8 +128,8 @@
   short_description: economics of sanitation
   category: Economics
   last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
+  analytics_installed: true
+  seo_configured: true
   blog_count: 0
   categories:
     - Public Health
@@ -476,7 +476,7 @@
   maintainer: washways
   last_updated: '2026-04-18'
   analytics_installed: false
-  seo_configured: false
+  seo_configured: true
   blog_count: 0
   published: false
   listed_on_tools: false
@@ -502,7 +502,7 @@
   maintainer: washways
   last_updated: '2026-04-10'
   analytics_installed: false
-  seo_configured: false
+  seo_configured: true
   blog_count: 0
   published: false
   listed_on_tools: false
