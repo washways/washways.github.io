@@ -161,19 +161,28 @@
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
-  short_description: test app to design and evaluate SPWS
-  category: ''
+  short_description: Test app to design and evaluate SPWS.
+  category: General
   last_updated: '2026-03-07'
   analytics_installed: true
   seo_configured: true
   blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/spws1-preview.jpg
+  categories:
+    - General
+  image: https://washways.github.io/SPWS1/assets/og-preview.png?v=1788713480718
   image_size: 1200x630
+  seo_description: Test app to design and evaluate SPWS.
+  source_url: https://github.com/washways/SPWS1
+  docs_url: https://github.com/washways/SPWS1/blob/main/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  tracking_id: G-64GCB9QDB5
+  listed_on_tools: true
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: ChildWASHHealthImpacts
   app_url: /ChildWASHHealthImpacts/
-  short_description: ChildWASHHealthImpacts
+  short_description: ChildWASHHealthImpacts.
   category: General
   last_updated: '2026-03-07'
   analytics_installed: true
@@ -182,7 +191,7 @@
   categories:
     - General
   image: >-
-    https://washways.github.io/ChildWASHHealthImpacts/assets/og-preview.png?v=1788709894221
+    https://washways.github.io/ChildWASHHealthImpacts/assets/og-preview.png?v=1788713498230
   image_size: 1200x630
   tracking_id: G-64GCB9QDB5
   listed_on_tools: true
@@ -191,7 +200,7 @@
   license: ''
   status: active
   maintainer: washways
-  seo_description: ChildWASHHealthImpacts
+  seo_description: ChildWASHHealthImpacts.
 - repo_name: washways/SolarPoweredWaterSystems
   app_name: SolarPoweredWaterSystems
   app_url: /SolarPoweredWaterSystems/
