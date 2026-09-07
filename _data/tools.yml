@@ -1,12 +1,14 @@
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: ChildWASHHealthImpacts
   app_url: /ChildWASHHealthImpacts/
-  short_description: >-
-    This tool helps manage ChildWASHHealthImpacts and publish site updates for
-    the project.
-  category: ''
-  categories: []
-  image: https://washways.org/assets/images/childwashhealthimpacts-preview.jpg
+  short_description: This tool analyzes child health impacts of WASH using GBD 2023 data.
+  category: Health
+  categories:
+    - Health
+    - Nutrition
+    - Child Development
+  image: >-
+    https://raw.githubusercontent.com/washways/ChildWASHHealthImpacts/main/assets/og-preview.png
   image_size: 1200x630
   source_url: https://github.com/washways/ChildWASHHealthImpacts
   docs_url: https://github.com/washways/ChildWASHHealthImpacts/blob/main/README.md
@@ -14,11 +16,11 @@
   status: active
   maintainer: washways
   last_updated: '2026-09-07'
-  analytics_installed: false
-  seo_configured: false
+  analytics_installed: true
+  seo_configured: true
   blog_count: 0
   published: false
-  listed_on_tools: false
+  listed_on_tools: true
   hide: false
   demo: false
   is_demo: false
@@ -26,13 +28,19 @@
   sample: false
   template: false
   placeholder: false
+  seo_description: This tool analyzes child health impacts of WASH using GBD 2023 data.
+  seo_title: Analyze Child Health Impacts of WASH
+  tracking_id: G-64GCB9QDB5
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
-  short_description: test app to design and evaluate SPWS
-  category: ''
-  categories: []
-  image: https://washways.org/assets/images/spws1-preview.jpg
+  short_description: SPWS Designer evaluates solar versus handpump water systems for engineers.
+  category: Water Supply
+  categories:
+    - Water Supply
+    - Engineering Tools
+    - Economic Analysis
+  image: https://raw.githubusercontent.com/washways/SPWS1/main/assets/og-preview.png
   image_size: 1200x630
   source_url: https://github.com/washways/SPWS1
   docs_url: https://github.com/washways/SPWS1/blob/main/README.md
@@ -40,11 +48,11 @@
   status: active
   maintainer: washways
   last_updated: '2026-09-07'
-  analytics_installed: false
-  seo_configured: false
+  analytics_installed: true
+  seo_configured: true
   blog_count: 0
   published: false
-  listed_on_tools: false
+  listed_on_tools: true
   hide: false
   demo: false
   is_demo: false
@@ -52,3 +60,6 @@
   sample: false
   template: false
   placeholder: false
+  seo_title: 'SPWS Designer: Compare Water Supply Options'
+  seo_description: SPWS Designer evaluates solar versus handpump water systems for engineers.
+  tracking_id: G-64GCB9QDB5
