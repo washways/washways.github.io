@@ -175,17 +175,19 @@
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
-  short_description: Test app to design and evaluate SPWS.
-  category: General
+  short_description: Compare solar piped water systems and boreholes for economic feasibility.
+  category: Water Supply
   last_updated: '2026-03-07'
   analytics_installed: true
   seo_configured: true
   blog_count: 0
   categories:
-    - General
+    - Water Supply
+    - Engineering Tools
+    - Economic Analysis
   image: https://raw.githubusercontent.com/washways/SPWS1/main/assets/og-preview.png
   image_size: 1200x630
-  seo_description: Test app to design and evaluate SPWS.
+  seo_description: Compare solar piped water systems and boreholes for economic feasibility.
   source_url: https://github.com/washways/SPWS1
   docs_url: https://github.com/washways/SPWS1/blob/main/README.md
   license: ''
@@ -193,17 +195,20 @@
   maintainer: washways
   tracking_id: G-64GCB9QDB5
   listed_on_tools: true
+  seo_title: 'SPWS Designer: Compare Water Supply Technologies'
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: ChildWASHHealthImpacts
   app_url: /ChildWASHHealthImpacts/
-  short_description: ChildWASHHealthImpacts.
-  category: General
+  short_description: This tool analyzes how WASH factors affect child health using GBD 2023 data.
+  category: Health Data Analysis
   last_updated: '2026-03-07'
   analytics_installed: true
   seo_configured: true
   blog_count: 0
   categories:
-    - General
+    - Health Data Analysis
+    - Child Nutrition
+    - Public Health
   image: >-
     https://raw.githubusercontent.com/washways/ChildWASHHealthImpacts/main/assets/og-preview.png
   image_size: 1200x630
@@ -214,7 +219,8 @@
   license: ''
   status: active
   maintainer: washways
-  seo_description: ChildWASHHealthImpacts.
+  seo_description: This tool analyzes how WASH factors affect child health using GBD 2023 data.
+  seo_title: Analyze Child Health Impacts from WASH Factors
 - repo_name: washways/SolarPoweredWaterSystems
   app_name: SolarPoweredWaterSystems
   app_url: /SolarPoweredWaterSystems/
