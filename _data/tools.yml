@@ -1,12 +1,14 @@
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: ChildWASHHealthImpacts
   app_url: /ChildWASHHealthImpacts/
-  short_description: This tool analyzes child health impacts of WASH using GBD 2023 data.
-  category: Health Analytics
+  short_description: >-
+    This tool analyzes how WASH factors impact child health and nutrition using
+    GBD data.
+  category: Health Data Analysis
   categories:
-    - Health Analytics
+    - Health Data Analysis
     - Child Nutrition
-    - Public Health
+    - WASH
   image: >-
     https://raw.githubusercontent.com/washways/ChildWASHHealthImpacts/main/assets/og-preview.png
   image_size: 1200x630
@@ -28,18 +30,20 @@
   sample: false
   template: false
   placeholder: false
-  seo_description: This tool analyzes child health impacts of WASH using GBD 2023 data.
+  seo_description: >-
+    This tool analyzes how WASH factors impact child health and nutrition using
+    GBD data.
   seo_title: Analyze Child Health Impacts of WASH
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
-  short_description: SPWS Designer helps engineers compare solar water systems with boreholes.
+  short_description: SPWS Designer evaluates solar water systems for engineers in Malawi.
   category: Water Supply
   categories:
     - Water Supply
     - Engineering Tools
-    - Economic Feasibility
+    - Economic Analysis
   image: https://raw.githubusercontent.com/washways/SPWS1/main/assets/og-preview.png
   image_size: 1200x630
   source_url: https://github.com/washways/SPWS1
@@ -60,6 +64,6 @@
   sample: false
   template: false
   placeholder: false
-  seo_title: 'SPWS Designer: Compare Water Supply Systems'
-  seo_description: SPWS Designer helps engineers compare solar water systems with boreholes.
+  seo_title: 'SPWS Designer: Solar Water Feasibility Tool'
+  seo_description: SPWS Designer evaluates solar water systems for engineers in Malawi.
   tracking_id: G-64GCB9QDB5
