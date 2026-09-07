@@ -334,13 +334,14 @@
 - repo_name: washways/GroundwaterDiscoveryPortal
   app_name: GroundwaterDiscoveryPortal
   app_url: /GroundwaterDiscoveryPortal/
-  short_description: Compute groundwater potential using a Source–Pathway–Receptor model.
-  category: Hydrology
+  short_description: This tool analyzes groundwater potential using GIS and remote sensing data.
+  category: Hydrogeology
   categories:
-    - Geoscience
-    - Hydrology
     - Environmental Science
-  image: https://washways.org/assets/images/groundwaterdiscoveryportal-preview.jpg
+    - Hydrogeology
+    - Remote Sensing
+  image: >-
+    https://raw.githubusercontent.com/washways/GroundwaterDiscoveryPortal/main/site/social-preview.png
   image_size: 1200x630
   source_url: https://github.com/washways/GroundwaterDiscoveryPortal
   docs_url: https://github.com/washways/GroundwaterDiscoveryPortal/blob/main/README.md
@@ -360,6 +361,6 @@
   sample: false
   template: false
   placeholder: false
-  seo_description: Compute groundwater potential using a Source–Pathway–Receptor model.
+  seo_description: This tool analyzes groundwater potential using GIS and remote sensing data.
   tracking_id: G-64GCB9QDB5
   seo_title: Groundwater Discovery Portal
