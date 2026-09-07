@@ -118,7 +118,7 @@ description: Selected Washways tools, maintained from the central tools registry
     }
   </style>
   <h2>Tools</h2>
-  <p class="tools-subtitle">Selected Washways tools, maintained from the central tools registry and optimized for discoverability.</p>
+  <p class="tools-subtitle">Selected Washways tools and experiments</p>
   <div class="tools-registry-grid">
     {% for tool in sorted_tools %}
       {% if tool.listed_on_tools == true and tool.hide != true and tool.demo != true and tool.is_demo != true and tool.isDemo != true and tool.sample != true and tool.template != true and tool.placeholder != true %}
