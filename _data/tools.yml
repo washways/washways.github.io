@@ -1,170 +1,24 @@
-- repo_name: washways/GroundwaterDiscoveryPortal
-  app_name: GroundwaterDiscoveryPortal
-  app_url: /GroundwaterDiscoveryPortal/
+- repo_name: washways/ChildWASHHealthImpacts
+  app_name: ChildWASHHealthImpacts
+  app_url: /ChildWASHHealthImpacts/
   short_description: >-
-    This tool helps manage GroundwaterDiscoveryPortal and publish site updates
-    for the project.
-  category: General
-  last_updated: '2026-03-07'
-  analytics_installed: true
-  seo_configured: false
-  blog_count: 0
-  categories:
-    - General
-  image: >-
-    https://raw.githubusercontent.com/washways/GroundwaterDiscoveryPortal/main/site/social-preview.png
+    This tool helps manage ChildWASHHealthImpacts and publish site updates for
+    the project.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/childwashhealthimpacts-preview.jpg
   image_size: 1200x630
-  seo_description: >-
-    This tool helps manage GroundwaterDiscoveryPortal and publish site updates
-    for the project.
-  source_url: https://github.com/washways/GroundwaterDiscoveryPortal
-  docs_url: https://github.com/washways/GroundwaterDiscoveryPortal/blob/main/README.md
-  license: MIT
+  source_url: https://github.com/washways/ChildWASHHealthImpacts
+  docs_url: https://github.com/washways/ChildWASHHealthImpacts/blob/main/README.md
+  license: ''
   status: active
   maintainer: washways
-  tracking_id: G-64GCB9QDB5
-  listed_on_tools: true
-- repo_name: washways/CholeraCoster
-  app_name: CholeraCoster
-  app_url: /CholeraCoster/
-  short_description: Calculate real-time cost-benefit of various cholera interventions worldwide.
-  category: VFM
-  last_updated: '2026-03-07'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  image: >-
-    https://raw.githubusercontent.com/washways/CholeraCoster/master/social-preview.png
-  seo_title: 'Global Cholera Cost Calculator: Analyze Interventions'
-  seo_description: Calculate real-time cost-benefit of various cholera interventions worldwide.
-  tracking_id: G-64GCB9QDB5
-  categories:
-    - cholera
-    - data
-    - CBA
-    - WASH
-    - VFM
-  image_size: 1200x630
-  canonical_url: https://washways.org/CholeraCoster/
-  published: true
-  hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-  listed_on_tools: true
-- repo_name: washways/washways.github.io
-  app_name: washways.github.io
-  app_url: /washways.github.io/
-  short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 3
-  categories: []
-  image: https://washways.org/assets/images/washways-github-io-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/SiteMonitor
-  app_name: SiteMonitor
-  app_url: /SiteMonitor/
-  short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: true
-  blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/sitemonitor-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/CO2SavingsCalculator
-  app_name: CO2SavingsCalculator
-  app_url: /CO2SavingsCalculator/
-  short_description: >-
-    CO₂ savings calculator for WASH/energy projects in Least Developed Countries
-    using Gold Standard methodology
-  category: CO2
-  last_updated: '2026-03-07'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  categories:
-    - CO2
-    - WASH
-    - Carbon
-    - Energy
-  image: https://washways.org/CO2SavingsCalculator/social-preview.png
-  image_size: 1200x630
-  seo_title: CO₂ Savings Calculator | Gold Standard
-  seo_description: >-
-    CO₂ savings calculator for WASH/energy projects in Least Developed Countries
-    using Gold Standard methodology
-  canonical_url: https://washways.org/CO2SavingsCalculator/
-  tracking_id: G-64GCB9QDB5
-  published: true
-  listed_on_tools: true
-  hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-- repo_name: washways/sanitation-fund-model
-  app_name: sanitation-fund-model
-  app_url: /sanitation-fund-model/
-  short_description: experimental sanitation fund modelling
-  category: ''
-  last_updated: '2026-03-07'
+  last_updated: '2026-09-07'
   analytics_installed: false
   seo_configured: false
   blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/sanitation-fund-model-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/wash-dashboard
-  app_name: wash-dashboard
-  app_url: /wash-dashboard/
-  short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/wash-dashboard-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/sanitation-model
-  app_name: sanitation-model
-  app_url: /sanitation-model/
-  short_description: economics of sanitation
-  category: Economics
-  last_updated: '2026-03-07'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  categories:
-    - Public Health
-    - Economics
-    - Data Visualization
-    - Advocacy
-    - Sustainable Development
-    - Policy Analysis
-  image: https://washways.github.io/sanitation-model/assets/og-preview.png
-  image_size: 1200x630
-  source_url: https://github.com/washways/sanitation-model
-  docs_url: https://github.com/washways/sanitation-model#readme
-  license: Apache-2.0
-  status: active
-  maintainer: washways
-  seo_title: Sanitation Impact Modeler
-  seo_description: economics of sanitation
-  canonical_url: https://washways.org/sanitation-model/
-  tracking_id: G-64GCB9QDB5
-  published: true
-  listed_on_tools: true
+  published: false
+  listed_on_tools: false
   hide: false
   demo: false
   is_demo: false
@@ -175,136 +29,41 @@
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
-  short_description: Compare solar piped water systems and boreholes for economic feasibility.
-  category: Water Supply
-  last_updated: '2026-03-07'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  categories:
-    - Water Supply
-    - Engineering Tools
-    - Economic Analysis
-  image: https://raw.githubusercontent.com/washways/SPWS1/main/assets/og-preview.png
+  short_description: test app to design and evaluate SPWS
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/spws1-preview.jpg
   image_size: 1200x630
-  seo_description: Compare solar piped water systems and boreholes for economic feasibility.
   source_url: https://github.com/washways/SPWS1
   docs_url: https://github.com/washways/SPWS1/blob/main/README.md
   license: ''
   status: active
   maintainer: washways
-  tracking_id: G-64GCB9QDB5
-  listed_on_tools: true
-  seo_title: 'SPWS Designer: Compare Water Supply Technologies'
-- repo_name: washways/ChildWASHHealthImpacts
-  app_name: ChildWASHHealthImpacts
-  app_url: /ChildWASHHealthImpacts/
-  short_description: This tool analyzes how WASH factors affect child health using GBD 2023 data.
-  category: Health Data Analysis
-  last_updated: '2026-03-07'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  categories:
-    - Health Data Analysis
-    - Child Nutrition
-    - Public Health
-  image: >-
-    https://raw.githubusercontent.com/washways/ChildWASHHealthImpacts/main/assets/og-preview.png
-  image_size: 1200x630
-  tracking_id: G-64GCB9QDB5
-  listed_on_tools: true
-  source_url: https://github.com/washways/ChildWASHHealthImpacts
-  docs_url: https://github.com/washways/ChildWASHHealthImpacts/blob/main/README.md
-  license: ''
-  status: active
-  maintainer: washways
-  seo_description: This tool analyzes how WASH factors affect child health using GBD 2023 data.
-  seo_title: Analyze Child Health Impacts from WASH Factors
-- repo_name: washways/SolarPoweredWaterSystems
-  app_name: SolarPoweredWaterSystems
-  app_url: /SolarPoweredWaterSystems/
-  short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
+  last_updated: '2026-09-07'
   analytics_installed: false
   seo_configured: false
   blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/solarpoweredwatersystems-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/experiments
-  app_name: experiments
-  app_url: /experiments/
-  short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/experiments-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/PacificRegions
-  app_name: PacificRegions
-  app_url: /PacificRegions/
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+- repo_name: washways/mwi-wash-nrt
+  app_name: mwi-wash-nrt
+  app_url: /mwi-wash-nrt/
   short_description: >-
-    Experimental Data Analysis to build sub regional analysis of Pacific Island
-    countries
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/pacificregions-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/WaterPopFiji
-  app_name: WaterPopFiji
-  app_url: /WaterPopFiji/
-  short_description: GEE testing
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: true
-  seo_configured: false
-  blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/waterpopfiji-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/networked-aframe
-  app_name: networked-aframe
-  app_url: http://haydenlee.io/networked-aframe
-  short_description: A web framework for building multi-user virtual reality experiences.
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/networked-aframe-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/aframevr
-  app_name: aframevr
-  app_url: /aframevr/
-  short_description: ''
-  category: ''
-  last_updated: '2026-03-07'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
-  categories: []
-  image: https://washways.org/assets/images/aframevr-preview.jpg
-  image_size: 1200x630
-- repo_name: washways/OECD-Expenditure-Explorer
-  app_name: OECD-Expenditure-Explorer
-  app_url: /OECD-Expenditure-Explorer/
-  short_description: ''
+    This tool helps manage mwi wash nrt and publish site updates for the
+    project.
   category: ''
   categories: []
-  image: https://washways.org/assets/images/oecd-expenditure-explorer-preview.jpg
+  image: https://washways.org/assets/images/mwi-wash-nrt-preview.jpg
   image_size: 1200x630
-  source_url: https://github.com/washways/OECD-Expenditure-Explorer
-  docs_url: https://github.com/washways/OECD-Expenditure-Explorer/blob/master/README.md
+  source_url: https://github.com/washways/mwi-wash-nrt
+  docs_url: https://github.com/washways/mwi-wash-nrt/blob/main/README.md
   license: ''
   status: active
   maintainer: washways
@@ -321,16 +80,44 @@
   sample: false
   template: false
   placeholder: false
-- repo_name: washways/mwi-wash-nrt
-  app_name: mwi-wash-nrt
-  app_url: /mwi-wash-nrt/
-  short_description: ''
+- repo_name: washways/sanitation-model
+  app_name: sanitation-model
+  app_url: /sanitation-model/
+  short_description: economics of sanitation
   category: ''
   categories: []
-  image: https://washways.org/assets/images/mwi-wash-nrt-preview.jpg
+  image: https://washways.org/assets/images/sanitation-model-preview.jpg
   image_size: 1200x630
-  source_url: https://github.com/washways/mwi-wash-nrt
-  docs_url: https://github.com/washways/mwi-wash-nrt/blob/main/README.md
+  source_url: https://github.com/washways/sanitation-model
+  docs_url: https://github.com/washways/sanitation-model/blob/main/README.md
+  license: Apache-2.0
+  status: active
+  maintainer: washways
+  last_updated: '2026-09-06'
+  analytics_installed: false
+  seo_configured: false
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+- repo_name: washways/OECD-Expenditure-Explorer
+  app_name: OECD-Expenditure-Explorer
+  app_url: /OECD-Expenditure-Explorer/
+  short_description: >-
+    This tool helps manage OECD Expenditure Explorer and publish site updates
+    for the project.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/oecd-expenditure-explorer-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/OECD-Expenditure-Explorer
+  docs_url: https://github.com/washways/OECD-Expenditure-Explorer/blob/master/README.md
   license: ''
   status: active
   maintainer: washways
@@ -375,46 +162,20 @@
   sample: false
   template: false
   placeholder: false
-- repo_name: washways/MalawiPaymentForMonitoring
-  app_name: MalawiPaymentForMonitoring
-  app_url: /MalawiPaymentForMonitoring/
-  short_description: ''
+- repo_name: washways/sanitation-fund-model
+  app_name: sanitation-fund-model
+  app_url: /sanitation-fund-model/
+  short_description: experimental sanitation fund modelling
   category: ''
   categories: []
-  image: https://washways.org/assets/images/malawipaymentformonitoring-preview.jpg
+  image: https://washways.org/assets/images/sanitation-fund-model-preview.jpg
   image_size: 1200x630
-  source_url: https://github.com/washways/MalawiPaymentForMonitoring
-  docs_url: https://github.com/washways/MalawiPaymentForMonitoring/blob/master/README.md
+  source_url: https://github.com/washways/sanitation-fund-model
+  docs_url: https://github.com/washways/sanitation-fund-model/blob/main/README.md
   license: ''
   status: active
   maintainer: washways
-  last_updated: '2026-08-10'
-  analytics_installed: false
-  seo_configured: false
-  blog_count: 0
-  published: false
-  listed_on_tools: false
-  hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-- repo_name: washways/market-radar
-  app_name: market-radar
-  app_url: /market-radar/
-  short_description: ''
-  category: ''
-  categories: []
-  image: https://washways.org/assets/images/market-radar-preview.jpg
-  image_size: 1200x630
-  source_url: https://github.com/washways/market-radar
-  docs_url: https://github.com/washways/market-radar/blob/main/README.md
-  license: ''
-  status: active
-  maintainer: washways
-  last_updated: '2026-08-09'
+  last_updated: '2026-08-25'
   analytics_installed: false
   seo_configured: false
   blog_count: 0
@@ -430,7 +191,9 @@
 - repo_name: washways/WaterSystemFinder
   app_name: WaterSystemFinder
   app_url: /WaterSystemFinder/
-  short_description: ''
+  short_description: >-
+    This tool helps manage WaterSystemFinder and publish site updates for the
+    project.
   category: ''
   categories: []
   image: https://washways.org/assets/images/watersystemfinder-preview.jpg
@@ -481,10 +244,68 @@
   sample: false
   template: false
   placeholder: false
+- repo_name: washways/CO2SavingsCalculator
+  app_name: CO2SavingsCalculator
+  app_url: /CO2SavingsCalculator/
+  short_description: >-
+    This tool helps manage CO2SavingsCalculator and publish site updates for the
+    project.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/co2savingscalculator-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/CO2SavingsCalculator
+  docs_url: https://github.com/washways/CO2SavingsCalculator/blob/main/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  last_updated: '2026-06-04'
+  analytics_installed: false
+  seo_configured: false
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+- repo_name: washways/WaterpointFeasibility
+  app_name: WaterpointFeasibility
+  app_url: /WaterpointFeasibility/
+  short_description: >-
+    This tool helps manage WaterpointFeasibility and publish site updates for
+    the project.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/waterpointfeasibility-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/WaterpointFeasibility
+  docs_url: https://github.com/washways/WaterpointFeasibility/blob/main/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  last_updated: '2026-05-28'
+  analytics_installed: false
+  seo_configured: false
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
 - repo_name: washways/globalMARScreener
   app_name: globalMARScreener
   app_url: /globalMARScreener/
-  short_description: ''
+  short_description: >-
+    This tool helps manage globalMARScreener and publish site updates for the
+    project.
   category: ''
   categories: []
   image: https://washways.org/assets/images/globalmarscreener-preview.jpg
@@ -496,7 +317,7 @@
   maintainer: washways
   last_updated: '2026-04-18'
   analytics_installed: false
-  seo_configured: true
+  seo_configured: false
   blog_count: 0
   published: false
   listed_on_tools: false
@@ -510,7 +331,9 @@
 - repo_name: washways/GlobalSoilSalinityScreener
   app_name: GlobalSoilSalinityScreener
   app_url: /GlobalSoilSalinityScreener/
-  short_description: ''
+  short_description: >-
+    This tool helps manage GlobalSoilSalinityScreener and publish site updates
+    for the project.
   category: ''
   categories: []
   image: https://washways.org/assets/images/globalsoilsalinityscreener-preview.jpg
@@ -522,7 +345,7 @@
   maintainer: washways
   last_updated: '2026-04-10'
   analytics_installed: false
-  seo_configured: true
+  seo_configured: false
   blog_count: 0
   published: false
   listed_on_tools: false
@@ -536,7 +359,9 @@
 - repo_name: washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024
   app_name: MalawiHealthNutWASH-Budget2026-2027andDHS2024
   app_url: /MalawiHealthNutWASH-Budget2026-2027andDHS2024/
-  short_description: ''
+  short_description: >-
+    This tool helps manage MalawiHealthNutWASH Budget2026 2027andDHS2024 and
+    publish site updates for the project.
   category: ''
   categories: []
   image: >-
@@ -549,6 +374,88 @@
   status: active
   maintainer: washways
   last_updated: '2026-03-26'
+  analytics_installed: false
+  seo_configured: false
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+- repo_name: washways/MalawiCDF4Chidren
+  app_name: MalawiCDF4Chidren
+  app_url: /MalawiCDF4Chidren/
+  short_description: Minimal publish package for the Malawi CDF for Children dashboard.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/malawicdf4chidren-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/MalawiCDF4Chidren
+  docs_url: https://github.com/washways/MalawiCDF4Chidren/blob/main/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  last_updated: '2026-03-09'
+  analytics_installed: false
+  seo_configured: false
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+- repo_name: washways/CholeraCoster
+  app_name: CholeraCoster
+  app_url: /CholeraCoster/
+  short_description: >-
+    This tool helps manage CholeraCoster and publish site updates for the
+    project.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/choleracoster-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/CholeraCoster
+  docs_url: https://github.com/washways/CholeraCoster/blob/master/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  last_updated: '2026-03-08'
+  analytics_installed: false
+  seo_configured: false
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+- repo_name: washways/GroundwaterDiscoveryPortal
+  app_name: GroundwaterDiscoveryPortal
+  app_url: /GroundwaterDiscoveryPortal/
+  short_description: >-
+    This tool helps manage GroundwaterDiscoveryPortal and publish site updates
+    for the project.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/groundwaterdiscoveryportal-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/GroundwaterDiscoveryPortal
+  docs_url: https://github.com/washways/GroundwaterDiscoveryPortal/blob/main/README.md
+  license: MIT
+  status: active
+  maintainer: washways
+  last_updated: '2026-03-04'
   analytics_installed: false
   seo_configured: false
   blog_count: 0
