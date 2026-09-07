@@ -97,12 +97,12 @@
 - repo_name: washways/OECD-Expenditure-Explorer
   app_name: OECD-Expenditure-Explorer
   app_url: /OECD-Expenditure-Explorer/
-  short_description: >-
-    This tool helps manage OECD Expenditure Explorer and publish site updates
-    for the project.
-  category: General
+  short_description: Explore and analyze government expenditure data with this tool.
+  category: Data Analysis
   categories:
-    - General
+    - Data Analysis
+    - Finance
+    - Government
   image: https://washways.org/assets/images/oecd-expenditure-explorer-preview.jpg
   image_size: 1200x630
   source_url: https://github.com/washways/OECD-Expenditure-Explorer
@@ -111,7 +111,7 @@
   status: active
   maintainer: washways
   last_updated: '2026-09-06'
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: false
   blog_count: 0
   published: false
@@ -123,10 +123,9 @@
   sample: false
   template: false
   placeholder: false
-  seo_description: >-
-    This tool helps manage OECD Expenditure Explorer and publish site updates
-    for the project.
+  seo_description: Explore and analyze government expenditure data with this tool.
   tracking_id: G-64GCB9QDB5
+  seo_title: Explore Government Expenditure Data
 - repo_name: washways/CO2SavingsCalculator
   app_name: CO2SavingsCalculator
   app_url: /CO2SavingsCalculator/
@@ -243,12 +242,12 @@
   app_name: MalawiHealthNutWASH-Budget2026-2027andDHS2024
   app_url: /MalawiHealthNutWASH-Budget2026-2027andDHS2024/
   short_description: >-
-    Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition
+    Compare Malawi 2026/27 budget allocations with DHS 2024 WASH and nutrition
     indicators.
-  category: Health Data Analysis
+  category: Health Data Visualization
   categories:
-    - Health Data Analysis
-    - Budget Allocation
+    - Health Data Visualization
+    - Budget Analysis
     - Public Health
   image: >-
     https://washways.org/assets/images/malawihealthnutwash-budget2026-2027anddhs2024-preview.jpg
@@ -273,7 +272,7 @@
   template: false
   placeholder: false
   seo_description: >-
-    Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition
+    Compare Malawi 2026/27 budget allocations with DHS 2024 WASH and nutrition
     indicators.
   seo_title: Malawi WASH Budget 2026/27 & DHS 2024 Atlas
   tracking_id: G-64GCB9QDB5
@@ -334,14 +333,13 @@
 - repo_name: washways/GroundwaterDiscoveryPortal
   app_name: GroundwaterDiscoveryPortal
   app_url: /GroundwaterDiscoveryPortal/
-  short_description: This tool analyzes groundwater potential using GIS and remote sensing data.
-  category: Hydrogeology
+  short_description: Compute groundwater potential using a Source–Pathway–Receptor model.
+  category: Hydrology
   categories:
+    - Geoscience
+    - Hydrology
     - Environmental Science
-    - Hydrogeology
-    - Remote Sensing
-  image: >-
-    https://raw.githubusercontent.com/washways/GroundwaterDiscoveryPortal/main/site/social-preview.png
+  image: https://washways.org/assets/images/groundwaterdiscoveryportal-preview.jpg
   image_size: 1200x630
   source_url: https://github.com/washways/GroundwaterDiscoveryPortal
   docs_url: https://github.com/washways/GroundwaterDiscoveryPortal/blob/main/README.md
@@ -361,6 +359,6 @@
   sample: false
   template: false
   placeholder: false
-  seo_description: This tool analyzes groundwater potential using GIS and remote sensing data.
+  seo_description: Compute groundwater potential using a Source–Pathway–Receptor model.
   tracking_id: G-64GCB9QDB5
   seo_title: Groundwater Discovery Portal
