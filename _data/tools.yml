@@ -1,12 +1,12 @@
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: ChildWASHHealthImpacts
   app_url: /ChildWASHHealthImpacts/
-  short_description: This tool analyzes child health impacts from WASH using GBD 2023 data.
+  short_description: This tool analyzes how WASH factors impact child health using GBD 2023 data.
   category: Health Data Analysis
   categories:
     - Health Data Analysis
     - Child Nutrition
-    - WASH
+    - WASH (Water, Sanitation, and Hygiene)
   image: >-
     https://raw.githubusercontent.com/washways/ChildWASHHealthImpacts/main/assets/og-preview.png
   image_size: 1200x630
@@ -28,13 +28,13 @@
   sample: false
   template: false
   placeholder: false
-  seo_description: This tool analyzes child health impacts from WASH using GBD 2023 data.
-  seo_title: Analyze Child Health Impacts from WASH
+  seo_description: This tool analyzes how WASH factors impact child health using GBD 2023 data.
+  seo_title: Analyze Child Health Impacts of WASH
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
-  short_description: SPWS Designer evaluates solar piped water systems for engineers.
+  short_description: Compare solar piped water systems and boreholes for economic feasibility.
   category: Water Supply
   categories:
     - Water Supply
@@ -60,6 +60,6 @@
   sample: false
   template: false
   placeholder: false
-  seo_title: 'SPWS Designer: Solar Water System Evaluation'
-  seo_description: SPWS Designer evaluates solar piped water systems for engineers.
+  seo_title: 'SPWS Designer: Compare Water Supply Technologies'
+  seo_description: Compare solar piped water systems and boreholes for economic feasibility.
   tracking_id: G-64GCB9QDB5
