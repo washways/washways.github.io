@@ -1,3 +1,8 @@
+---
+layout: default
+title: Tools
+description: Selected Washways tools, maintained from the central tools registry.
+---
 <!-- TOOLS_MANAGER_BLOCK_START -->
 <!-- Managed by GitHubPagesManager. Source: _data/tools.yml -->
 {% assign tools_source = site.data.tools %}
@@ -116,7 +121,7 @@
   <p class="tools-subtitle">Selected Washways tools, maintained from the central tools registry and optimized for discoverability.</p>
   <div class="tools-registry-grid">
     {% for tool in sorted_tools %}
-      {% if tool.listed_on_tools == true and tool.published != false and tool.hide != true and tool.demo != true and tool.is_demo != true and tool.isDemo != true and tool.sample != true and tool.template != true and tool.placeholder != true %}
+      {% if tool.listed_on_tools == true and tool.hide != true and tool.demo != true and tool.is_demo != true and tool.isDemo != true and tool.sample != true and tool.template != true and tool.placeholder != true %}
       <article class="tool-card">
         <a href="{{ tool.app_url | default: '/' }}">
           <img class="tool-thumb" src="{{ tool.image | default: '/assets/images/tool-preview.jpg' }}" alt="{{ tool.app_name | default: tool.repo_name | escape }} preview image" loading="lazy" />
