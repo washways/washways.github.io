@@ -335,11 +335,13 @@
   app_name: GroundwaterDiscoveryPortal
   app_url: /GroundwaterDiscoveryPortal/
   short_description: >-
-    This tool helps manage GroundwaterDiscoveryPortal and publish site updates
-    for the project.
-  category: General
+    Explore groundwater potential using the Groundwater Potential Index for
+    data-scarce regions.
+  category: Environmental Science
   categories:
-    - General
+    - Environmental Science
+    - Geospatial Analysis
+    - Hydrology
   image: https://washways.org/assets/images/groundwaterdiscoveryportal-preview.jpg
   image_size: 1200x630
   source_url: https://github.com/washways/GroundwaterDiscoveryPortal
@@ -348,7 +350,7 @@
   status: active
   maintainer: washways
   last_updated: '2026-03-04'
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: true
   blog_count: 0
   published: false
@@ -361,6 +363,7 @@
   template: false
   placeholder: false
   seo_description: >-
-    This tool helps manage GroundwaterDiscoveryPortal and publish site updates
-    for the project.
+    Explore groundwater potential using the Groundwater Potential Index for
+    data-scarce regions.
   tracking_id: G-64GCB9QDB5
+  seo_title: Explore Groundwater Potential with GWPI
