@@ -2,12 +2,12 @@
   app_name: ChildWASHHealthImpacts
   app_url: /ChildWASHHealthImpacts/
   short_description: >-
-    This tool analyzes how WASH factors impact child health and nutrition using
-    GBD data.
-  category: Health Data Analysis
+    This tool analyzes child health impacts using WASH-focused Global Burden of
+    Disease data.
+  category: Health Analytics
   categories:
-    - Health Data Analysis
-    - Child Nutrition
+    - Health Analytics
+    - Child Health
     - WASH
   image: >-
     https://raw.githubusercontent.com/washways/ChildWASHHealthImpacts/main/assets/og-preview.png
@@ -31,14 +31,14 @@
   template: false
   placeholder: false
   seo_description: >-
-    This tool analyzes how WASH factors impact child health and nutrition using
-    GBD data.
-  seo_title: Analyze Child Health Impacts of WASH
+    This tool analyzes child health impacts using WASH-focused Global Burden of
+    Disease data.
+  seo_title: Analyze Child Health Impacts with WASH Data
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
-  short_description: SPWS Designer evaluates solar water systems for engineers in Malawi.
+  short_description: SPWS Designer evaluates solar piped water systems for engineers.
   category: Water Supply
   categories:
     - Water Supply
@@ -64,6 +64,6 @@
   sample: false
   template: false
   placeholder: false
-  seo_title: 'SPWS Designer: Solar Water Feasibility Tool'
-  seo_description: SPWS Designer evaluates solar water systems for engineers in Malawi.
+  seo_title: 'SPWS Designer: Water Supply Feasibility Tool'
+  seo_description: SPWS Designer evaluates solar piped water systems for engineers.
   tracking_id: G-64GCB9QDB5
