@@ -243,12 +243,12 @@
   app_name: MalawiHealthNutWASH-Budget2026-2027andDHS2024
   app_url: /MalawiHealthNutWASH-Budget2026-2027andDHS2024/
   short_description: >-
-    Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition
-    indicators.
+    This tool analyzes Malawi's 2026/27 budget allocations and DHS 2024 WASH
+    indicators by district.
   category: Health Data Analysis
   categories:
     - Health Data Analysis
-    - Budget Allocation
+    - Budget Planning
     - Public Health
   image: >-
     https://washways.org/assets/images/malawihealthnutwash-budget2026-2027anddhs2024-preview.jpg
@@ -273,9 +273,9 @@
   template: false
   placeholder: false
   seo_description: >-
-    Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition
-    indicators.
-  seo_title: Malawi WASH Budget 2026/27 & DHS 2024 Atlas
+    This tool analyzes Malawi's 2026/27 budget allocations and DHS 2024 WASH
+    indicators by district.
+  seo_title: Explore Malawi's 2026/27 WASH Budget and DHS 2024
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/MalawiCDF4Chidren
   app_name: MalawiCDF4Chidren
