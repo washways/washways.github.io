@@ -71,9 +71,14 @@
 - repo_name: washways/sanitation-model
   app_name: sanitation-model
   app_url: /sanitation-model/
-  short_description: economics of sanitation
-  category: ''
-  categories: []
+  short_description: >-
+    Quantify the financial burden of poor sanitation with an interactive
+    economic modeling tool.
+  category: Economic Modeling
+  categories:
+    - Sanitation
+    - Economic Modeling
+    - Public Health
   image: https://washways.org/assets/images/sanitation-model-preview.jpg
   image_size: 1200x630
   source_url: https://github.com/washways/sanitation-model
@@ -86,7 +91,7 @@
   seo_configured: true
   blog_count: 0
   published: false
-  listed_on_tools: false
+  listed_on_tools: true
   hide: false
   demo: false
   is_demo: false
@@ -94,15 +99,22 @@
   sample: false
   template: false
   placeholder: false
+  seo_title: 'Sanitation Impact Modeler: Economic Analysis Tool'
+  seo_description: >-
+    Quantify the financial burden of poor sanitation with an interactive
+    economic modeling tool.
+  tracking_id: G-64GCB9QDB5
 - repo_name: washways/OECD-Expenditure-Explorer
   app_name: OECD-Expenditure-Explorer
   app_url: /OECD-Expenditure-Explorer/
   short_description: >-
-    This tool helps manage OECD Expenditure Explorer and publish site updates
-    for the project.
-  category: General
+    Visualize global aid flows to the world's least developed countries using
+    OECD data.
+  category: Data Visualization
   categories:
-    - General
+    - Data Visualization
+    - International Aid
+    - Economic Analysis
   image: https://washways.org/assets/images/oecd-expenditure-explorer-preview.jpg
   image_size: 1200x630
   source_url: https://github.com/washways/OECD-Expenditure-Explorer
@@ -111,8 +123,8 @@
   status: active
   maintainer: washways
   last_updated: '2026-09-06'
-  analytics_installed: false
-  seo_configured: false
+  analytics_installed: true
+  seo_configured: true
   blog_count: 0
   published: false
   listed_on_tools: true
@@ -124,9 +136,10 @@
   template: false
   placeholder: false
   seo_description: >-
-    This tool helps manage OECD Expenditure Explorer and publish site updates
-    for the project.
+    Visualize global aid flows to the world's least developed countries using
+    OECD data.
   tracking_id: G-64GCB9QDB5
+  seo_title: OECD Expenditure Explorer for Global Aid
 - repo_name: washways/CO2SavingsCalculator
   app_name: CO2SavingsCalculator
   app_url: /CO2SavingsCalculator/
@@ -242,14 +255,12 @@
 - repo_name: washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024
   app_name: MalawiHealthNutWASH-Budget2026-2027andDHS2024
   app_url: /MalawiHealthNutWASH-Budget2026-2027andDHS2024/
-  short_description: >-
-    Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition
-    indicators.
-  category: Health Data Analysis
+  short_description: Explore Malawi's 2026/27 WASH budget allocations with district-level maps.
+  category: Public Health
   categories:
-    - Health Data Analysis
-    - Budget Allocation
+    - Data Visualization
     - Public Health
+    - Budget Analysis
   image: >-
     https://washways.org/assets/images/malawihealthnutwash-budget2026-2027anddhs2024-preview.jpg
   image_size: 1200x630
@@ -272,17 +283,18 @@
   sample: false
   template: false
   placeholder: false
-  seo_description: >-
-    Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition
-    indicators.
-  seo_title: Malawi WASH Budget 2026/27 & DHS 2024 Atlas
+  seo_description: Explore Malawi's 2026/27 WASH budget allocations with district-level maps.
+  seo_title: Malawi WASH Budget Atlas 2026/27
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/MalawiCDF4Chidren
   app_name: MalawiCDF4Chidren
   app_url: /MalawiCDF4Chidren/
-  short_description: Minimal publish package for the Malawi CDF for Children dashboard.
-  category: ''
-  categories: []
+  short_description: Explore child-focused CDF investments across Malawi with GIS insights.
+  category: Data Visualization
+  categories:
+    - Data Visualization
+    - GIS Mapping
+    - Budget Analysis
   image: https://washways.org/assets/images/malawicdf4chidren-preview.jpg
   image_size: 1200x630
   source_url: https://github.com/washways/MalawiCDF4Chidren
@@ -291,11 +303,11 @@
   status: active
   maintainer: washways
   last_updated: '2026-03-09'
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: true
   blog_count: 0
   published: false
-  listed_on_tools: false
+  listed_on_tools: true
   hide: false
   demo: false
   is_demo: false
@@ -303,6 +315,9 @@
   sample: false
   template: false
   placeholder: false
+  seo_title: Malawi CDF Dashboard for Children
+  seo_description: Explore child-focused CDF investments across Malawi with GIS insights.
+  tracking_id: G-64GCB9QDB5
 - repo_name: washways/CholeraCoster
   app_name: CholeraCoster
   app_url: /CholeraCoster/
