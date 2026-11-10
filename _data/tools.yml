@@ -1,21 +1,20 @@
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: ChildWASHHealthImpacts
-  app_url: /ChildWASHHealthImpacts/
-  short_description: This tool analyzes how WASH factors impact child health using GBD 2023 data.
+  app_url: https://apps.washways.org/ChildWASHHealthImpacts/
+  short_description: See at what ages WASH-related diseases cause the most child deaths and DALYs, by country and cause, using GBD 2023 data.
   category: Health Analytics
   categories:
-    - Health Analytics
-    - Child Health
-    - WASH (Water, Sanitation, and Hygiene)
-  image: >-
-    https://raw.githubusercontent.com/washways/ChildWASHHealthImpacts/main/assets/og-preview.jpg?v=1788810258432
+  - Health Analytics
+  - Child Health
+  - WASH (Water, Sanitation, and Hygiene)
+  image: ''
   image_size: 1200x630
   source_url: https://github.com/washways/ChildWASHHealthImpacts
   docs_url: https://github.com/washways/ChildWASHHealthImpacts/blob/main/README.md
   license: ''
   status: active
   maintainer: washways
-  last_updated: '2026-09-07'
+  last_updated: '2026-11-10'
   analytics_installed: true
   seo_configured: true
   blog_count: 0
@@ -28,29 +27,613 @@
   sample: false
   template: false
   placeholder: false
-  seo_description: This tool analyzes how WASH factors impact child health using GBD 2023 data.
+  seo_description: See at what ages WASH-related diseases cause the most child deaths and DALYs, by country and cause, using GBD 2023 data.
   seo_title: Analyze Child Health Impacts of WASH
   tracking_id: G-64GCB9QDB5
+  keywords:
+  - child health
+  - GBD 2023
+  - disease burden
+  - WASH
+  source_public: false
+- repo_name: washways/CholeraCoster
+  app_name: CholeraCoster
+  app_url: /CholeraCoster/
+  short_description: Compare the costs and benefits of cholera prevention - WASH, oral vaccine or both - for any country.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/choleracoster-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/CholeraCoster
+  docs_url: https://github.com/washways/CholeraCoster/blob/master/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  last_updated: '2026-11-10'
+  analytics_installed: true
+  seo_configured: true
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+  seo_description: Compare the costs and benefits of cholera prevention - WASH, oral vaccine or both - for any country.
+  keywords:
+  - cholera
+  - cost-benefit
+  - vaccination
+  - WASH
+  source_public: true
+- repo_name: washways/CO2SavingsCalculator
+  app_name: CO2SavingsCalculator
+  app_url: /CO2SavingsCalculator/
+  short_description: Estimate CO2 emission reductions from WASH and energy projects in Least Developed Countries using Gold Standard methods.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/co2savingscalculator-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/CO2SavingsCalculator
+  docs_url: https://github.com/washways/CO2SavingsCalculator/blob/main/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  last_updated: '2026-11-10'
+  analytics_installed: true
+  seo_configured: true
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+  seo_description: Estimate CO2 emission reductions from WASH and energy projects in Least Developed Countries using Gold Standard methods.
+  keywords:
+  - carbon
+  - CO2
+  - Gold Standard
+  - climate finance
+  source_public: true
+- repo_name: washways/experiments
+  app_name: experiments
+  app_url: /experiments/
+  short_description: ''
+  category: ''
+  categories: []
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/experiments
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: true
+  last_updated: '2026-11-10'
+  source_public: true
+- repo_name: washways/globalMARScreener
+  app_name: globalMARScreener
+  app_url: /globalMARScreener/
+  short_description: Screen where managed aquifer recharge could work, combining terrain, hydrology, lithology and hydrogeology data.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/globalmarscreener-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/globalMARScreener
+  docs_url: https://github.com/washways/globalMARScreener/blob/main/README.md
+  license: MIT
+  status: active
+  maintainer: washways
+  last_updated: '2026-11-10'
+  analytics_installed: false
+  seo_configured: true
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+  seo_description: Screen where managed aquifer recharge could work, combining terrain, hydrology, lithology and hydrogeology data.
+  keywords:
+  - groundwater
+  - aquifer recharge
+  - Earth Engine
+  - screening
+  source_public: true
+- repo_name: washways/GlobalSoilSalinityScreener
+  app_name: GlobalSoilSalinityScreener
+  app_url: /GlobalSoilSalinityScreener/
+  short_description: Map where groundwater salinity is more likely in data-scarce regions, using satellite and environmental data.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/globalsoilsalinityscreener-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/GlobalSoilSalinityScreener
+  docs_url: https://github.com/washways/GlobalSoilSalinityScreener/blob/main/README.md
+  license: MIT
+  status: active
+  maintainer: washways
+  last_updated: '2026-11-10'
+  analytics_installed: false
+  seo_configured: false
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+  seo_description: Map where groundwater salinity is more likely in data-scarce regions, using satellite and environmental data.
+  keywords:
+  - salinity
+  - groundwater
+  - Earth Engine
+  - screening
+  source_public: true
+- repo_name: washways/GroundwaterDiscoveryPortal
+  app_name: GroundwaterDiscoveryPortal
+  app_url: /GroundwaterDiscoveryPortal/
+  short_description: Score groundwater potential from 0 to 10 anywhere using satellite indicators of storage, recharge and yield.
+  category: Hydrogeology
+  categories:
+  - Environmental Science
+  - Hydrogeology
+  - Remote Sensing
+  image: https://raw.githubusercontent.com/washways/GroundwaterDiscoveryPortal/main/site/social-preview.png
+  image_size: 1200x630
+  source_url: https://github.com/washways/GroundwaterDiscoveryPortal
+  docs_url: https://github.com/washways/GroundwaterDiscoveryPortal/blob/main/README.md
+  license: MIT
+  status: active
+  maintainer: washways
+  last_updated: '2026-11-10'
+  analytics_installed: true
+  seo_configured: true
+  blog_count: 0
+  published: false
+  listed_on_tools: true
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+  seo_description: Score groundwater potential from 0 to 10 anywhere using satellite indicators of storage, recharge and yield.
+  tracking_id: G-64GCB9QDB5
+  seo_title: Groundwater Discovery Portal
+  keywords:
+  - groundwater
+  - remote sensing
+  - GIS
+  - Earth Engine
+  source_public: true
+- repo_name: washways/GroundwaterIntelligence
+  app_name: GroundwaterIntelligence
+  app_url: https://apps.washways.org/GroundwaterIntelligence/
+  short_description: Screen groundwater potential, recharge and salinity, view statistics by area and basin, and plan cost-aware monitoring networks.
+  category: groundwater
+  categories:
+  - groundwater
+  - monitoring network
+  - Malawi
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/GroundwaterIntelligence
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: Screen groundwater potential, recharge and salinity, view statistics by area and basin, and plan cost-aware monitoring networks.
+  keywords:
+  - groundwater
+  - monitoring network
+  - Malawi
+  - Zambia
+  - Mozambique
+  last_updated: '2026-11-10'
+  source_public: false
+- repo_name: washways/HAIcostModel
+  app_name: HAIcostModel
+  app_url: https://apps.washways.org/HAIcostModel/
+  short_description: Estimate hospital-acquired infections and deaths linked to weak WASH and infection control, what they cost, and what fixing them saves.
+  category: health facilities
+  categories:
+  - health facilities
+  - infection control
+  - WASH
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/HAIcostModel
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: Estimate hospital-acquired infections and deaths linked to weak WASH and infection control, what they cost, and what fixing them saves.
+  keywords:
+  - health facilities
+  - infection control
+  - WASH
+  - costing
+  last_updated: '2026-11-10'
+  source_public: false
+- repo_name: washways/HydroSense-Waterpoint-Observatory
+  app_name: HydroSense
+  app_url: https://apps.washways.org/HydroSense/
+  short_description: Live monitoring of rural boreholes in Malawi from LoRa sensor loggers, with a dashboard, reports and docs.
+  category: waterpoints
+  categories:
+  - waterpoints
+  - IoT sensors
+  - monitoring
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/HydroSense-Waterpoint-Observatory
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: Live monitoring of rural boreholes in Malawi from LoRa sensor loggers, with a dashboard, reports and docs.
+  keywords:
+  - waterpoints
+  - IoT sensors
+  - monitoring
+  - Malawi
+  last_updated: '2026-11-10'
+  source_public: false
+- repo_name: washways/MalawiCDF4Chidren
+  app_name: MalawiCDF4Chidren
+  app_url: /MalawiCDF4Chidren/
+  short_description: Explore Malawi's Constituency Development Fund for Children with budgets, GIS coverage and child hazard exposure by area.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/malawicdf4chidren-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/MalawiCDF4Chidren
+  docs_url: https://github.com/washways/MalawiCDF4Chidren/blob/main/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  last_updated: '2026-11-10'
+  analytics_installed: true
+  seo_configured: true
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+  seo_description: Explore Malawi's Constituency Development Fund for Children with budgets, GIS coverage and child hazard exposure by area.
+  keywords:
+  - Malawi
+  - CDF
+  - children
+  - GIS
+  source_public: true
+- repo_name: washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024
+  app_name: MalawiHealthNutWASH-Budget2026-2027andDHS2024
+  app_url: /MalawiHealthNutWASH-Budget2026-2027andDHS2024/
+  short_description: Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition indicators.
+  category: Health Data Analysis
+  categories:
+  - Health Data Analysis
+  - Budget Allocation
+  - Public Health
+  image: https://washways.org/assets/images/malawihealthnutwash-budget2026-2027anddhs2024-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024
+  docs_url: https://github.com/washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024/blob/main/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  last_updated: '2026-11-10'
+  analytics_installed: true
+  seo_configured: true
+  blog_count: 0
+  published: false
+  listed_on_tools: true
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+  seo_description: Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition indicators.
+  seo_title: Malawi WASH Budget 2026/27 & DHS 2024 Atlas
+  tracking_id: G-64GCB9QDB5
+  keywords:
+  - Malawi
+  - budget
+  - DHS 2024
+  - nutrition
+  source_public: true
+- repo_name: washways/OECD-Expenditure-Explorer
+  app_name: OECD-Expenditure-Explorer
+  app_url: https://apps.washways.org/OECD-Expenditure-Explorer/
+  short_description: Explore aid to the 46 Least Developed Countries by donor, sector and climate tag, and compare WASH aid with rural service gaps.
+  category: General
+  categories:
+  - General
+  image: https://washways.org/assets/images/oecd-expenditure-explorer-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/OECD-Expenditure-Explorer
+  docs_url: https://github.com/washways/OECD-Expenditure-Explorer/blob/master/README.md
+  license: ''
+  status: active
+  maintainer: washways
+  last_updated: '2026-11-10'
+  analytics_installed: true
+  seo_configured: true
+  blog_count: 0
+  published: false
+  listed_on_tools: true
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+  seo_description: Explore aid to the 46 Least Developed Countries by donor, sector and climate tag, and compare WASH aid with rural service gaps.
+  tracking_id: G-64GCB9QDB5
+  keywords:
+  - development aid
+  - OECD
+  - LDCs
+  - WASH finance
+  source_public: false
+- repo_name: washways/pierrevert
+  app_name: pierrevert
+  app_url: /pierrevert/
+  short_description: Explore vineyard terroir layers for AOC Pierrevert - vigour, moisture, soil, slope and aspect.
+  category: terroir
+  categories:
+  - terroir
+  - vineyard
+  - remote sensing
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/pierrevert
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: Explore vineyard terroir layers for AOC Pierrevert - vigour, moisture, soil, slope and aspect.
+  keywords:
+  - terroir
+  - vineyard
+  - remote sensing
+  - experiment
+  last_updated: '2026-11-10'
+  source_public: true
+- repo_name: washways/PopulationEstimator
+  app_name: PopulationEstimator
+  app_url: https://apps.washways.org/PopulationEstimator/
+  short_description: Count people and buildings in any area of Malawi for 2020-2030 from three independent sources - draw, upload or search an area.
+  category: Malawi
+  categories:
+  - Malawi
+  - population
+  - buildings
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/PopulationEstimator
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: Count people and buildings in any area of Malawi for 2020-2030 from three independent sources - draw, upload or search an area.
+  keywords:
+  - Malawi
+  - population
+  - buildings
+  - planning
+  last_updated: '2026-11-10'
+  source_public: false
+- repo_name: washways/rural-sanitation-value-gap
+  app_name: rural-sanitation-value-gap
+  app_url: /rural-sanitation-value-gap/
+  short_description: Compare sanitation finance with the cost of closing rural sanitation gaps in Least Developed Countries, and the child lives at stake.
+  category: sanitation
+  categories:
+  - sanitation
+  - finance gap
+  - child survival
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/rural-sanitation-value-gap
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: Compare sanitation finance with the cost of closing rural sanitation gaps in Least Developed Countries, and the child lives at stake.
+  keywords:
+  - sanitation
+  - finance gap
+  - child survival
+  - LDCs
+  last_updated: '2026-11-10'
+  source_public: true
+- repo_name: washways/sanitation-equity-performance
+  app_name: sanitation-equity-performance
+  app_url: /sanitation-equity-performance/
+  short_description: Explore how affordability and inequality shape sanitation cost, coverage and environmental performance across 1,000 households.
+  category: sanitation
+  categories:
+  - sanitation
+  - affordability
+  - equity
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/sanitation-equity-performance
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: Explore how affordability and inequality shape sanitation cost, coverage and environmental performance across 1,000 households.
+  keywords:
+  - sanitation
+  - affordability
+  - equity
+  - simulation
+  last_updated: '2026-11-10'
+  source_public: true
+- repo_name: washways/sanitation-fund-model
+  app_name: sanitation-fund-model
+  app_url: /sanitation-fund-model/
+  short_description: 'Simulate a blended-finance revolving fund for sanitation: solvency, debt repayment, toilets built and cost per result.'
+  category: sanitation
+  categories:
+  - sanitation
+  - blended finance
+  - revolving fund
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/sanitation-fund-model
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: 'Simulate a blended-finance revolving fund for sanitation: solvency, debt repayment, toilets built and cost per result.'
+  keywords:
+  - sanitation
+  - blended finance
+  - revolving fund
+  - simulation
+  last_updated: '2026-11-10'
+  source_public: true
+- repo_name: washways/sanitation-model
+  app_name: sanitation-model
+  app_url: /sanitation-model/
+  short_description: Put a money value on the cost of poor sanitation - health, productivity, mortality and time losses - for advocacy and planning.
+  category: ''
+  categories: []
+  image: https://washways.org/assets/images/sanitation-model-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/sanitation-model
+  docs_url: https://github.com/washways/sanitation-model/blob/main/README.md
+  license: Apache-2.0
+  status: active
+  maintainer: washways
+  last_updated: '2026-11-10'
+  analytics_installed: true
+  seo_configured: true
+  blog_count: 0
+  published: false
+  listed_on_tools: false
+  hide: false
+  demo: false
+  is_demo: false
+  isDemo: false
+  sample: false
+  template: false
+  placeholder: false
+  seo_description: Put a money value on the cost of poor sanitation - health, productivity, mortality and time losses - for advocacy and planning.
+  keywords:
+  - sanitation
+  - economics
+  - cost of inaction
+  - advocacy
+  source_public: true
+- repo_name: washways/SiteMonitorServer
+  app_name: SiteMonitor
+  app_url: https://apps.washways.org/SiteMonitor/
+  short_description: Monitor solar and hand-pump waterpoints across Malawi with historical data and analytics (sign-in required).
+  category: waterpoints
+  categories:
+  - waterpoints
+  - solar pumps
+  - monitoring
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/SiteMonitorServer
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: Monitor solar and hand-pump waterpoints across Malawi with historical data and analytics (sign-in required).
+  keywords:
+  - waterpoints
+  - solar pumps
+  - monitoring
+  - Malawi
+  last_updated: '2026-11-10'
+  source_public: false
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
-  short_description: >-
-    SPWS Designer evaluates solar water systems' economic feasibility for
-    engineers.
+  short_description: SPWS Designer evaluates solar water systems' economic feasibility for engineers.
   category: Water Supply
   categories:
-    - Water Supply
-    - Engineering Tools
-    - Economic Analysis
-  image: >-
-    https://raw.githubusercontent.com/washways/SPWS1/main/assets/og-preview.jpg?v=1788810305197
+  - Water Supply
+  - Engineering Tools
+  - Economic Analysis
+  image: https://raw.githubusercontent.com/washways/SPWS1/main/assets/og-preview.jpg?v=1788810305197
   image_size: 1200x630
   source_url: https://github.com/washways/SPWS1
   docs_url: https://github.com/washways/SPWS1/blob/main/README.md
   license: ''
   status: active
   maintainer: washways
-  last_updated: '2026-09-07'
+  last_updated: '2026-11-10'
   analytics_installed: true
   seo_configured: true
   blog_count: 0
@@ -64,103 +647,46 @@
   template: false
   placeholder: false
   seo_title: 'SPWS Designer: Solar Water Feasibility Tool'
-  seo_description: >-
-    SPWS Designer evaluates solar water systems' economic feasibility for
-    engineers.
+  seo_description: SPWS Designer evaluates solar water systems' economic feasibility for engineers.
   tracking_id: G-64GCB9QDB5
-- repo_name: washways/sanitation-model
-  app_name: sanitation-model
-  app_url: /sanitation-model/
-  short_description: economics of sanitation
-  category: ''
-  categories: []
-  image: https://washways.org/assets/images/sanitation-model-preview.jpg
-  image_size: 1200x630
-  source_url: https://github.com/washways/sanitation-model
-  docs_url: https://github.com/washways/sanitation-model/blob/main/README.md
-  license: Apache-2.0
-  status: active
-  maintainer: washways
-  last_updated: '2026-09-06'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  published: false
-  listed_on_tools: false
-  hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-- repo_name: washways/OECD-Expenditure-Explorer
-  app_name: OECD-Expenditure-Explorer
-  app_url: /OECD-Expenditure-Explorer/
-  short_description: >-
-    This tool helps manage OECD Expenditure Explorer and publish site updates
-    for the project.
-  category: General
+  keywords:
+  - solar water
+  - water supply
+  - engineering
+  - feasibility
+  source_public: true
+- repo_name: washways/washlink
+  app_name: washlink
+  app_url: https://apps.washways.org/washlink/
+  short_description: 'Demonstrator, synthetic data only: one mobile-first view of Malawi WASH information from mWater, Kobo and other systems.'
+  category: Malawi
   categories:
-    - General
-  image: https://washways.org/assets/images/oecd-expenditure-explorer-preview.jpg
+  - Malawi
+  - interoperability
+  - WASH data
+  image: ''
   image_size: 1200x630
-  source_url: https://github.com/washways/OECD-Expenditure-Explorer
-  docs_url: https://github.com/washways/OECD-Expenditure-Explorer/blob/master/README.md
+  source_url: https://github.com/washways/washlink
+  docs_url: ''
   license: ''
   status: active
   maintainer: washways
-  last_updated: '2026-09-06'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  published: false
-  listed_on_tools: true
-  hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-  seo_description: >-
-    This tool helps manage OECD Expenditure Explorer and publish site updates
-    for the project.
-  tracking_id: G-64GCB9QDB5
-- repo_name: washways/CO2SavingsCalculator
-  app_name: CO2SavingsCalculator
-  app_url: /CO2SavingsCalculator/
-  short_description: >-
-    This tool helps manage CO2SavingsCalculator and publish site updates for the
-    project.
-  category: ''
-  categories: []
-  image: https://washways.org/assets/images/co2savingscalculator-preview.jpg
-  image_size: 1200x630
-  source_url: https://github.com/washways/CO2SavingsCalculator
-  docs_url: https://github.com/washways/CO2SavingsCalculator/blob/main/README.md
-  license: ''
-  status: active
-  maintainer: washways
-  last_updated: '2026-06-04'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  published: false
+  analytics_installed: false
+  seo_configured: false
   listed_on_tools: false
   hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
+  seo_description: 'Demonstrator, synthetic data only: one mobile-first view of Malawi WASH information from mWater, Kobo and other systems.'
+  keywords:
+  - Malawi
+  - interoperability
+  - WASH data
+  - demonstrator
+  last_updated: '2026-11-10'
+  source_public: false
 - repo_name: washways/WaterpointFeasibility
   app_name: WaterpointFeasibility
   app_url: /WaterpointFeasibility/
-  short_description: >-
-    This tool helps manage WaterpointFeasibility and publish site updates for
-    the project.
+  short_description: Screen rural water supply options - piped solar or gravity schemes and boreholes - from uploaded candidate source points.
   category: ''
   categories: []
   image: https://washways.org/assets/images/waterpointfeasibility-preview.jpg
@@ -170,197 +696,79 @@
   license: ''
   status: active
   maintainer: washways
-  last_updated: '2026-05-28'
+  last_updated: '2026-11-10'
   analytics_installed: false
   seo_configured: false
   blog_count: 0
   published: false
   listed_on_tools: false
-  hide: false
+  hide: true
   demo: false
   is_demo: false
   isDemo: false
   sample: false
   template: false
   placeholder: false
-- repo_name: washways/globalMARScreener
-  app_name: globalMARScreener
-  app_url: /globalMARScreener/
-  short_description: >-
-    This tool helps manage globalMARScreener and publish site updates for the
-    project.
-  category: ''
-  categories: []
-  image: https://washways.org/assets/images/globalmarscreener-preview.jpg
+  seo_description: Screen rural water supply options - piped solar or gravity schemes and boreholes - from uploaded candidate source points.
+  keywords:
+  - rural water
+  - feasibility
+  - boreholes
+  - planning
+  source_public: false
+- repo_name: washways/WaterPopFiji
+  app_name: WaterPopFiji
+  app_url: /WaterPopFiji/
+  short_description: Map how many people in Fiji live near the sea, in an Earth Engine app.
+  category: Fiji
+  categories:
+  - Fiji
+  - population
+  - coastal
+  image: ''
   image_size: 1200x630
-  source_url: https://github.com/washways/globalMARScreener
-  docs_url: https://github.com/washways/globalMARScreener/blob/main/README.md
-  license: MIT
+  source_url: https://github.com/washways/WaterPopFiji
+  docs_url: ''
+  license: ''
   status: active
   maintainer: washways
-  last_updated: '2026-04-18'
-  analytics_installed: false
-  seo_configured: true
-  blog_count: 0
-  published: false
-  listed_on_tools: false
-  hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-- repo_name: washways/GlobalSoilSalinityScreener
-  app_name: GlobalSoilSalinityScreener
-  app_url: /GlobalSoilSalinityScreener/
-  short_description: >-
-    This tool helps manage GlobalSoilSalinityScreener and publish site updates
-    for the project.
-  category: ''
-  categories: []
-  image: https://washways.org/assets/images/globalsoilsalinityscreener-preview.jpg
-  image_size: 1200x630
-  source_url: https://github.com/washways/GlobalSoilSalinityScreener
-  docs_url: https://github.com/washways/GlobalSoilSalinityScreener/blob/main/README.md
-  license: MIT
-  status: active
-  maintainer: washways
-  last_updated: '2026-04-10'
   analytics_installed: false
   seo_configured: false
-  blog_count: 0
-  published: false
   listed_on_tools: false
   hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-- repo_name: washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024
-  app_name: MalawiHealthNutWASH-Budget2026-2027andDHS2024
-  app_url: /MalawiHealthNutWASH-Budget2026-2027andDHS2024/
-  short_description: >-
-    Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition
-    indicators.
-  category: Health Data Analysis
+  seo_description: Map how many people in Fiji live near the sea, in an Earth Engine app.
+  keywords:
+  - Fiji
+  - population
+  - coastal
+  - Earth Engine
+  last_updated: '2026-11-10'
+  source_public: true
+- repo_name: washways/WaterSystemFinder
+  app_name: WaterSystemFinder
+  app_url: https://apps.washways.org/WaterSystemFinder/
+  short_description: Draw an area in rural Malawi to design a costed water scheme or screen for communities that may be underserved.
+  category: rural water
   categories:
-    - Health Data Analysis
-    - Budget Allocation
-    - Public Health
-  image: >-
-    https://washways.org/assets/images/malawihealthnutwash-budget2026-2027anddhs2024-preview.jpg
+  - rural water
+  - Malawi
+  - scheme design
+  image: ''
   image_size: 1200x630
-  source_url: https://github.com/washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024
-  docs_url: >-
-    https://github.com/washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024/blob/main/README.md
+  source_url: https://github.com/washways/WaterSystemFinder
+  docs_url: ''
   license: ''
   status: active
   maintainer: washways
-  last_updated: '2026-03-26'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  published: false
-  listed_on_tools: true
-  hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-  seo_description: >-
-    Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition
-    indicators.
-  seo_title: Malawi WASH Budget 2026/27 & DHS 2024 Atlas
-  tracking_id: G-64GCB9QDB5
-- repo_name: washways/MalawiCDF4Chidren
-  app_name: MalawiCDF4Chidren
-  app_url: /MalawiCDF4Chidren/
-  short_description: Minimal publish package for the Malawi CDF for Children dashboard.
-  category: ''
-  categories: []
-  image: https://washways.org/assets/images/malawicdf4chidren-preview.jpg
-  image_size: 1200x630
-  source_url: https://github.com/washways/MalawiCDF4Chidren
-  docs_url: https://github.com/washways/MalawiCDF4Chidren/blob/main/README.md
-  license: ''
-  status: active
-  maintainer: washways
-  last_updated: '2026-03-09'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  published: false
+  analytics_installed: false
+  seo_configured: false
   listed_on_tools: false
   hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-- repo_name: washways/CholeraCoster
-  app_name: CholeraCoster
-  app_url: /CholeraCoster/
-  short_description: >-
-    This tool helps manage CholeraCoster and publish site updates for the
-    project.
-  category: ''
-  categories: []
-  image: https://washways.org/assets/images/choleracoster-preview.jpg
-  image_size: 1200x630
-  source_url: https://github.com/washways/CholeraCoster
-  docs_url: https://github.com/washways/CholeraCoster/blob/master/README.md
-  license: ''
-  status: active
-  maintainer: washways
-  last_updated: '2026-03-08'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  published: false
-  listed_on_tools: false
-  hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-- repo_name: washways/GroundwaterDiscoveryPortal
-  app_name: GroundwaterDiscoveryPortal
-  app_url: /GroundwaterDiscoveryPortal/
-  short_description: This tool analyzes groundwater potential using GIS and remote sensing data.
-  category: Hydrogeology
-  categories:
-    - Environmental Science
-    - Hydrogeology
-    - Remote Sensing
-  image: >-
-    https://raw.githubusercontent.com/washways/GroundwaterDiscoveryPortal/main/site/social-preview.png
-  image_size: 1200x630
-  source_url: https://github.com/washways/GroundwaterDiscoveryPortal
-  docs_url: https://github.com/washways/GroundwaterDiscoveryPortal/blob/main/README.md
-  license: MIT
-  status: active
-  maintainer: washways
-  last_updated: '2026-03-04'
-  analytics_installed: true
-  seo_configured: true
-  blog_count: 0
-  published: false
-  listed_on_tools: true
-  hide: false
-  demo: false
-  is_demo: false
-  isDemo: false
-  sample: false
-  template: false
-  placeholder: false
-  seo_description: This tool analyzes groundwater potential using GIS and remote sensing data.
-  tracking_id: G-64GCB9QDB5
-  seo_title: Groundwater Discovery Portal
+  seo_description: Draw an area in rural Malawi to design a costed water scheme or screen for communities that may be underserved.
+  keywords:
+  - rural water
+  - Malawi
+  - scheme design
+  - coverage gaps
+  last_updated: '2026-11-10'
+  source_public: false
