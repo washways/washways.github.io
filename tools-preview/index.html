@@ -49,23 +49,25 @@ permalink: /tools-preview/
     .count { color: var(--muted); font-size: 0.88rem; }
     .active-filter { display: none; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--text-2); }
     .active-filter button { border: 0; background: var(--chip-bg); color: var(--chip-ink); border-radius: 999px; padding: 4px 10px; cursor: pointer; font: inherit; font-size: 0.8rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; padding-bottom: 48px; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow); transition: transform .15s ease, box-shadow .15s ease; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; padding-bottom: 48px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow); transition: transform .15s ease, box-shadow .15s ease; }
     .card:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(18, 21, 28, 0.12); }
     .thumb { display: block; aspect-ratio: 1200 / 630; background: linear-gradient(135deg, #1b2030, #2b3350); position: relative; overflow: hidden; }
     .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .thumb .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 16px; text-align: center; color: #fff; font-weight: 700; font-size: 1.15rem; background: linear-gradient(135deg, #E8505B 0%, #7f5fa8 55%, #9AC4F8 100%); }
-    .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-    .host { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
-    .card h2 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
+    .thumb .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 12px; text-align: center; color: #fff; font-weight: 700; font-size: 0.95rem; overflow-wrap: anywhere; background: linear-gradient(135deg, #E8505B 0%, #7f5fa8 55%, #9AC4F8 100%); }
+    .body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .host { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+    .card h2 { margin: 0; font-size: 0.95rem; line-height: 1.3; overflow-wrap: anywhere; }
     .card h2 a { text-decoration: none; }
     .card h2 a:hover { color: var(--accent); }
-    .desc { margin: 0; color: var(--text-2); font-size: 0.92rem; }
+    .desc { margin: 0; color: var(--text-2); font-size: 0.84rem; line-height: 1.45; }
     .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
-    .chip { border: 0; background: var(--chip-bg); color: var(--chip-ink); border-radius: 999px; padding: 3px 10px; font: inherit; font-size: 0.75rem; cursor: pointer; }
+    .chip { border: 0; background: var(--chip-bg); color: var(--chip-ink); border-radius: 999px; padding: 2px 8px; font: inherit; font-size: 0.7rem; cursor: pointer; }
     .chip:hover { background: var(--accent-2); color: #12151c; }
     .actions { margin-top: auto; padding-top: 8px; display: flex; gap: 14px; align-items: center; }
-    .open { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; font-size: 0.88rem; padding: 7px 14px; border-radius: 8px; }
+    .open { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; font-size: 0.8rem; padding: 6px 12px; border-radius: 8px; }
+    .sort { padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; font-size: 0.9rem; }
+    .featured { position: absolute; top: 8px; left: 8px; background: rgba(15,17,21,0.7); color: #fbbf24; font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
     .open:hover { filter: brightness(0.93); }
     .src { font-size: 0.85rem; color: var(--text-2); }
     .empty { color: var(--text-2); padding: 40px 0; text-align: center; grid-column: 1 / -1; }
@@ -107,6 +109,11 @@ permalink: /tools-preview/
       </section>
       <div class="toolbar">
         <input class="search" id="search" type="search" placeholder="Search tools or keywords" aria-label="Search tools">
+        <select class="sort" id="sort" aria-label="Sort tools">
+          <option value="popular">Most popular</option>
+          <option value="updated">Recently updated</option>
+          <option value="name">A to Z</option>
+        </select>
         <span class="active-filter" id="active-filter">Keyword: <button id="clear-filter" type="button"></button></span>
         <span class="count" id="count"></span>
       </div>
@@ -195,9 +202,19 @@ permalink: /tools-preview/
         image: String(t.image || ""),
         keywords: keywordsOf(t),
         host: hostOf(String(t.app_url)),
-        source: isPublicSource(t) ? String(t.source_url) : ""
+        source: isPublicSource(t) ? String(t.source_url) : "",
+        featured: t.featured === true,
+        visits: Number(t.visits) || 0,
+        updated: Date.parse(t.repo_updated || t.last_updated || "") || 0
       };
-    }).sort(function (a, b) { return a.name.localeCompare(b.name); });
+    });
+    var sortBy = "popular";
+    var SORTERS = {
+      // Featured first, then most viewed (from the manager's Analytics import).
+      popular: function (a, b) { return (b.featured - a.featured) || (b.visits - a.visits) || a.name.localeCompare(b.name); },
+      updated: function (a, b) { return (b.updated - a.updated) || a.name.localeCompare(b.name); },
+      name: function (a, b) { return a.name.localeCompare(b.name); }
+    };
 
     var query = "";
     var keyword = "";
@@ -215,6 +232,7 @@ permalink: /tools-preview/
 
     function thumb(t) {
       var link = el("a", { "class": "thumb", href: t.url, "aria-label": "Open " + t.name, tabindex: "-1" });
+      if (t.featured) link.appendChild(el("span", { "class": "featured", text: "★ Featured" }));
       var placeholder = el("div", { "class": "ph", text: t.name });
       if (t.image) {
         var img = el("img", { src: t.image, alt: "", loading: "lazy" });
@@ -247,7 +265,7 @@ permalink: /tools-preview/
 
     function render() {
       var q = query.toLowerCase();
-      var rows = visible.filter(function (t) {
+      var rows = visible.slice().sort(SORTERS[sortBy] || SORTERS.name).filter(function (t) {
         if (keyword && !t.keywords.some(function (k) { return k.toLowerCase() === keyword.toLowerCase(); })) return false;
         if (!q) return true;
         return (t.name + " " + t.desc + " " + t.keywords.join(" ")).toLowerCase().indexOf(q) !== -1;
@@ -263,6 +281,7 @@ permalink: /tools-preview/
     }
 
     document.getElementById("search").addEventListener("input", function (ev) { query = ev.target.value; render(); });
+    document.getElementById("sort").addEventListener("change", function (ev) { sortBy = ev.target.value; render(); });
     document.getElementById("clear-filter").addEventListener("click", function () { keyword = ""; render(); });
 
     if (unlocked()) show();
