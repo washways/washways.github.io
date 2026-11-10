@@ -36,6 +36,7 @@
   - disease burden
   - WASH
   source_public: false
+  repo_updated: '2026-10-13'
 - repo_name: washways/CholeraCoster
   app_name: CholeraCoster
   app_url: /CholeraCoster/
@@ -69,6 +70,7 @@
   - vaccination
   - WASH
   source_public: true
+  repo_updated: '2026-03-08'
 - repo_name: washways/CO2SavingsCalculator
   app_name: CO2SavingsCalculator
   app_url: /CO2SavingsCalculator/
@@ -102,6 +104,7 @@
   - Gold Standard
   - climate finance
   source_public: true
+  repo_updated: '2026-06-04'
 - repo_name: washways/experiments
   app_name: experiments
   app_url: /experiments/
@@ -121,6 +124,7 @@
   hide: true
   last_updated: '2026-11-10'
   source_public: true
+  repo_updated: '2025-10-12'
 - repo_name: washways/globalMARScreener
   app_name: globalMARScreener
   app_url: /globalMARScreener/
@@ -154,6 +158,7 @@
   - Earth Engine
   - screening
   source_public: true
+  repo_updated: '2026-04-18'
 - repo_name: washways/GlobalSoilSalinityScreener
   app_name: GlobalSoilSalinityScreener
   app_url: /GlobalSoilSalinityScreener/
@@ -187,6 +192,7 @@
   - Earth Engine
   - screening
   source_public: true
+  repo_updated: '2026-04-10'
 - repo_name: washways/GroundwaterDiscoveryPortal
   app_name: GroundwaterDiscoveryPortal
   app_url: /GroundwaterDiscoveryPortal/
@@ -225,6 +231,7 @@
   - GIS
   - Earth Engine
   source_public: true
+  repo_updated: '2026-09-07'
 - repo_name: washways/GroundwaterIntelligence
   app_name: GroundwaterIntelligence
   app_url: https://apps.washways.org/GroundwaterIntelligence/
@@ -254,6 +261,7 @@
   - Mozambique
   last_updated: '2026-11-10'
   source_public: false
+  repo_updated: '2026-11-10'
 - repo_name: washways/HAIcostModel
   app_name: HAIcostModel
   app_url: https://apps.washways.org/HAIcostModel/
@@ -282,6 +290,7 @@
   - costing
   last_updated: '2026-11-10'
   source_public: false
+  repo_updated: '2026-11-01'
 - repo_name: washways/HydroSense-Waterpoint-Observatory
   app_name: HydroSense
   app_url: https://apps.washways.org/HydroSense/
@@ -310,6 +319,7 @@
   - Malawi
   last_updated: '2026-11-10'
   source_public: false
+  repo_updated: '2026-06-13'
 - repo_name: washways/MalawiCDF4Chidren
   app_name: MalawiCDF4Chidren
   app_url: /MalawiCDF4Chidren/
@@ -343,6 +353,7 @@
   - children
   - GIS
   source_public: true
+  repo_updated: '2026-09-09'
 - repo_name: washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024
   app_name: MalawiHealthNutWASH-Budget2026-2027andDHS2024
   app_url: /MalawiHealthNutWASH-Budget2026-2027andDHS2024/
@@ -381,6 +392,7 @@
   - DHS 2024
   - nutrition
   source_public: true
+  repo_updated: '2026-09-09'
 - repo_name: washways/OECD-Expenditure-Explorer
   app_name: OECD-Expenditure-Explorer
   app_url: https://apps.washways.org/OECD-Expenditure-Explorer/
@@ -416,6 +428,7 @@
   - LDCs
   - WASH finance
   source_public: false
+  repo_updated: '2026-09-24'
 - repo_name: washways/pierrevert
   app_name: pierrevert
   app_url: /pierrevert/
@@ -444,6 +457,7 @@
   - experiment
   last_updated: '2026-11-10'
   source_public: true
+  repo_updated: '2026-04-02'
 - repo_name: washways/PopulationEstimator
   app_name: PopulationEstimator
   app_url: https://apps.washways.org/PopulationEstimator/
@@ -472,6 +486,7 @@
   - planning
   last_updated: '2026-11-10'
   source_public: false
+  repo_updated: '2026-10-30'
 - repo_name: washways/rural-sanitation-value-gap
   app_name: rural-sanitation-value-gap
   app_url: /rural-sanitation-value-gap/
@@ -500,6 +515,7 @@
   - LDCs
   last_updated: '2026-11-10'
   source_public: true
+  repo_updated: '2026-10-30'
 - repo_name: washways/sanitation-equity-performance
   app_name: sanitation-equity-performance
   app_url: /sanitation-equity-performance/
@@ -528,6 +544,7 @@
   - simulation
   last_updated: '2026-11-10'
   source_public: true
+  repo_updated: '2026-11-09'
 - repo_name: washways/sanitation-fund-model
   app_name: sanitation-fund-model
   app_url: /sanitation-fund-model/
@@ -556,6 +573,7 @@
   - simulation
   last_updated: '2026-11-10'
   source_public: true
+  repo_updated: '2026-10-24'
 - repo_name: washways/sanitation-model
   app_name: sanitation-model
   app_url: /sanitation-model/
@@ -589,6 +607,7 @@
   - cost of inaction
   - advocacy
   source_public: true
+  repo_updated: '2026-09-09'
 - repo_name: washways/SiteMonitorServer
   app_name: SiteMonitor
   app_url: https://apps.washways.org/SiteMonitor/
@@ -617,6 +636,7 @@
   - Malawi
   last_updated: '2026-11-10'
   source_public: false
+  repo_updated: '2026-11-10'
 - repo_name: washways/SPWS1
   app_name: SPWS1
   app_url: /SPWS1/
@@ -655,6 +675,7 @@
   - engineering
   - feasibility
   source_public: true
+  repo_updated: '2026-09-07'
 - repo_name: washways/washlink
   app_name: washlink
   app_url: https://apps.washways.org/washlink/
@@ -683,6 +704,7 @@
   - demonstrator
   last_updated: '2026-11-10'
   source_public: false
+  repo_updated: '2026-10-13'
 - repo_name: washways/WaterpointFeasibility
   app_name: WaterpointFeasibility
   app_url: /WaterpointFeasibility/
@@ -716,6 +738,7 @@
   - boreholes
   - planning
   source_public: false
+  repo_updated: '2026-09-29'
 - repo_name: washways/WaterPopFiji
   app_name: WaterPopFiji
   app_url: /WaterPopFiji/
@@ -744,6 +767,7 @@
   - Earth Engine
   last_updated: '2026-11-10'
   source_public: true
+  repo_updated: '2024-05-17'
 - repo_name: washways/WaterSystemFinder
   app_name: WaterSystemFinder
   app_url: https://apps.washways.org/WaterSystemFinder/
@@ -772,3 +796,4 @@
   - coverage gaps
   last_updated: '2026-11-10'
   source_public: false
+  repo_updated: '2026-09-29'
