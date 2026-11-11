@@ -573,7 +573,7 @@
   license: ''
   status: active
   maintainer: washways
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: false
   listed_on_tools: false
   hide: false
@@ -585,9 +585,10 @@
     - finance gap
     - child survival
     - LDCs
-  last_updated: '2026-11-10'
+  last_updated: '2026-11-11'
   source_public: true
   repo_updated: '2026-10-30'
+  tracking_id: G-64GCB9QDB5
 - repo_name: washways/sanitation-equity-performance
   app_name: sanitation-equity-performance
   app_url: /sanitation-equity-performance/
