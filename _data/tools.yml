@@ -310,7 +310,7 @@
   license: ''
   status: active
   maintainer: washways
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: false
   listed_on_tools: false
   hide: false
@@ -322,9 +322,10 @@
     - infection control
     - WASH
     - costing
-  last_updated: '2026-11-10'
+  last_updated: '2026-11-11'
   source_public: false
   repo_updated: '2026-11-01'
+  tracking_id: G-64GCB9QDB5
 - repo_name: washways/HydroSense-Waterpoint-Observatory
   app_name: HydroSense
   app_url: https://apps.washways.org/HydroSense/
