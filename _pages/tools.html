@@ -1,0 +1,310 @@
+---
+layout: null
+sitemap: false
+permalink: /tools.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Preview page: kept out of search engines until it replaces the homepage. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>WASHways Tools</title>
+  <meta name="description" content="Free tools and data experiments for Water, Sanitation and Hygiene (WASH).">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f7fb; --surface: #ffffff; --text: #12151c; --text-2: #4a5468; --muted: #8590a6;
+      --border: #e3e7ef; --accent: #E8505B; --accent-ink: #ffffff; --accent-2: #9AC4F8;
+      --chip-bg: #eef2f8; --chip-ink: #3c4a63; --shadow: 0 2px 10px rgba(18, 21, 28, 0.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0f14; --surface: #161922; --text: #e8eaf0; --text-2: #a3acbe; --muted: #6b7489;
+        --border: #262b3b; --chip-bg: #1f2433; --chip-ink: #b8c3d9; --shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.5; }
+    a { color: inherit; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    header.site { border-bottom: 1px solid var(--border); background: var(--surface); }
+    header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; padding-bottom: 14px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+    .brand img { width: 28px; height: 28px; }
+    .brand span b { color: var(--accent); }
+    nav.site a { text-decoration: none; color: var(--text-2); font-size: 0.92rem; margin-left: 18px; }
+    nav.site a:hover { color: var(--accent); }
+    .hero { padding: 40px 0 8px; }
+    .hero h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 3.4vw, 2.3rem); line-height: 1.2; letter-spacing: -0.01em; }
+    .hero p { margin: 0; color: var(--text-2); max-width: 680px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 22px 0 14px; }
+    .search { flex: 1 1 260px; min-width: 0; padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; }
+    .search:focus { outline: 2px solid var(--accent-2); outline-offset: 1px; }
+    .count { color: var(--muted); font-size: 0.88rem; }
+    .active-filter { display: none; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--text-2); }
+    .active-filter button { border: 0; background: var(--chip-bg); color: var(--chip-ink); border-radius: 999px; padding: 4px 10px; cursor: pointer; font: inherit; font-size: 0.8rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; padding-bottom: 48px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow); transition: transform .15s ease, box-shadow .15s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(18, 21, 28, 0.12); }
+    .thumb { display: block; aspect-ratio: 1200 / 630; background: linear-gradient(135deg, #1b2030, #2b3350); position: relative; overflow: hidden; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .thumb .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 12px; text-align: center; color: #fff; font-weight: 700; font-size: 0.95rem; overflow-wrap: anywhere; background: linear-gradient(135deg, #E8505B 0%, #7f5fa8 55%, #9AC4F8 100%); }
+    .body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .host { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+    .card h2 { margin: 0; font-size: 0.95rem; line-height: 1.3; overflow-wrap: anywhere; }
+    .card h2 a { text-decoration: none; }
+    .card h2 a:hover { color: var(--accent); }
+    .desc { margin: 0; color: var(--text-2); font-size: 0.84rem; line-height: 1.45; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+    .chip { border: 0; background: var(--chip-bg); color: var(--chip-ink); border-radius: 999px; padding: 2px 8px; font: inherit; font-size: 0.7rem; cursor: pointer; }
+    .chip:hover { background: var(--accent-2); color: #12151c; }
+    .actions { margin-top: auto; padding-top: 8px; display: flex; gap: 14px; align-items: center; }
+    .open { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; font-size: 0.8rem; padding: 6px 12px; border-radius: 8px; }
+    .sort { padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; font-size: 0.9rem; }
+    .retired { position: absolute; inset: 0; background: rgba(13,20,36,.78); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 10px; }
+    .retired b { color: #fbbf24; font-size: 0.72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .retired span { font-size: 0.85rem; }
+    .card.is-retired .desc { opacity: .7; }
+    .featured { position: absolute; top: 8px; left: 8px; background: rgba(15,17,21,0.7); color: #fbbf24; font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
+    .open:hover { filter: brightness(0.93); }
+    .src { font-size: 0.85rem; color: var(--text-2); }
+    .empty { color: var(--text-2); padding: 40px 0; text-align: center; grid-column: 1 / -1; }
+    footer.site { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; padding: 18px 0 28px; }
+    /* Password gate */
+    .gate { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; }
+    .gate form { width: 100%; max-width: 360px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 26px; box-shadow: var(--shadow); }
+    .gate h1 { margin: 0 0 6px; font-size: 1.25rem; }
+    .gate p { margin: 0 0 16px; color: var(--text-2); font-size: 0.9rem; }
+    .gate input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font: inherit; background: var(--bg); color: var(--text); margin-bottom: 12px; }
+    .gate button { width: 100%; padding: 10px; border: 0; border-radius: 8px; background: var(--accent); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+    .gate .err { color: var(--accent); font-size: 0.85rem; min-height: 1.2em; margin: 8px 0 0; }
+    [hidden] { display: none !important; }
+    @media (max-width: 600px) { nav.site { display: none; } .hero { padding-top: 26px; } }
+  </style>
+</head>
+<body>
+  <div class="gate" id="gate">
+    <form id="gate-form" autocomplete="off">
+      <h1>Preview</h1>
+      <p>This page is not public yet. Enter the preview password.</p>
+      <input id="gate-pw" type="password" placeholder="Password" aria-label="Password" autofocus>
+      <button type="submit">View tools</button>
+      <p class="err" id="gate-err" role="alert"></p>
+    </form>
+  </div>
+
+  <div id="page" hidden>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="/"><img src="/assets/images/favicon.png" alt=""><span>WASH<b>ways</b></span></a>
+        <nav class="site"><a href="/tools">All tools</a><a href="/contact">Contact</a><a href="https://github.com/washways">GitHub</a></nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <section class="hero">
+        <h1>Tools for Water, Sanitation &amp; Hygiene</h1>
+        <p>Free calculators, dashboards and data experiments for WASH planning, costing and monitoring.</p>
+      </section>
+      <div class="toolbar">
+        <input class="search" id="search" type="search" placeholder="Search tools or keywords" aria-label="Search tools">
+        <select class="sort" id="sort" aria-label="Sort tools">
+          <option value="popular">Most popular</option>
+          <option value="updated">Recently updated</option>
+          <option value="name">A to Z</option>
+        </select>
+        <span class="active-filter" id="active-filter">Keyword: <button id="clear-filter" type="button"></button></span>
+        <span class="count" id="count"></span>
+      </div>
+      <section class="grid" id="grid" aria-live="polite"></section>
+    </main>
+    <footer class="site"><div class="wrap">&copy; WASHways &middot; <a href="https://github.com/washways">github.com/washways</a></div></footer>
+  </div>
+
+  <!-- Rendered by Jekyll from _data/tools.yml; edit tools in Washways Manager. -->
+  <script id="tools-data" type="application/json">{{ site.data.tools | jsonify | replace: "</", "<\/" }}</script>
+  <script>
+  (function () {
+    // A soft gate for previewing only: the hash below keeps the password itself out
+    // of the page source, but this is not access control - the tool list is already
+    // public in the site repository.
+    var PASSWORD_HASH = "42b0119c8cbfabf9efb78ec80a53422dd57cbf763a93abc7523417d2bcb54a26";
+    var SALT = "washways-preview:";
+    var SESSION_KEY = "ww_preview_ok";
+
+    function sha256Hex(text) {
+      var bytes = new TextEncoder().encode(text);
+      return crypto.subtle.digest("SHA-256", bytes).then(function (buf) {
+        return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+          return ("0" + b.toString(16)).slice(-2);
+        }).join("");
+      });
+    }
+
+    function unlocked() {
+      try { return sessionStorage.getItem(SESSION_KEY) === PASSWORD_HASH; } catch (e) { return false; }
+    }
+
+    function show() {
+      document.getElementById("gate").hidden = true;
+      document.getElementById("page").hidden = false;
+      render();
+    }
+
+    document.getElementById("gate-form").addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var pw = document.getElementById("gate-pw").value;
+      sha256Hex(SALT + pw).then(function (hash) {
+        if (hash === PASSWORD_HASH) {
+          try { sessionStorage.setItem(SESSION_KEY, PASSWORD_HASH); } catch (e) {}
+          show();
+        } else {
+          document.getElementById("gate-err").textContent = "That password is not right.";
+        }
+      });
+    });
+
+    var tools = [];
+    try { tools = JSON.parse(document.getElementById("tools-data").textContent) || []; } catch (e) { tools = []; }
+    if (!Array.isArray(tools)) tools = (tools && tools.apps) || [];
+
+    function list(value) {
+      if (Array.isArray(value)) return value.map(String).map(function (s) { return s.trim(); }).filter(Boolean);
+      if (typeof value === "string") return value.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+      return [];
+    }
+    function keywordsOf(t) {
+      var k = list(t.keywords);
+      if (!k.length) k = list(t.categories);
+      if (!k.length && t.category) k = [String(t.category)];
+      var seen = {};
+      return k.filter(function (w) { var key = w.toLowerCase(); if (seen[key] || key === "general") return false; seen[key] = 1; return true; }).slice(0, 6);
+    }
+    function hostOf(url) {
+      if (/^https?:\/\//i.test(url)) { try { return new URL(url).host; } catch (e) { return ""; } }
+      return "washways.org";
+    }
+    // Only link source code the manager has confirmed is in a public repo.
+    function isPublicSource(t) {
+      return !!t.source_url && t.source_public === true;
+    }
+    var FILLER = /^This tool helps manage .+ and publish .+ updates for the project\.?$/i;
+
+    var visible = tools.filter(function (t) {
+      // `hide` is the switch for this page; `listed_on_tools` belongs to the old /tools page.
+      return t && t.hide !== true && t.app_url;
+    }).map(function (t) {
+      return {
+        name: String(t.app_name || t.repo_name || "Untitled"),
+        url: String(t.app_url),
+        desc: FILLER.test(String(t.short_description || "")) ? "" : String(t.short_description || ""),
+        image: String(t.image || ""),
+        keywords: keywordsOf(t),
+        host: hostOf(String(t.app_url)),
+        source: isPublicSource(t) ? String(t.source_url) : "",
+        featured: t.featured === true,
+        retired: t.retired === true,
+        replacementUrl: String(t.replacement_url || ""),
+        replacementName: String(t.replacement_name || ""),
+        visits: Number(t.visits) || 0,
+        updated: Date.parse(t.repo_updated || t.last_updated || "") || 0
+      };
+    });
+    var sortBy = "popular";
+    var SORTERS = {
+      // Featured first, then most viewed (from the manager's Analytics import).
+      popular: function (a, b) { return (b.featured - a.featured) || (b.visits - a.visits) || a.name.localeCompare(b.name); },
+      updated: function (a, b) { return (b.updated - a.updated) || a.name.localeCompare(b.name); },
+      name: function (a, b) { return a.name.localeCompare(b.name); }
+    };
+
+    var query = "";
+    var keyword = "";
+
+    function el(tag, attrs, children) {
+      var node = document.createElement(tag);
+      Object.keys(attrs || {}).forEach(function (k) {
+        if (k === "text") node.textContent = attrs[k];
+        else if (k === "on") Object.keys(attrs.on).forEach(function (e) { node.addEventListener(e, attrs.on[e]); });
+        else node.setAttribute(k, attrs[k]);
+      });
+      (children || []).forEach(function (c) { if (c) node.appendChild(c); });
+      return node;
+    }
+
+    function thumb(t) {
+      var link = el("a", { "class": "thumb", href: t.url, "aria-label": "Open " + t.name, tabindex: "-1" });
+      if (t.featured && !t.retired) link.appendChild(el("span", { "class": "featured", text: "★ Featured" }));
+      var placeholder = el("div", { "class": "ph", text: t.name });
+      if (t.image) {
+        var img = el("img", { src: t.image, alt: "", loading: "lazy" });
+        img.addEventListener("error", function () { img.remove(); link.appendChild(placeholder); });
+        link.appendChild(img);
+      } else {
+        link.appendChild(placeholder);
+      }
+      return link;
+    }
+
+    function card(t) {
+      var chips = el("div", { "class": "chips" }, t.keywords.map(function (k) {
+        return el("button", { "class": "chip", type: "button", text: k, on: { click: function () { keyword = k; render(); } } });
+      }));
+      var top = thumb(t);
+      if (t.retired) {
+        top.appendChild(el("div", { "class": "retired" }, [
+          el("b", { text: "Retired" }),
+          el("span", { text: t.replacementUrl ? "Replaced by " + (t.replacementName || "a newer tool") : "No longer maintained" })
+        ]));
+      }
+      return el("article", { "class": "card" + (t.retired ? " is-retired" : "") }, [
+        top,
+        el("div", { "class": "body" }, [
+          el("div", { "class": "host", text: t.host }),
+          el("h2", {}, [el("a", { href: t.url, text: t.name })]),
+          t.desc ? el("p", { "class": "desc", text: t.desc }) : null,
+          t.keywords.length ? chips : null,
+          el("div", { "class": "actions" }, [
+            t.retired && t.replacementUrl
+              ? el("a", { "class": "open", href: t.replacementUrl, text: "Go to " + (t.replacementName || "replacement") })
+              : el("a", { "class": "open", href: t.url, text: t.retired ? "Open old version" : "Open tool" }),
+            t.retired && t.replacementUrl ? el("a", { "class": "src", href: t.url, text: "Old version" }) : null,
+            t.source ? el("a", { "class": "src", href: t.source, text: "Source" }) : null
+          ])
+        ])
+      ]);
+    }
+
+    function render() {
+      var q = query.toLowerCase();
+      var rows = visible.slice().sort(function (a, b) {
+        return (a.retired - b.retired) || (SORTERS[sortBy] || SORTERS.name)(a, b);
+      }).filter(function (t) {
+        if (keyword && !t.keywords.some(function (k) { return k.toLowerCase() === keyword.toLowerCase(); })) return false;
+        if (!q) return true;
+        return (t.name + " " + t.desc + " " + t.keywords.join(" ")).toLowerCase().indexOf(q) !== -1;
+      });
+      var grid = document.getElementById("grid");
+      grid.textContent = "";
+      if (!rows.length) grid.appendChild(el("p", { "class": "empty", text: "No tools match." }));
+      rows.forEach(function (t) { grid.appendChild(card(t)); });
+      document.getElementById("count").textContent = rows.length + " of " + visible.length + " tools";
+      var af = document.getElementById("active-filter");
+      af.style.display = keyword ? "inline-flex" : "none";
+      document.getElementById("clear-filter").textContent = keyword ? keyword + " ×" : "";
+    }
+
+    document.getElementById("search").addEventListener("input", function (ev) { query = ev.target.value; render(); });
+    document.getElementById("sort").addEventListener("change", function (ev) { sortBy = ev.target.value; render(); });
+    document.getElementById("clear-filter").addEventListener("click", function () { keyword = ""; render(); });
+
+    if (unlocked()) show();
+  })();
+  </script>
+</body>
+</html>
