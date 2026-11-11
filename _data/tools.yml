@@ -855,14 +855,14 @@
   analytics_installed: false
   seo_configured: false
   listed_on_tools: false
-  hide: false
+  hide: true
   seo_description: Map how many people in Fiji live near the sea, in an Earth Engine app.
   keywords:
     - Fiji
     - population
     - coastal
     - Earth Engine
-  last_updated: '2026-11-10'
+  last_updated: '2026-11-11'
   source_public: true
   repo_updated: '2024-05-17'
 - repo_name: washways/WaterSystemFinder
