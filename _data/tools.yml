@@ -824,7 +824,7 @@
   license: ''
   status: active
   maintainer: washways
-  last_updated: '2026-11-10'
+  last_updated: '2026-11-11'
   analytics_installed: false
   seo_configured: false
   blog_count: 0
@@ -847,6 +847,10 @@
     - planning
   source_public: false
   repo_updated: '2026-09-29'
+  retired: true
+  replacement_name: WaterPointPlanner
+  replacement_url: https://apps.washways.org/waterpointplanner/
+  retired_note: ''
 - repo_name: washways/WaterPopFiji
   app_name: WaterPopFiji
   app_url: /WaterPopFiji/
