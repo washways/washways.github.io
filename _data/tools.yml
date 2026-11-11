@@ -747,7 +747,7 @@
   license: ''
   status: active
   maintainer: washways
-  last_updated: '2026-11-10'
+  last_updated: '2026-11-11'
   analytics_installed: true
   seo_configured: true
   blog_count: 0
@@ -772,6 +772,10 @@
     - feasibility
   source_public: true
   repo_updated: '2026-09-07'
+  retired: true
+  replacement_name: WaterPointPlanner
+  replacement_url: https://apps.washways.org/waterpointplanner/
+  retired_note: ''
 - repo_name: washways/washlink
   app_name: washlink
   app_url: https://apps.washways.org/washlink/
