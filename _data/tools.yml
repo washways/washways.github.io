@@ -546,9 +546,13 @@
     - population
     - buildings
     - planning
-  last_updated: '2026-11-10'
+  last_updated: '2026-11-11'
   source_public: false
   repo_updated: '2026-10-30'
+  retired: true
+  replacement_name: WaterPointPlanner
+  replacement_url: https://apps.washways.org/waterpointplanner/
+  retired_note: Population estimates are now part of WaterPointPlanner.
 - repo_name: washways/rural-sanitation-value-gap
   app_name: rural-sanitation-value-gap
   app_url: /rural-sanitation-value-gap/
@@ -895,6 +899,149 @@
     - Malawi
     - scheme design
     - coverage gaps
-  last_updated: '2026-11-10'
+  last_updated: '2026-11-11'
   source_public: false
   repo_updated: '2026-09-29'
+  retired: true
+  replacement_name: WaterPointPlanner
+  replacement_url: https://apps.washways.org/waterpointplanner/
+  retired_note: Scheme design and coverage-gap screening are now part of WaterPointPlanner.
+- repo_name: washways/WaterPointPlanner
+  app_name: WaterPointPlanner
+  app_url: https://apps.washways.org/waterpointplanner/
+  short_description: >-
+    Plan rural water supply in Malawi: design a costed water scheme, screen
+    candidate sites, or find communities with coverage gaps, all in one app.
+  category: rural water
+  categories:
+    - rural water
+    - Malawi
+    - scheme design
+  image: https://washways.org/assets/images/tools/watersystemfinder-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/WaterPointPlanner
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: false
+  seo_description: >-
+    Plan rural water supply in Malawi: design a costed water scheme, screen
+    candidate sites, or find communities with coverage gaps, all in one app.
+  keywords:
+    - rural water
+    - Malawi
+    - scheme design
+    - site screening
+    - coverage gaps
+    - boreholes
+  last_updated: '2026-11-11'
+  source_public: false
+  repo_updated: '2026-11-11'
+  featured: true
+- repo_name: washways/WASHCost2
+  app_name: WASHCostMalawi
+  app_url: https://apps.washways.org/WASHCostMalawi/
+  short_description: >-
+    District-level capital and life-cycle cost estimates to reach and sustain
+    Malawi's water, sanitation and hygiene SDG6 targets, for all 33 districts.
+  category: costing
+  categories:
+    - costing
+    - Malawi
+    - WASH
+  image: https://apps.washways.org/WASHCostMalawi/og-image.png
+  image_size: 1200x630
+  source_url: https://github.com/washways/WASHCost2
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: true
+  listed_on_tools: false
+  hide: false
+  seo_description: >-
+    District-level capital and life-cycle cost estimates to reach and sustain
+    Malawi's water, sanitation and hygiene SDG6 targets, for all 33 districts.
+  keywords:
+    - costing
+    - life-cycle costs
+    - Malawi
+    - SDG6
+    - district planning
+    - WASH
+  last_updated: '2026-11-11'
+  source_public: false
+  repo_updated: '2026-11-11'
+- repo_name: washways/mwi-wash-nrt
+  app_name: MalawiClimateMonitoring
+  app_url: https://apps.washways.org/MalawiClimateMonitoring/
+  short_description: >-
+    Daily rainfall, flood, heat, wind and drought screening for every
+    Traditional Authority in Malawi, with maps, trends and PDF situation reports.
+  category: climate
+  categories:
+    - climate
+    - disaster risk
+    - Malawi
+  image: https://apps.washways.org/MalawiClimateMonitoring/static/og-image.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/mwi-wash-nrt
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: true
+  listed_on_tools: false
+  hide: false
+  seo_description: >-
+    Daily rainfall, flood, heat, wind and drought screening for every
+    Traditional Authority in Malawi, with maps, trends and PDF situation reports.
+  keywords:
+    - climate
+    - floods
+    - drought
+    - disaster preparedness
+    - satellite data
+    - Malawi
+  last_updated: '2026-11-11'
+  source_public: false
+  repo_updated: '2026-10-23'
+- repo_name: washways/MalawiDistrictMonitoring
+  app_name: DistrictWaterAssessment
+  app_url: https://apps.washways.org/assessment/
+  short_description: >-
+    Shared waterpoint monitoring rounds for Malawi districts: field surveys,
+    functionality and water quality, district and TA reports. Sign-in required.
+  category: monitoring
+  categories:
+    - monitoring
+    - waterpoints
+    - Malawi
+  image: ''
+  image_size: ''
+  source_url: https://github.com/washways/MalawiDistrictMonitoring
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: false
+  seo_configured: false
+  listed_on_tools: false
+  hide: true
+  seo_description: >-
+    Shared waterpoint monitoring rounds for Malawi districts: field surveys,
+    functionality and water quality, district and TA reports. Sign-in required.
+  keywords:
+    - waterpoint monitoring
+    - functionality
+    - water quality
+    - Malawi
+  last_updated: '2026-11-11'
+  source_public: false
+  repo_updated: '2026-10-20'
