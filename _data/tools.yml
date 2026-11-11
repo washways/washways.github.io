@@ -639,7 +639,7 @@
   license: ''
   status: active
   maintainer: washways
-  analytics_installed: false
+  analytics_installed: true
   seo_configured: false
   listed_on_tools: false
   hide: false
@@ -651,9 +651,10 @@
     - blended finance
     - revolving fund
     - simulation
-  last_updated: '2026-11-10'
+  last_updated: '2026-11-11'
   source_public: true
   repo_updated: '2026-10-24'
+  tracking_id: G-64GCB9QDB5
 - repo_name: washways/sanitation-model
   app_name: sanitation-model
   app_url: /sanitation-model/
@@ -982,7 +983,8 @@
   app_url: https://apps.washways.org/MalawiClimateMonitoring/
   short_description: >-
     Daily rainfall, flood, heat, wind and drought screening for every
-    Traditional Authority in Malawi, with maps, trends and PDF situation reports.
+    Traditional Authority in Malawi, with maps, trends and PDF situation
+    reports.
   category: climate
   categories:
     - climate
@@ -1001,7 +1003,8 @@
   hide: false
   seo_description: >-
     Daily rainfall, flood, heat, wind and drought screening for every
-    Traditional Authority in Malawi, with maps, trends and PDF situation reports.
+    Traditional Authority in Malawi, with maps, trends and PDF situation
+    reports.
   keywords:
     - climate
     - floods
