@@ -56,6 +56,19 @@ footer.site button:hover { color: var(--accent); }
 .active-filter { display: none; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--text-2); }
 .active-filter button { border: 0; background: var(--chip-bg); color: var(--chip-ink); border-radius: 999px; padding: 4px 10px; cursor: pointer; font: inherit; font-size: 0.8rem; }
 
+/* topic buttons */
+.topics { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 0 18px; }
+.topic { border: 1px solid var(--border); background: var(--surface); color: var(--text-2); border-radius: 999px; padding: 6px 13px; font: inherit; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: background .12s, color .12s, border-color .12s; }
+.topic .n { color: var(--muted); font-size: 0.75rem; margin-left: 2px; }
+.topic:hover { border-color: var(--accent); color: var(--accent); }
+.topic.is-on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.topic.is-on .n { color: rgba(255,255,255,.8); }
+.topic:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+@media (max-width: 600px) {
+  .topics { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 16px 14px; scrollbar-width: none; }
+  .topic { flex: none; }
+}
+
 /* cards */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; padding-bottom: 32px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow); transition: transform .15s ease, box-shadow .15s ease; }

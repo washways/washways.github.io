@@ -31,8 +31,14 @@ description: "Free online calculators, maps and dashboards for planning, costing
       <option value="updated">Recently updated</option>
       <option value="name">A to Z</option>
     </select>
-    <span class="active-filter" id="active-filter">Topic: <button id="clear-filter" type="button"></button></span>
+    <span class="active-filter" id="active-filter">Keyword: <button id="clear-filter" type="button"></button></span>
     <span class="count" id="count" aria-live="polite">{{ active.size }} tools</span>
+  </div>
+  <div class="topics" id="topics" role="group" aria-label="Filter by topic">
+    <button class="topic is-on" type="button" data-topic="">All</button>
+    {%- for tp in site.data.topics %}
+    <button class="topic" type="button" data-topic="{{ tp.name | escape }}" data-terms="{{ tp.terms | join: '|' | downcase | escape }}">{{ tp.name | escape }} <span class="n"></span></button>
+    {%- endfor %}
   </div>
 
   <section class="grid" id="grid">
@@ -133,14 +139,27 @@ description: "Free online calculators, maps and dashboards for planning, costing
   var filterBox = document.getElementById("active-filter");
   var filterBtn = document.getElementById("clear-filter");
   var search = document.getElementById("search");
-  var query = "", topic = "", searchTimer = null;
+  var query = "", topic = "", group = null, searchTimer = null;
 
   function track(name, params) { if (window.gtag) window.gtag("event", name, params); }
+
+  // Topic buttons (from _data/topics.yml): a card matches when a word in its text starts with a term.
+  function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  var groups = Array.prototype.slice.call(document.querySelectorAll("#topics .topic")).map(function (btn) {
+    var terms = (btn.getAttribute("data-terms") || "").split("|").filter(Boolean);
+    var re = terms.length ? new RegExp("(^|[^a-z0-9])(" + terms.map(escapeRe).join("|") + ")") : null;
+    var members = cards.filter(function (c) { return !re || re.test(c.getAttribute("data-text")); });
+    var n = btn.querySelector(".n");
+    if (n) n.textContent = members.length;
+    if (re && !members.length) btn.hidden = true;
+    return { btn: btn, name: btn.getAttribute("data-topic"), members: members, all: !re };
+  });
 
   function apply() {
     var shown = 0;
     cards.forEach(function (c) {
-      var ok = (!topic || c.getAttribute("data-kw").indexOf("|" + topic + "|") !== -1) &&
+      var ok = (!group || group.all || group.members.indexOf(c) !== -1) &&
+               (!topic || c.getAttribute("data-kw").indexOf("|" + topic + "|") !== -1) &&
                (!query || c.getAttribute("data-text").indexOf(query) !== -1);
       c.hidden = !ok;
       if (ok) shown++;
@@ -149,7 +168,20 @@ description: "Free online calculators, maps and dashboards for planning, costing
     count.textContent = shown === cards.length ? cards.length + " tools" : shown + " of " + cards.length + " tools";
     filterBox.style.display = topic ? "inline-flex" : "none";
     filterBtn.textContent = topic ? topic + " ×" : "";
+    groups.forEach(function (g) {
+      var on = group ? g === group : g.all;
+      g.btn.classList.toggle("is-on", on);
+      g.btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
   }
+  document.getElementById("topics").addEventListener("click", function (ev) {
+    var btn = ev.target.closest(".topic");
+    if (!btn) return;
+    var g = groups.filter(function (x) { return x.btn === btn; })[0];
+    group = (!g || g.all || g === group) ? null : g;
+    apply();
+    if (group) track("filter_topic", { topic: group.name });
+  });
 
   var SORTS = {
     featured: function (a, b) { return (b.dataset.featured - a.dataset.featured) || a.dataset.name.localeCompare(b.dataset.name); },
@@ -171,10 +203,10 @@ description: "Free online calculators, maps and dashboards for planning, costing
     if (!chip) return;
     topic = chip.getAttribute("data-kw");
     apply();
-    track("filter_topic", { topic: topic });
+    track("filter_keyword", { keyword: topic });
     window.scrollTo({ top: grid.getBoundingClientRect().top + window.scrollY - 140, behavior: "smooth" });
   });
-  function reset() { topic = ""; query = ""; search.value = ""; apply(); }
+  function reset() { topic = ""; query = ""; group = null; search.value = ""; apply(); }
   filterBtn.addEventListener("click", reset);
   document.getElementById("reset").addEventListener("click", reset);
 })();

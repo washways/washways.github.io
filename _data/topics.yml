@@ -1,0 +1,23 @@
+# Topic buttons above the tool cards on the homepage.
+# A tool belongs to a topic when its name, description or keywords contain a word that
+# starts with one of the terms (case-insensitive). Topics that match no tools are hidden.
+- name: Water supply
+  terms: [water supply, rural water, waterpoint, water point, borehole, piped, water scheme, solar water, hand pump]
+- name: Sanitation
+  terms: [sanitation, latrine, toilet]
+- name: Health
+  terms: [health, cholera, disease, infection, child, nutrition, hygiene]
+- name: Groundwater
+  terms: [groundwater, aquifer, salinity, recharge, hydrogeolog]
+- name: Climate
+  terms: [climate, flood, drought, rainfall, carbon, co2, emission]
+- name: Costs & finance
+  terms: [cost, finance, budget, aid, fund, economic, investment]
+- name: Monitoring
+  terms: [monitoring, sensor, survey, functionality, iot]
+- name: Maps & satellite
+  terms: [map, satellite, earth engine, remote sensing, gis]
+- name: Malawi
+  terms: [malawi]
+- name: Global
+  terms: [global, any country, countries, least developed, ldc]
