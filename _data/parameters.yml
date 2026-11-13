@@ -30,9 +30,9 @@ logo: "/assets/images/logo.svg"
 author: "WASHWays"
 description: "Free online tools for water, sanitation and hygiene (WASH) planning, costing and monitoring."
 # Google Analytics is loaded on every page by assets/js/washways-analytics.js (GA4 G-64GCB9QDB5 with a consent banner).
-# contact form action: set to your Formspree endpoint, e.g. "https://formspree.io/f/abcdwxyz".
-# While it is "#", the contact page shows the form greyed out with a "being set up" note.
-contact_form_action: "#"
+# Contact form: Formspree endpoint (messages go to the address on the Formspree account).
+# If set to "#", the contact page shows the form greyed out with a "being set up" note.
+contact_form_action: "https://formspree.io/f/xzerzokq"
 # copyright
 copyright: "Copyright &copy; 2024 [washways](https://washways.org) based on theme by [themfisher](https://themfisher.com)"
 
