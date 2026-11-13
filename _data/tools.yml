@@ -155,7 +155,8 @@
   status: active
   maintainer: washways
   last_updated: '2026-11-10'
-  analytics_installed: false
+  analytics_installed: true
+  tracking_id: G-64GCB9QDB5
   seo_configured: true
   blog_count: 0
   published: false
@@ -193,7 +194,8 @@
   status: active
   maintainer: washways
   last_updated: '2026-11-10'
-  analytics_installed: false
+  analytics_installed: true
+  tracking_id: G-64GCB9QDB5
   seo_configured: false
   blog_count: 0
   published: false
@@ -612,7 +614,8 @@
   license: ''
   status: active
   maintainer: washways
-  analytics_installed: false
+  analytics_installed: true
+  tracking_id: G-64GCB9QDB5
   seo_configured: false
   listed_on_tools: false
   hide: false
@@ -799,7 +802,8 @@
   license: ''
   status: active
   maintainer: washways
-  analytics_installed: false
+  analytics_installed: true
+  analytics_via: server
   seo_configured: false
   listed_on_tools: false
   hide: false
@@ -940,7 +944,8 @@
   license: ''
   status: active
   maintainer: washways
-  analytics_installed: false
+  analytics_installed: true
+  analytics_via: server
   seo_configured: false
   listed_on_tools: false
   hide: false
@@ -1050,7 +1055,8 @@
   license: ''
   status: active
   maintainer: washways
-  analytics_installed: false
+  analytics_installed: true
+  analytics_via: server
   seo_configured: false
   listed_on_tools: false
   hide: true
