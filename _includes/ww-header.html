@@ -1,0 +1,10 @@
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/favicon.png' | relative_url }}" alt="" width="28" height="28"><span>WASH<b>ways</b></span></a>
+    <nav class="site" aria-label="Main">
+      <a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Tools</a>
+      <a href="{{ '/contact.html' | relative_url }}"{% if page.url contains "contact" %} aria-current="page"{% endif %}>Contact</a>
+    </nav>
+  </div>
+</header>

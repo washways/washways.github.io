@@ -1,0 +1,32 @@
+{%- comment -%}
+  Shared <head> tags for every page: title, description, canonical, social preview,
+  structured data hook and the WASHways analytics script (GA4 + consent banner).
+  Page front matter can set: title, seo_title (full title), description, og_image, noindex.
+{%- endcomment -%}
+{%- if page.seo_title -%}{%- assign ww_title = page.seo_title -%}
+{%- elsif page.title -%}{%- assign ww_title = page.title | append: " | WASHways" -%}
+{%- else -%}{%- assign ww_title = site.title -%}{%- endif -%}
+{%- assign ww_desc = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 -%}
+{%- assign ww_image = page.og_image | default: site.og_image | absolute_url -%}
+{%- assign ww_url = page.url | replace: "index.html", "" | absolute_url -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ ww_title | escape }}</title>
+<meta name="description" content="{{ ww_desc | escape }}">
+{% if page.noindex %}<meta name="robots" content="noindex">{% else %}<link rel="canonical" href="{{ ww_url }}">{% endif %}
+<meta property="og:site_name" content="WASHways">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ ww_title | escape }}">
+<meta property="og:description" content="{{ ww_desc | escape }}">
+<meta property="og:url" content="{{ ww_url }}">
+<meta property="og:image" content="{{ ww_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ ww_title | escape }}">
+<meta name="twitter:description" content="{{ ww_desc | escape }}">
+<meta name="twitter:image" content="{{ ww_image }}">
+<link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+<meta name="theme-color" content="#E8505B">
+<script src="{{ '/assets/js/washways-analytics.js' | relative_url }}" async></script>

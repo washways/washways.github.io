@@ -1,9 +1,12 @@
 baseurl: "" # the subpath of your site, e.g. blog/
-url: "https://washways.github.io" # the base hostname & protocol for your site, e.g. http://example.com/
+url: "https://washways.org" # used for canonical links, social previews and the sitemap
 
 title: WASHways
-description: >- # this meanss to ignore newlines untill "baseurl:"
-  WASH, data, code, experiments 
+description: >-
+  Free online calculators, maps and dashboards for planning, costing and
+  monitoring water, sanitation and hygiene (WASH) services.
+# Default social preview image (1200x630) for pages without their own.
+og_image: /assets/images/og-washways.png
 
 #################### Comment Section (Disqus) ################
 disqus_shortname: "" # Add your shortname for Disqus Comment. For example : mr-brown
@@ -22,7 +25,7 @@ plugins:
   - jekyll/tagging
 
 paginate: 6
-paginate_path: "/page/:num"
+paginate_path: "/blog/page:num/"
 
 # include
 include:

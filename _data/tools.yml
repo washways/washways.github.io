@@ -1,5 +1,5 @@
 - repo_name: washways/ChildWASHHealthImpacts
-  app_name: ChildWASHHealthImpacts
+  app_name: Child WASH Health Impacts
   app_url: https://apps.washways.org/ChildWASHHealthImpacts/
   short_description: >-
     See at what ages WASH-related diseases cause the most child deaths and
@@ -43,7 +43,7 @@
   source_public: false
   repo_updated: '2026-11-11'
 - repo_name: washways/CholeraCoster
-  app_name: CholeraCoster
+  app_name: Cholera Coster
   app_url: /CholeraCoster/
   short_description: >-
     Compare the costs and benefits of cholera prevention - WASH, oral vaccine or
@@ -82,7 +82,7 @@
   source_public: true
   repo_updated: '2026-03-08'
 - repo_name: washways/CO2SavingsCalculator
-  app_name: CO2SavingsCalculator
+  app_name: CO2 Savings Calculator
   app_url: /CO2SavingsCalculator/
   short_description: >-
     Estimate CO2 emission reductions from WASH and energy projects in Least
@@ -140,7 +140,7 @@
   source_public: true
   repo_updated: '2025-10-12'
 - repo_name: washways/globalMARScreener
-  app_name: globalMARScreener
+  app_name: Global MAR Screener
   app_url: /globalMARScreener/
   short_description: >-
     Screen where managed aquifer recharge could work, combining terrain,
@@ -178,7 +178,7 @@
   source_public: true
   repo_updated: '2026-11-11'
 - repo_name: washways/GlobalSoilSalinityScreener
-  app_name: GlobalSoilSalinityScreener
+  app_name: Global Salinity Screener
   app_url: /GlobalSoilSalinityScreener/
   short_description: >-
     Map where groundwater salinity is more likely in data-scarce regions, using
@@ -216,7 +216,7 @@
   source_public: true
   repo_updated: '2026-11-11'
 - repo_name: washways/GroundwaterDiscoveryPortal
-  app_name: GroundwaterDiscoveryPortal
+  app_name: Groundwater Discovery Portal
   app_url: /GroundwaterDiscoveryPortal/
   short_description: >-
     Score groundwater potential from 0 to 10 anywhere using satellite indicators
@@ -260,7 +260,7 @@
   source_public: true
   repo_updated: '2026-09-07'
 - repo_name: washways/GroundwaterIntelligence
-  app_name: GroundwaterIntelligence
+  app_name: Groundwater Intelligence
   app_url: https://apps.washways.org/GroundwaterIntelligence/
   short_description: >-
     Screen groundwater potential, recharge and salinity, view statistics by area
@@ -295,7 +295,7 @@
   source_public: false
   repo_updated: '2026-11-11'
 - repo_name: washways/HAIcostModel
-  app_name: HAIcostModel
+  app_name: Hospital Infection Cost Model
   app_url: https://apps.washways.org/HAIcostModel/
   short_description: >-
     Estimate hospital-acquired infections and deaths linked to weak WASH and
@@ -365,7 +365,7 @@
   source_public: false
   repo_updated: '2026-06-13'
 - repo_name: washways/MalawiCDF4Chidren
-  app_name: MalawiCDF4Chidren
+  app_name: Malawi CDF for Children
   app_url: /MalawiCDF4Chidren/
   short_description: >-
     Explore Malawi's Constituency Development Fund for Children with budgets,
@@ -403,7 +403,7 @@
   source_public: true
   repo_updated: '2026-11-11'
 - repo_name: washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024
-  app_name: MalawiHealthNutWASH-Budget2026-2027andDHS2024
+  app_name: Malawi WASH Budget & DHS Atlas
   app_url: /MalawiHealthNutWASH-Budget2026-2027andDHS2024/
   short_description: >-
     Compare Malawi's 2026/27 budget allocations with DHS 2024 WASH and nutrition
@@ -448,7 +448,7 @@
   source_public: true
   repo_updated: '2026-11-11'
 - repo_name: washways/OECD-Expenditure-Explorer
-  app_name: OECD-Expenditure-Explorer
+  app_name: OECD Aid Explorer
   app_url: https://apps.washways.org/OECD-Expenditure-Explorer/
   short_description: >-
     Explore aid to the 46 Least Developed Countries by donor, sector and climate
@@ -522,7 +522,7 @@
   source_public: true
   repo_updated: '2026-11-11'
 - repo_name: washways/PopulationEstimator
-  app_name: PopulationEstimator
+  app_name: Population Estimator
   app_url: https://apps.washways.org/PopulationEstimator/
   short_description: >-
     Count people and buildings in any area of Malawi for 2020-2030 from three
@@ -559,7 +559,7 @@
   replacement_url: https://apps.washways.org/waterpointplanner/
   retired_note: Population estimates are now part of WaterPointPlanner.
 - repo_name: washways/rural-sanitation-value-gap
-  app_name: rural-sanitation-value-gap
+  app_name: Rural Sanitation Value Gap
   app_url: /rural-sanitation-value-gap/
   short_description: >-
     Compare sanitation finance with the cost of closing rural sanitation gaps in
@@ -594,7 +594,7 @@
   repo_updated: '2026-11-11'
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/sanitation-equity-performance
-  app_name: sanitation-equity-performance
+  app_name: Sanitation Equity & Performance
   app_url: /sanitation-equity-performance/
   short_description: >-
     Explore how affordability and inequality shape sanitation cost, coverage and
@@ -628,7 +628,7 @@
   source_public: true
   repo_updated: '2026-11-11'
 - repo_name: washways/sanitation-fund-model
-  app_name: sanitation-fund-model
+  app_name: Sanitation Fund Model
   app_url: /sanitation-fund-model/
   short_description: >-
     Simulate a blended-finance revolving fund for sanitation: solvency, debt
@@ -662,7 +662,7 @@
   repo_updated: '2026-11-11'
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/sanitation-model
-  app_name: sanitation-model
+  app_name: Cost of Poor Sanitation
   app_url: /sanitation-model/
   short_description: >-
     Put a money value on the cost of poor sanitation - health, productivity,
@@ -734,7 +734,7 @@
   source_public: false
   repo_updated: '2026-11-11'
 - repo_name: washways/SPWS1
-  app_name: SPWS1
+  app_name: SPWS Designer
   app_url: /SPWS1/
   short_description: >-
     SPWS Designer evaluates solar water systems' economic feasibility for
@@ -782,7 +782,7 @@
   replacement_url: https://apps.washways.org/waterpointplanner/
   retired_note: ''
 - repo_name: washways/washlink
-  app_name: washlink
+  app_name: WASHlink
   app_url: https://apps.washways.org/washlink/
   short_description: >-
     Demonstrator, synthetic data only: one mobile-first view of Malawi WASH
@@ -886,7 +886,7 @@
   source_public: true
   repo_updated: '2026-11-11'
 - repo_name: washways/WaterSystemFinder
-  app_name: WaterSystemFinder
+  app_name: Water System Finder
   app_url: https://apps.washways.org/WaterSystemFinder/
   short_description: >-
     Draw an area in rural Malawi to design a costed water scheme or screen for
@@ -959,7 +959,7 @@
   repo_updated: '2026-11-11'
   featured: true
 - repo_name: washways/WASHCost2
-  app_name: WASHCostMalawi
+  app_name: WASHCost Malawi
   app_url: https://apps.washways.org/WASHCostMalawi/
   short_description: >-
     District-level capital and life-cycle cost estimates to reach and sustain
@@ -995,7 +995,7 @@
   source_public: false
   repo_updated: '2026-11-11'
 - repo_name: washways/mwi-wash-nrt
-  app_name: MalawiClimateMonitoring
+  app_name: Malawi Climate Monitoring
   app_url: https://apps.washways.org/MalawiClimateMonitoring/
   short_description: >-
     Daily rainfall, flood, heat, wind and drought screening for every

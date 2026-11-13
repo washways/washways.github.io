@@ -1,35 +1,21 @@
 ---
-layout: default
+layout: ww
 ---
-
-<section class="section">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-lg-5">
-        <h2 class="mb-4">{{ page.title }}</h2>
-        <div class="content mb-4">{{ page.content }}</div>
-        <form method="POST" action="{{ site.data.parameters.contact_form_action }}" class="row">
-          <div class="col-md-6">
-            <input type="text" class="form-control mb-4" placeholder="Name" name="name" id="name">
-          </div>
-          <div class="col-md-6">
-            <input type="email" class="form-control mb-4" placeholder="Email" name="email" id="email">
-          </div>
-          <div class="col-12">
-            <input type="text" class="form-control mb-4" placeholder="Subject" name="subject" id="subject">
-          </div>
-          <div class="col-12">
-            <textarea name="message" id="message" class="form-control mb-4" placeholder="Type You Message Here"
-              rows="5"></textarea>
-          </div>
-          <div class="col-12">
-            <button class="btn btn-primary btn-block" type="submit">Send</button>
-          </div>
-        </form>
-      </div>
-      <div class="col-lg-6 text-md-right">
-        <img class="img-fluid" src="{{ page.image | relative_url }}">
-      </div>
-    </div>
-  </div>
-</section>
+{%- assign action = site.data.parameters.contact_form_action -%}
+{%- assign ready = false -%}
+{%- if action and action != "" and action != "#" -%}{%- assign ready = true -%}{%- endif -%}
+<div class="wrap page">
+  <h1>{{ page.heading | default: page.title }}</h1>
+  {{ content }}
+  {%- unless ready %}
+  <p class="note">The contact form is being set up and will work shortly.</p>
+  {%- endunless %}
+  <form class="form" method="POST" action="{% if ready %}{{ action }}{% else %}#{% endif %}">
+    <label>Name<input type="text" name="name" autocomplete="name" required></label>
+    <label>Email<input type="email" name="email" autocomplete="email" required></label>
+    <label class="full">Subject<input type="text" name="subject"></label>
+    <label class="full">Message<textarea name="message" rows="6" required></textarea></label>
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+    <button type="submit"{% unless ready %} disabled{% endunless %}>Send message</button>
+  </form>
+</div>

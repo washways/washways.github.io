@@ -1,0 +1,25 @@
+{%- assign t = include.tool -%}
+{%- assign kw = t.keywords -%}
+{%- if kw == nil or kw.size == 0 -%}{%- assign kw = t.categories -%}{%- endif -%}
+{%- capture kwlist -%}{%- for k in kw limit: 5 -%}{%- assign kl = k | downcase | strip -%}{%- if kl != "general" and kl != "" -%}{{ k | strip }}|{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- assign kws = kwlist | split: "|" -%}
+{%- capture searchtext -%}{{ t.app_name }} {{ t.short_description }} {{ kws | join: " " }}{%- endcapture -%}
+<article class="card" data-name="{{ t.app_name | downcase | escape }}" data-text="{{ searchtext | downcase | normalize_whitespace | escape }}" data-kw="|{{ kws | join: '|' | downcase | escape }}|" data-updated="{{ t.repo_updated | default: t.last_updated }}" data-featured="{% if t.featured %}1{% else %}0{% endif %}">
+  <a class="thumb" href="{{ t.app_url }}" data-ww-tool="{{ t.app_name | escape }}" tabindex="-1">
+    <div class="ph">{{ t.app_name | escape }}</div>
+    {%- if t.image and t.image != "" %}
+    <img src="{{ t.image }}" alt="Screenshot of {{ t.app_name | escape }}" loading="lazy" decoding="async" width="1200" height="630" onerror="this.remove()">
+    {%- endif %}
+    {%- if t.featured %}<span class="featured">&#9733; Featured</span>{% endif %}
+  </a>
+  <div class="body">
+    <h3><a href="{{ t.app_url }}" data-ww-tool="{{ t.app_name | escape }}">{{ t.app_name | escape }}</a></h3>
+    {%- if t.short_description %}
+    <p class="desc">{{ t.short_description | strip | escape }}</p>
+    {%- endif %}
+    {%- if kws.size > 0 %}
+    <div class="chips">{% for k in kws %}<button class="chip" type="button" data-kw="{{ k | downcase | escape }}">{{ k | escape }}</button>{% endfor %}</div>
+    {%- endif %}
+    <div class="actions"><a class="open" href="{{ t.app_url }}" data-ww-tool="{{ t.app_name | escape }}">Open tool</a></div>
+  </div>
+</article>

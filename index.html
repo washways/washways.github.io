@@ -1,65 +1,181 @@
 ---
-layout: default
+layout: ww
+seo_title: "WASHways | Free tools for water, sanitation & hygiene"
+description: "Free online calculators, maps and dashboards for planning, costing and monitoring water, sanitation and hygiene (WASH) services. No sign-up needed."
 ---
+{%- comment -%}
+  The homepage: one card per tool in _data/tools.yml (edited in Washways Manager).
+  Cards with `hide: true` are left out entirely; `retired: true` ones go in the
+  collapsed "Retired tools" list. Featured tools come first.
+{%- endcomment -%}
+{%- assign shown = site.data.tools | where_exp: "t", "t.hide != true" | where_exp: "t", "t.app_url" -%}
+{%- assign active = shown | where_exp: "t", "t.retired != true" | sort_natural: "app_name" -%}
+{%- assign featured = active | where_exp: "t", "t.featured == true" -%}
+{%- assign others = active | where_exp: "t", "t.featured != true" -%}
+{%- assign retired = shown | where_exp: "t", "t.retired == true" | sort_natural: "app_name" -%}
 
-<!-- banner -->
-{% if site.data.homepage.banner.enable %}
-<section class="banner bg-cover"
-  style="background-image: url('{{ site.data.homepage.banner.bg_image | relative_url }}');">
-  <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid illustration" alt="">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <h1>{{ site.data.homepage.banner.title }}</h1>
-      </div>
-      <div class="col-lg-6 illustration-mobile">
-        <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid" alt="">
-      </div>
-    </div>
+<section class="hero">
+  <div class="wrap">
+    <h1>Free tools for <em>water, sanitation &amp; hygiene</em></h1>
+    <p>Calculators, maps and dashboards for planning, costing and monitoring WASH services. Open them in your browser and start working.</p>
+    <div class="facts"><span>{{ active.size }} tools</span><span>Free to use</span><span>No sign-up needed for most</span></div>
   </div>
 </section>
-{% endif %}
-<!-- /banner -->
 
-<!-- blog -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto px-0">
-        <div class="bg-white shadow block">
-          {% for post in paginator.posts %}
-          {% include post.html %}
-          {% endfor %}
-          <!-- pagination -->
-          {% include pagination.html %}
-        </div>
-      </div>
-    </div>
+<div class="wrap" id="tools">
+  <h2 class="skip">All tools</h2>
+  <div class="toolbar">
+    <input class="search" id="search" type="search" placeholder="Search tools, topics or countries" aria-label="Search tools">
+    <select class="sort" id="sort" aria-label="Sort tools">
+      <option value="featured">Featured first</option>
+      <option value="updated">Recently updated</option>
+      <option value="name">A to Z</option>
+    </select>
+    <span class="active-filter" id="active-filter">Topic: <button id="clear-filter" type="button"></button></span>
+    <span class="count" id="count" aria-live="polite">{{ active.size }} tools</span>
   </div>
-</section>
-<!-- /blog -->
 
-<!-- call_to_action -->
-{% if site.data.homepage.call_to_action.enable %}
-<section class="section pt-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <div class="row shadow bg-white p-5">
-          <div class="col-md-4 text-center text-md-left mb-4 mb-lg-0">
-            <img src="{{ site.data.homepage.call_to_action.image | relative_url }}" class="mr-4 img-fluid rounded" alt=""></div>
-          <div class="col-md-8 text-center text-md-left">
-            <h3 class="mt-0">{{ site.data.homepage.call_to_action.title }}</h3>
-            <p>{{ site.data.homepage.call_to_action.description }}</p>
-            {% if site.data.homepage.call_to_action.button.enable %}
-            <a href="{{ site.data.homepage.call_to_action.button.link | relative_url }}"
-              class="btn btn-primary">{{ site.data.homepage.call_to_action.button.label }}</a>
-            {% endif %}
-          </div>
-        </div>
-      </div>
+  <section class="grid" id="grid">
+    {%- for t in featured %}{% include tool-card.html tool=t %}{% endfor -%}
+    {%- for t in others %}{% include tool-card.html tool=t %}{% endfor -%}
+    <p class="empty" id="empty" hidden>No tools match. <button class="chip" type="button" id="reset">Show all tools</button></p>
+  </section>
+
+  {%- if retired.size > 0 %}
+  <details class="retired-list">
+    <summary>Retired tools ({{ retired.size }})</summary>
+    <ul>
+      {%- for t in retired %}
+      <li>
+        <b>{{ t.app_name | escape }}</b>
+        <span>{% if t.retired_note and t.retired_note != "" %}{{ t.retired_note | escape }}{% else %}No longer maintained.{% endif %}</span>
+        {%- if t.replacement_url and t.replacement_url != "" %}
+        <a href="{{ t.replacement_url }}" data-ww-tool="{{ t.replacement_name | default: 'replacement' | escape }}">Use {{ t.replacement_name | default: "the new tool" | escape }} &rarr;</a>
+        {%- endif %}
+        <a class="old" href="{{ t.app_url }}" rel="nofollow" data-ww-tool="{{ t.app_name | escape }} (retired)">Old version</a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </details>
+  {%- endif %}
+
+  <section class="about" aria-label="About WASHways">
+    <div>
+      <h2>What is WASHways?</h2>
+      <p>A growing set of data tools for people who plan, fund and run water, sanitation and hygiene services: governments, NGOs, utilities and researchers.</p>
     </div>
-  </div>
-</section>
-{% endif %}
-<!-- /call_to_action -->
+    <div>
+      <h2>Where does the data come from?</h2>
+      <p>Public sources such as the Global Burden of Disease, DHS surveys, OECD aid data and satellite imagery, plus field monitoring in Malawi. Each tool explains its sources.</p>
+    </div>
+    <div>
+      <h2>Ideas or problems?</h2>
+      <p>Suggest a tool, report a bug or ask about using the tools in your work. <a href="{{ '/contact.html' | relative_url }}">Get in touch</a>.</p>
+    </div>
+  </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://washways.org/#org",
+      "name": "WASHways",
+      "url": "https://washways.org/",
+      "logo": "https://washways.org/assets/images/favicon.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://washways.org/#website",
+      "url": "https://washways.org/",
+      "name": "WASHways",
+      "description": {{ page.description | jsonify }},
+      "publisher": { "@id": "https://washways.org/#org" }
+    },
+    {
+      "@type": "ItemList",
+      "name": "WASHways tools",
+      "itemListElement": [
+        {%- assign ordered = featured | concat: others -%}
+        {%- for t in ordered %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "WebApplication",
+            "name": {{ t.app_name | jsonify }},
+            "url": {{ t.app_url | absolute_url | jsonify }},
+            "description": {{ t.short_description | strip | jsonify }},
+            {%- if t.image and t.image != "" %}
+            "image": {{ t.image | absolute_url | jsonify }},
+            {%- endif %}
+            "applicationCategory": "ReferenceApplication",
+            "operatingSystem": "Any (web browser)",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  var grid = document.getElementById("grid");
+  var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
+  var empty = document.getElementById("empty");
+  var count = document.getElementById("count");
+  var filterBox = document.getElementById("active-filter");
+  var filterBtn = document.getElementById("clear-filter");
+  var search = document.getElementById("search");
+  var query = "", topic = "", searchTimer = null;
+
+  function track(name, params) { if (window.gtag) window.gtag("event", name, params); }
+
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var ok = (!topic || c.getAttribute("data-kw").indexOf("|" + topic + "|") !== -1) &&
+               (!query || c.getAttribute("data-text").indexOf(query) !== -1);
+      c.hidden = !ok;
+      if (ok) shown++;
+    });
+    empty.hidden = shown > 0;
+    count.textContent = shown === cards.length ? cards.length + " tools" : shown + " of " + cards.length + " tools";
+    filterBox.style.display = topic ? "inline-flex" : "none";
+    filterBtn.textContent = topic ? topic + " ×" : "";
+  }
+
+  var SORTS = {
+    featured: function (a, b) { return (b.dataset.featured - a.dataset.featured) || a.dataset.name.localeCompare(b.dataset.name); },
+    updated: function (a, b) { return (Date.parse(b.dataset.updated) || 0) - (Date.parse(a.dataset.updated) || 0) || a.dataset.name.localeCompare(b.dataset.name); },
+    name: function (a, b) { return a.dataset.name.localeCompare(b.dataset.name); }
+  };
+  document.getElementById("sort").addEventListener("change", function (ev) {
+    cards.sort(SORTS[ev.target.value] || SORTS.featured).forEach(function (c) { grid.insertBefore(c, empty); });
+  });
+
+  search.addEventListener("input", function () {
+    query = search.value.trim().toLowerCase();
+    apply();
+    clearTimeout(searchTimer);
+    if (query.length > 2) searchTimer = setTimeout(function () { track("search", { search_term: query }); }, 1200);
+  });
+  grid.addEventListener("click", function (ev) {
+    var chip = ev.target.closest(".chip[data-kw]");
+    if (!chip) return;
+    topic = chip.getAttribute("data-kw");
+    apply();
+    track("filter_topic", { topic: topic });
+    window.scrollTo({ top: grid.getBoundingClientRect().top + window.scrollY - 140, behavior: "smooth" });
+  });
+  function reset() { topic = ""; query = ""; search.value = ""; apply(); }
+  filterBtn.addEventListener("click", reset);
+  document.getElementById("reset").addEventListener("click", reset);
+})();
+</script>

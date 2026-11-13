@@ -1,0 +1,17 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ '/' | absolute_url }}</loc><lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>{{ '/contact.html' | absolute_url }}</loc><priority>0.3</priority></url>
+  <url><loc>{{ '/privacy.html' | absolute_url }}</loc><priority>0.2</priority></url>
+{%- comment -%} Tools served from washways.org/<app>/ (same host, so they can be listed here). {%- endcomment -%}
+{%- assign listed = site.data.tools | where_exp: "t", "t.hide != true" | where_exp: "t", "t.retired != true" -%}
+{%- for t in listed -%}
+{%- unless t.app_url contains "://" %}
+  <url><loc>{{ t.app_url | absolute_url }}</loc>{% assign lm = t.repo_updated | default: t.last_updated %}{% if lm %}<lastmod>{{ lm }}</lastmod>{% endif %}<priority>0.8</priority></url>
+{%- endunless -%}
+{%- endfor %}
+</urlset>

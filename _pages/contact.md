@@ -1,8 +1,8 @@
 ---
 layout: contact
-title: "Contact Us"
-description : "this is meta description"
-image: "/assets/images/contact.svg"
+title: "Contact"
+heading: "Get in touch"
+description: "Contact WASHways: suggest a tool, report a problem or ask about using the water, sanitation and hygiene tools in your work."
 ---
 
-Please get in touch!
+Suggest a tool, report a problem, or ask about using WASHways tools in your work.

@@ -2,9 +2,8 @@
 menu:
   # main menu
   main:
-    - { name: Home, url: "/" }
-    - { name: Contact, url: "contact.html" }
-    - { name: Tools, url: "tools.html" }
+    - { name: Tools, url: "/" }
+    - { name: Contact, url: "/contact.html" }
 
   ##### Dropdown menu ######
 
@@ -19,9 +18,9 @@ menu:
 
   # Footer menu
   footer:
-    - { name: Home, url: "/" }
-    - { name: Contact, url: "contact.html" }
-    - { name: Tools, url: "tools.html" }
+    - { name: Tools, url: "/" }
+    - { name: Contact, url: "/contact.html" }
+    - { name: Privacy, url: "/privacy.html" }
 
 ######################### Default Parameters ###########################
 
@@ -29,11 +28,11 @@ menu:
 logo: "/assets/images/logo.svg"
 # meta data
 author: "WASHWays"
-description: "This is meta description"
-# google analitycs ID
-google_analitycs_id: "" # your id
-# contact form action
-contact_form_action: "#" # contact form works with : https://formspree.io
+description: "Free online tools for water, sanitation and hygiene (WASH) planning, costing and monitoring."
+# Google Analytics is loaded on every page by assets/js/washways-analytics.js (GA4 G-64GCB9QDB5 with a consent banner).
+# contact form action: set to your Formspree endpoint, e.g. "https://formspree.io/f/abcdwxyz".
+# While it is "#", the contact page shows the form greyed out with a "being set up" note.
+contact_form_action: "#"
 # copyright
 copyright: "Copyright &copy; 2024 [washways](https://washways.org) based on theme by [themfisher](https://themfisher.com)"
 
