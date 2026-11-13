@@ -2,11 +2,11 @@
 # A tool belongs to a topic when its name, description or keywords contain a word that
 # starts with one of the terms (case-insensitive). Topics that match no tools are hidden.
 - name: Water supply
-  terms: [water supply, rural water, waterpoint, water point, borehole, piped, water scheme, solar water, hand pump]
+  terms: [water supply, rural water, waterpoint, water point, borehole, piped, water scheme, solar water, hand pump, "water, sanitation", drinking water]
 - name: Sanitation
   terms: [sanitation, latrine, toilet]
 - name: Health
-  terms: [health, cholera, disease, infection, child, nutrition, hygiene]
+  terms: [health, cholera, disease, infection, child health, child death, child survival, child lives, nutrition, hygiene]
 - name: Groundwater
   terms: [groundwater, aquifer, salinity, recharge, hydrogeolog]
 - name: Climate
@@ -14,7 +14,7 @@
 - name: Costs & finance
   terms: [cost, finance, budget, aid, fund, economic, investment]
 - name: Monitoring
-  terms: [monitoring, sensor, survey, functionality, iot]
+  terms: [monitor, sensor, survey, functionality, iot, early warning]
 - name: Maps & satellite
   terms: [map, satellite, earth engine, remote sensing, gis]
 - name: Malawi
