@@ -1020,6 +1020,117 @@
   last_updated: '2026-11-11'
   source_public: false
   repo_updated: '2026-11-11'
+- repo_name: washways/PipedWaterLifecycleCostsMalawi
+  app_name: Piped Water Life-Cycle Costs
+  photo_scene: A gravity-fed piped water scheme in the Malawian hills - an intake tank on a forested slope, a pipeline running down to village tap stands, a caretaker repairing a leaking pipe joint.
+  app_url: https://apps.washways.org/PipedwaterlifecyclecostsMalawi/
+  short_description: >-
+    What it costs each year to keep Malawi's rural piped water systems
+    working - gravity-fed, solar- and grid-pumped - with maps, sensitivity
+    and financing options.
+  category: costing
+  categories:
+    - costing
+    - Malawi
+    - piped water
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/PipedWaterLifecycleCostsMalawi
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: true
+  analytics_via: server
+  seo_configured: true
+  listed_on_tools: false
+  hide: false
+  seo_description: >-
+    Annual life-cycle cost of Malawi's rural piped water systems
+    (gravity-fed, solar- and grid-pumped) from public sources: adjustable
+    model, maps, sensitivity, financing and method.
+  keywords:
+    - life-cycle costs
+    - piped water
+    - Malawi
+    - solar pumping
+    - financing
+  last_updated: '2026-11-16'
+  source_public: false
+  repo_updated: '2026-11-12'
+- repo_name: washways/WaterTariffExplorer
+  app_name: WaterTariffExplorer
+  photo_scene: A woman's hands paying a few coins to a tap-stand attendant in a Malawian village, jerrycans lined up in the queue behind.
+  app_url: https://apps.washways.org/watertariffexplorer/
+  short_description: >-
+    What could a rural village in Malawi pay for water, and would it cover
+    the running costs? Test tariffs with sliders, charts and scenarios.
+  category: costing
+  categories:
+    - costing
+    - Malawi
+    - tariffs
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/WaterTariffExplorer
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: true
+  analytics_via: server
+  seo_configured: true
+  listed_on_tools: false
+  hide: false
+  seo_description: >-
+    What could a rural village in Malawi pay for water, and would it cover the
+    running costs? Sliders, charts and scenarios that run in your browser.
+  keywords:
+    - water tariffs
+    - affordability
+    - Malawi
+    - cost recovery
+    - rural water
+  last_updated: '2026-11-16'
+  source_public: false
+  repo_updated: '2026-11-14'
+- repo_name: washways/InstitutionalCostingTool
+  app_name: Institutional WASH Costing
+  photo_scene: A rural Malawian primary school with a new latrine block and a handwashing station in the yard, a health centre visible down the road.
+  app_url: https://apps.washways.org/InstitutionalWASHCosting/
+  short_description: >-
+    Cost and plan WASH for schools, health facilities and markets in Malawi
+    (sign-in required).
+  category: costing
+  categories:
+    - costing
+    - Malawi
+    - schools
+    - health facilities
+  image: ''
+  image_size: 1200x630
+  source_url: https://github.com/washways/InstitutionalCostingTool
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: true
+  analytics_via: server
+  seo_configured: true
+  listed_on_tools: false
+  hide: false
+  seo_description: >-
+    WASH costing and planning for schools, health facilities and markets in
+    Malawi.
+  keywords:
+    - costing
+    - schools
+    - health facilities
+    - Malawi
+    - WASH in institutions
+  last_updated: '2026-11-16'
+  source_public: false
+  repo_updated: '2026-11-12'
 - repo_name: washways/mwi-wash-nrt
   app_name: Malawi Climate Monitoring
   photo_scene: Dark rain clouds gathering over maize fields near the shore of Lake Malawi, a village on the plain below.
