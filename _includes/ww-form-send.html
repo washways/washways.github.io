@@ -1,0 +1,43 @@
+{%- comment -%}
+  Sends a form to Formspree in place (JSON API) and shows a thank-you note.
+  include params: form (element id), done (thank-you text), event (GA event name),
+  subject_prefix (text before the first field named in subject_field), subject_field.
+  Without JS the form still posts normally to Formspree.
+{%- endcomment -%}
+<script>
+(function () {
+  var form = document.getElementById({{ include.form | jsonify }});
+  if (!form) return;
+  var status = form.querySelector("[role=status]");
+  var button = form.querySelector("button[type=submit]");
+  var label = button.textContent;
+  var subject = form.querySelector("input[name=_subject]");
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var key = null;
+    {%- if include.subject_field %}
+    key = form.elements[{{ include.subject_field | jsonify }}];
+    var org = form.elements.organisation;
+    if (subject && key) subject.value = {{ include.subject_prefix | jsonify }} + key.value + (org && org.value ? " (" + org.value + ")" : "");
+    {%- endif %}
+    button.disabled = true;
+    button.textContent = "Sending...";
+    fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        form.querySelectorAll("label, button, .hide-on-done").forEach(function (n) { n.hidden = true; });
+        status.className = "full note";
+        status.textContent = {{ include.done | jsonify }};
+        status.hidden = false;
+        if (window.gtag) window.gtag("event", {{ include.event | jsonify }}, key ? { tool_name: key.value } : {});
+      })
+      .catch(function () {
+        button.disabled = false;
+        button.textContent = label;
+        status.className = "full note";
+        status.textContent = "Sorry, this could not be sent. Please try again in a moment.";
+        status.hidden = false;
+      });
+  });
+})();
+</script>

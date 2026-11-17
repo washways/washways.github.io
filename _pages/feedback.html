@@ -1,0 +1,48 @@
+---
+layout: ww
+title: "Feedback"
+noindex: true
+description: "Tell us what works, what does not and what you would like to see in WASHways tools."
+---
+{%- comment -%}
+  Feedback on one tool. The "Feedback" button inside each tool (assets/js/washways-analytics.js)
+  sends straight to Formspree; tools whose security policy blocks that open this page instead,
+  with ?tool=<name>&page=<url>. Same Formspree form as Contact; subject starts with "Feedback:".
+{%- endcomment -%}
+{%- assign action = site.data.parameters.contact_form_action -%}
+<div class="wrap page">
+  <h1>Feedback and suggestions</h1>
+  <p>Tell us what works, what does not, and what would make a tool more useful in your work. Every message is read.</p>
+
+  <form class="form" id="feedback-form" method="POST" action="{{ action }}">
+    <label>Tool<input type="text" name="tool" id="fb-tool" required></label>
+    <label>Type
+      <select name="kind">
+        <option>Suggestion</option>
+        <option>Problem or bug</option>
+        <option>Data question</option>
+        <option>Praise</option>
+      </select>
+    </label>
+    <label class="full">Your feedback<textarea name="message" rows="6" required></textarea></label>
+    <label>Email<input type="email" name="email" autocomplete="email" placeholder="Optional, if you would like a reply"></label>
+    <label>Organisation<input type="text" name="organisation" autocomplete="organization" placeholder="Optional"></label>
+    <input type="hidden" name="page" id="fb-page">
+    <input type="hidden" name="form_type" value="feedback">
+    <input type="hidden" name="_subject" value="Feedback">
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+    <button type="submit">Send feedback</button>
+    <p class="full" role="status" aria-live="polite" hidden></p>
+  </form>
+</div>
+
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  document.getElementById("fb-tool").value = q.get("tool") || "";
+  document.getElementById("fb-page").value = q.get("page") || document.referrer || "";
+  var msg = q.get("message");
+  if (msg) document.querySelector("#feedback-form textarea").value = msg;
+})();
+</script>
+{% include ww-form-send.html form="feedback-form" event="feedback_submit" subject_field="tool" subject_prefix="Feedback: " done="Thank you for your feedback." %}

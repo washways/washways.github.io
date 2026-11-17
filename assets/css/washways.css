@@ -86,9 +86,16 @@ footer.site button:hover { color: var(--accent); }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
 .chip { border: 0; background: var(--chip-bg); color: var(--chip-ink); border-radius: 999px; padding: 2px 9px; font: inherit; font-size: 0.72rem; cursor: pointer; }
 .chip:hover { background: var(--accent-2); color: #12151c; }
-.actions { margin-top: auto; padding-top: 8px; }
+.actions { margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
 .open { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; font-size: 0.84rem; padding: 7px 14px; border-radius: 8px; }
 .open:hover { filter: brightness(0.93); }
+.signin { color: var(--text-2); font-size: 0.82rem; text-decoration: underline; text-underline-offset: 2px; }
+.signin:hover { color: var(--accent); }
+
+/* tools that need an account: a band across the picture */
+.reg-band { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 9px 10px; background: rgba(15,17,21,0.78); color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: .01em; backdrop-filter: blur(2px); }
+.reg-band svg { flex: none; color: #fbbf24; }
+.card.is-reg .thumb img { filter: saturate(.75) brightness(.9); }
 .empty { color: var(--text-2); padding: 40px 0; text-align: center; grid-column: 1 / -1; }
 
 /* retired tools */
@@ -116,8 +123,12 @@ footer.site button:hover { color: var(--accent); }
 .form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
 .form label { display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; font-weight: 600; color: var(--text-2); }
 .form .full { grid-column: 1 / -1; }
-.form input, .form textarea { font: inherit; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); }
-.form input:focus, .form textarea:focus { outline: 2px solid var(--accent-2); outline-offset: 1px; }
+.form input, .form textarea, .form select { font: inherit; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); }
+.form input:focus, .form textarea:focus, .form select:focus { outline: 2px solid var(--accent-2); outline-offset: 1px; }
+.form input, .form textarea, .form select { font-weight: 400; }
+.form ::placeholder { color: var(--muted); }
+.form .check { flex-direction: row; align-items: flex-start; gap: 8px; font-weight: 400; }
+.form .check input { margin-top: 3px; }
 .form button { justify-self: start; border: 0; border-radius: 8px; background: var(--accent); color: #fff; font: inherit; font-weight: 600; padding: 10px 20px; cursor: pointer; }
 .form button[disabled] { opacity: .5; cursor: not-allowed; }
 .note { background: var(--chip-bg); color: var(--chip-ink); border-radius: 8px; padding: 10px 12px; font-size: 0.9rem; }
