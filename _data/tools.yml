@@ -1021,6 +1021,44 @@
   last_updated: '2026-11-11'
   source_public: false
   repo_updated: '2026-11-11'
+- repo_name: washways/WaterServicesByResults
+  app_name: Water Services by Results
+  photo_scene: An Area Mechanic repairing a rural handpump in Malawi while villagers wait with buckets.
+  app_url: https://apps.washways.org/WaterServicesByResults/
+  short_description: >-
+    Planning, costing and financing professional rural water maintenance in
+    Malawi: Area Mechanics, service contracts and results-based financing.
+  category: costing
+  categories:
+    - costing
+    - Malawi
+    - WASH
+  image: https://washways.org/assets/images/tools/waterservicesbyresults-preview.png
+  image_size: 1200x630
+  source_url: https://github.com/washways/WaterServicesByResults
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: true
+  analytics_via: server
+  seo_configured: true
+  listed_on_tools: false
+  hide: false
+  seo_description: >-
+    Planning, costing and financing professional rural water maintenance in
+    Malawi: Area Mechanics, service contracts and results-based financing.
+  keywords:
+    - handpump maintenance
+    - Area Mechanics
+    - results-based financing
+    - service contracts
+    - costing
+    - Malawi
+    - rural water
+  last_updated: '2026-11-17'
+  source_public: false
+  repo_updated: '2026-11-17'
 - repo_name: washways/PipedWaterLifecycleCostsMalawi
   app_name: Piped Water Life-Cycle Costs
   photo_scene: A gravity-fed piped water scheme in the Malawian hills - an intake tank on a forested slope, a pipeline running down to village tap stands, a caretaker repairing a leaking pipe joint.
