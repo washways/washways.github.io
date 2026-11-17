@@ -290,6 +290,7 @@
 
   // ── feedback panel ──
   var panel = null;
+  var directBlocked = null; // null = not checked yet; true = CSP blocks formspree.io here
   function field(node) {
     return css(node, {
       display: 'block', width: '100%', boxSizing: 'border-box', margin: '0 0 8px',
@@ -359,19 +360,31 @@
     status.setAttribute('role', 'status');
     var send = button('Send feedback', true, submit);
 
-    function fallbackLink() {
+    // Some tools' Content-Security-Policy blocks formspree.io. Then the button sends the
+    // message on to washways.org/feedback.html (a click, so the new tab is not blocked).
+    function useFallback(note) {
+      directBlocked = true;
+      send.textContent = 'Continue on washways.org';
+      status.textContent = note || 'This tool cannot send messages itself, so your message opens on washways.org to send.';
+      css(status, { display: 'block', color: '#a3acbe' });
+    }
+    function openFallback() {
       var url = FEEDBACK_URL + '?tool=' + encodeURIComponent(tool) +
         '&page=' + encodeURIComponent(location.href) + '&message=' + encodeURIComponent(msg.value);
-      status.textContent = 'This tool cannot send messages itself. ';
-      var a = el('a', { color: '#9AC4F8' }, 'Send it on washways.org instead');
-      a.href = url;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      status.appendChild(a);
-      status.style.display = 'block';
+      gtag('event', 'feedback_fallback', { tool_name: tool });
+      window.open(url, '_blank', 'noopener');
+      closePanel();
+    }
+    if (directBlocked) useFallback();
+    else if (directBlocked === null) {
+      // A no-cors GET only checks that the page may connect; it submits nothing.
+      fetch(FORM_URL, { method: 'GET', mode: 'no-cors', cache: 'no-store' })
+        .then(function () { directBlocked = false; })
+        .catch(function () { if (panel) useFallback(); else directBlocked = true; });
     }
     function submit() {
       if (!msg.value.trim()) { msg.focus(); return; }
+      if (directBlocked) { openFallback(); return; }
       send.disabled = true;
       send.textContent = 'Sending...';
       status.style.display = 'none';
@@ -398,7 +411,10 @@
           send.textContent = 'Send feedback';
           // A TypeError means the request never left the page (e.g. the tool's
           // Content-Security-Policy blocks formspree.io): offer the washways.org form.
-          if (err instanceof TypeError) { fallbackLink(); return; }
+          if (err instanceof TypeError) {
+            useFallback('This tool cannot send messages itself. Click again to send it on washways.org.');
+            return;
+          }
           status.textContent = 'Sorry, this could not be sent. Please try again in a moment.';
           status.style.display = 'block';
         });
