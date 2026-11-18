@@ -66,7 +66,9 @@
   blog_count: 0
   published: false
   listed_on_tools: false
-  hide: false
+  # Offline 2026-11-18 until fixed (owner request): card hidden and GitHub Pages unpublished.
+  # To restore: hide: false, and re-enable Pages on washways/CholeraCoster (branch master, folder /).
+  hide: true
   demo: false
   is_demo: false
   isDemo: false
