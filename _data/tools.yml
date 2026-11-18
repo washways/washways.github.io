@@ -569,10 +569,7 @@
   last_updated: '2026-11-11'
   source_public: false
   repo_updated: '2026-10-30'
-  retired: true
-  replacement_name: WaterPointPlanner
-  replacement_url: https://apps.washways.org/waterpointplanner/
-  retired_note: Population estimates are now part of WaterPointPlanner.
+  analytics_via: server
 - repo_name: washways/rural-sanitation-value-gap
   app_name: Rural Sanitation Value Gap
   photo_scene: A local mason builds the brick walls of a new latrine behind a rural homestead at sunset while a family looks on.
