@@ -7,16 +7,15 @@
  * - Ads/personalisation storage is always denied.
  * - The choice is kept in a cookie on .washways.org, so it is asked once for the
  *   whole site and every app.
- * - Links with data-ww-tool="Name" send an `open_tool` event (used on the tools page);
- *   links with data-ww-register="Name" send `register_click`.
+ * - Links with data-ww-tool="Name" send an `open_tool` event (used on the tools page).
  * - Any element with data-ww-consent opens the choice again (e.g. a footer link).
  * - On tool pages (not washways.org's own pages) it adds a small bottom-left dock:
- *   an "All WASHways tools" link back to https://washways.org/ (`back_to_home` event)
+ *   an "All WASHways tools" link back to https://washways.org/ (`back_to_home` event),
+ *   an "Experimental" badge that explains the tools are free, non-commercial and experimental
+ *   and invites collaboration and criticism (`about_open`),
  *   and a "Feedback" button that sends a note to Formspree from inside the tool
  *   (`feedback_submit`). If the tool's security policy blocks that, it offers
  *   washways.org/feedback.html instead.
- * - On the sign-in screen of a tool that needs an account (REGISTRATION below) it shows
- *   a "Request access" note linking to washways.org/register.html.
  *
  * Edit the copy in the washways.github.io repo (assets/js/washways-analytics.js).
  */
@@ -29,12 +28,15 @@
   var PRIVACY_URL = 'https://washways.org/privacy.html';
   var HOME_URL = 'https://washways.org/';
   var FEEDBACK_URL = 'https://washways.org/feedback.html';
-  var REGISTER_URL = 'https://washways.org/register.html';
+  var CONTACT_URL = 'https://washways.org/contact.html';
+  var ETHOS = 'WASHways tools are free, non-commercial and experimental. They are shared to invite ' +
+    'collaboration and constructive criticism, so please check results before relying on them.';
   // Formspree form shared with the Contact page (_data/parameters.yml contact_form_action).
   var FORM_URL = 'https://formspree.io/f/xzerzokq';
 
-  // Tools that need an account (registry `registration: true`), by host + path prefix.
-  var REGISTRATION = {
+  // Tool names for feedback where the page title is not the tool's name (e.g. a sign-in page),
+  // by host + path prefix.
+  var TOOL_NAMES = {
     'apps.washways.org/sitemonitor/': 'SiteMonitor',
     'apps.washways.org/institutionalwashcosting/': 'Institutional WASH Costing'
   };
@@ -75,7 +77,7 @@
     (document.head || document.documentElement).appendChild(s);
   }
 
-  // Which tool a visitor opened (or asked to register for) from the tools page.
+  // Which tool a visitor opened from the tools page.
   document.addEventListener('click', function (ev) {
     var a = ev.target && ev.target.closest ? ev.target.closest('a[data-ww-tool]') : null;
     if (a) {
@@ -84,10 +86,6 @@
         link_url: a.href,
         transport_type: 'beacon'
       });
-    }
-    var reg = ev.target && ev.target.closest ? ev.target.closest('a[data-ww-register]') : null;
-    if (reg) {
-      gtag('event', 'register_click', { tool_name: reg.getAttribute('data-ww-register'), transport_type: 'beacon' });
     }
     var reopen = ev.target && ev.target.closest ? ev.target.closest('[data-ww-consent]') : null;
     if (reopen) { ev.preventDefault(); showBanner(); }
@@ -139,7 +137,10 @@
       display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px'
     });
     var text = el('span', { flex: '1 1 260px' });
-    text.appendChild(document.createTextNode('WASHways uses Google Analytics cookies to learn which tools are useful. '));
+    text.appendChild(el('strong', { display: 'block', margin: '0 0 2px' },
+      'Free, non-commercial and experimental.'));
+    text.appendChild(document.createTextNode('WASHways tools are shared to invite collaboration and constructive ' +
+      'criticism; please check results before relying on them. We use Google Analytics cookies to learn which tools are useful. '));
     var more = el('a', { color: '#9AC4F8' }, 'Privacy');
     more.href = PRIVACY_URL;
     text.appendChild(more);
@@ -153,14 +154,9 @@
 
   // ── which tool is this? ──
   function pageKey() { return (location.hostname + location.pathname).toLowerCase(); }
-  function registrationTool() {
-    var key = pageKey();
-    for (var prefix in REGISTRATION) if (key.indexOf(prefix) === 0) return REGISTRATION[prefix];
-    return '';
-  }
   function toolName() {
-    var reg = registrationTool();
-    if (reg) return reg;
+    var key = pageKey();
+    for (var prefix in TOOL_NAMES) if (key.indexOf(prefix) === 0) return TOOL_NAMES[prefix];
     var title = (document.title || '').split(/\s+[|–—-]\s+/)[0].trim();
     if (title && !/^\d{3}\b/.test(title)) return title;
     return location.pathname.split('/')[1] || location.hostname;
@@ -202,6 +198,19 @@
     svg.appendChild(p);
     return svg;
   }
+  function flaskIcon() {
+    var NS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('width', '13');
+    svg.setAttribute('height', '13');
+    svg.setAttribute('aria-hidden', 'true');
+    var p = document.createElementNS(NS, 'path');
+    p.setAttribute('fill', '#fbbf24');
+    p.setAttribute('d', 'M9 2h6v2h-1v5.2l5.6 9.4A2 2 0 0 1 17.9 22H6.1a2 2 0 0 1-1.7-3.4L10 9.2V4H9V2zm3 9.3L8.3 17h7.4L12 11.3z');
+    svg.appendChild(p);
+    return svg;
+  }
   function showDock() {
     if (dock || !document.body || document.querySelector('meta[name="ww-site"]')) return;
     spot = homeSpot();
@@ -227,6 +236,19 @@
       gtag('event', 'back_to_home', { from_path: location.pathname, transport_type: 'beacon' });
     });
 
+    var exp = pill('button');
+    exp.type = 'button';
+    exp.title = 'Free, non-commercial and experimental: what that means';
+    exp.setAttribute('aria-label', 'About WASHways: free, non-commercial and experimental');
+    exp.setAttribute('aria-haspopup', 'dialog');
+    css(exp, { color: '#fbbf24' });
+    var expLabel = el('span', { whiteSpace: 'nowrap' }, 'Experimental');
+    exp.appendChild(flaskIcon());
+    exp.appendChild(expLabel);
+    exp.addEventListener('click', function () {
+      if (panel && panel.getAttribute('data-kind') === 'about') closePanel(); else openAbout();
+    });
+
     var fb = pill('button');
     fb.type = 'button';
     fb.title = 'Send feedback or a suggestion about this tool';
@@ -235,9 +257,12 @@
     var fbLabel = el('span', { whiteSpace: 'nowrap' }, 'Feedback');
     fb.appendChild(bubbleIcon());
     fb.appendChild(fbLabel);
-    fb.addEventListener('click', function () { if (panel) closePanel(); else openPanel(); });
+    fb.addEventListener('click', function () {
+      if (panel && panel.getAttribute('data-kind') === 'feedback') closePanel(); else openPanel();
+    });
 
     dock.appendChild(home);
+    dock.appendChild(exp);
     dock.appendChild(fb);
 
     // Shrinks to just the icons so it covers as little of the tool as possible:
@@ -245,8 +270,10 @@
     var pinned = false;
     function setOpen(open) {
       homeLabel.style.display = open ? '' : 'none';
+      expLabel.style.display = open ? '' : 'none';
       fbLabel.style.display = open ? '' : 'none';
       home.style.padding = open ? '6px 11px 6px 8px' : '8px 7px';
+      exp.style.padding = open ? '6px 11px 6px 9px' : '7px 8px';
       fb.style.padding = open ? '6px 11px 6px 9px' : '7px 8px';
       dock.style.opacity = '1';
     }
@@ -271,7 +298,7 @@
       dock.style.visibility = '';
       for (var i = 0; i < stack.length; i++) {
         for (var n = stack[i]; n && n !== document.body && n !== document.documentElement; n = n.parentElement) {
-          if (n === bar || n === dock || n === panel || n === regNote) break;
+          if (n === bar || n === dock || n === panel) break;
           var pos = getComputedStyle(n).position;
           if (pos === 'fixed' || pos === 'sticky') {
             var r = n.getBoundingClientRect();
@@ -306,20 +333,20 @@
     if (dock && dock.collapse) dock.collapse();
   }
   function onPanelKey(ev) { if (ev.key === 'Escape') closePanel(); }
-  function openPanel() {
-    if (panel || !document.body) return;
-    var tool = toolName();
+  // An empty dialog above the dock with a title and close button; `kind` tells the dock buttons apart.
+  function newPanel(kind, title) {
+    closePanel();
     panel = el('div', PANEL);
     panel.setAttribute('role', 'dialog');
-    panel.setAttribute('aria-label', 'Feedback on ' + tool);
+    panel.setAttribute('aria-label', title);
+    panel.setAttribute('data-kind', kind);
     css(panel, {
       position: 'fixed', bottom: ((parseInt(dock && dock.style.bottom, 10) || 12) + 44) + 'px',
       zIndex: '2147483647', width: '320px', maxWidth: 'calc(100vw - 24px)', padding: '12px 14px 14px'
     });
     panel.style[(spot && spot.side) || 'left'] = '12px';
-
     var head = el('div', { display: 'flex', alignItems: 'center', gap: '8px', margin: '0 0 8px' });
-    var h = el('strong', { flex: '1', fontSize: '14px' }, 'Feedback on ' + tool);
+    var h = el('strong', { flex: '1', fontSize: '14px' }, title);
     var x = el('button', {
       font: 'inherit', fontSize: '18px', lineHeight: '1', background: 'transparent', color: '#a3acbe',
       border: '0', cursor: 'pointer', padding: '2px 4px', margin: '0'
@@ -329,9 +356,42 @@
     x.addEventListener('click', closePanel);
     head.appendChild(h);
     head.appendChild(x);
+    panel.appendChild(head);
+    return panel;
+  }
+
+  // ── "Experimental" panel: what WASHways is and how to help ──
+  function openAbout() {
+    if (!document.body) return;
+    var p = newPanel('about', 'Free, non-commercial, experimental');
+    p.appendChild(el('p', { margin: '0 0 8px' }, ETHOS));
+    p.appendChild(el('p', { margin: '0 0 12px', color: '#a3acbe', fontSize: '12.5px' },
+      'Nothing here is sold. Found an error, a better method or data we should use? ' +
+      'Constructive criticism and offers to collaborate make these tools better.'));
+    var actions = el('div', { display: 'flex', flexWrap: 'wrap', gap: '8px' });
+    actions.appendChild(button('Give feedback', true, function () { openPanel(); }));
+    var work = el('a', {
+      font: 'inherit', fontSize: '13px', fontWeight: '600', padding: '7px 14px', borderRadius: '8px',
+      border: '1px solid #3a4152', color: '#fff', textDecoration: 'none'
+    }, 'Work with us');
+    work.href = CONTACT_URL;
+    work.target = '_blank';
+    work.rel = 'noopener';
+    actions.appendChild(work);
+    p.appendChild(actions);
+    document.body.appendChild(p);
+    document.addEventListener('keydown', onPanelKey, true);
+    gtag('event', 'about_open', { tool_name: toolName() });
+  }
+
+  function openPanel() {
+    if (!document.body) return;
+    var tool = toolName();
+    newPanel('feedback', 'Feedback on ' + tool);
 
     var intro = el('p', { margin: '0 0 10px', color: '#a3acbe', fontSize: '12.5px' },
-      'What works, what does not, what would help? Every message is read.');
+      'This tool is experimental, and constructive criticism is how it improves. What works, ' +
+      'what does not, where do results look wrong? Every message is read.');
 
     var kind = field(document.createElement('select'));
     ['Suggestion', 'Problem or bug', 'Data question', 'Praise'].forEach(function (k) {
@@ -420,7 +480,6 @@
         });
     }
 
-    panel.appendChild(head);
     panel.appendChild(intro);
     panel.appendChild(kind);
     panel.appendChild(msg);
@@ -434,48 +493,9 @@
     gtag('event', 'feedback_open', { tool_name: tool });
   }
 
-  // ── "Request access" note on the sign-in screen of tools that need an account ──
-  var regNote = null;
-  function looksLikeSignIn() {
-    if (/^\s*401\b/.test(document.title)) return true; // nginx page after a cancelled password prompt
-    var pw = document.querySelector('input[type="password"]');
-    return !!(pw && pw.offsetParent !== null);
-  }
-  function checkRegistration() {
-    var tool = registrationTool();
-    if (!tool || !document.body) return;
-    var show = looksLikeSignIn();
-    if (show && !regNote) {
-      regNote = el('div', PANEL);
-      regNote.setAttribute('role', 'note');
-      css(regNote, {
-        position: 'fixed', top: '12px', left: '50%', transform: 'translateX(-50%)', zIndex: '2147483646',
-        width: '420px', maxWidth: 'calc(100vw - 24px)', padding: '12px 14px',
-        display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 12px'
-      });
-      var text = el('span', { flex: '1 1 220px' });
-      text.appendChild(el('strong', { display: 'block', fontSize: '14px' }, 'New to ' + tool + '?'));
-      text.appendChild(document.createTextNode('This tool needs an account. Tell us who you are and we will email your sign-in details.'));
-      var go = el('a', {
-        background: '#E8505B', color: '#fff', textDecoration: 'none', fontWeight: '600',
-        padding: '8px 14px', borderRadius: '8px', whiteSpace: 'nowrap'
-      }, 'Request access');
-      go.href = REGISTER_URL + '?tool=' + encodeURIComponent(tool);
-      go.setAttribute('data-ww-register', tool);
-      regNote.appendChild(text);
-      regNote.appendChild(go);
-      document.body.appendChild(regNote);
-    } else if (!show && regNote) {
-      regNote.remove();
-      regNote = null;
-    }
-  }
-
   function start() {
     if (!choice) showBanner();
     showDock();
-    checkRegistration();
-    if (registrationTool()) setInterval(checkRegistration, 1500); // single-page apps swap screens
   }
   if (document.body) start();
   else document.addEventListener('DOMContentLoaded', start);

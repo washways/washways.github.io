@@ -7,7 +7,7 @@ description: "How WASHways uses Google Analytics and cookies, and how to change 
 
 # Privacy and cookies
 
-WASHways tools are free and need no account, apart from a few tools that hold partners' data, which need registration.
+WASHways is a free, non-commercial and experimental project. The tools need no account, apart from a few that hold partners' data, which are password protected.
 
 ## Analytics
 
@@ -23,15 +23,11 @@ Your choice applies to washways.org and to the tools at apps.washways.org, and i
 
 If you send a message, we use your name and email only to reply to you.
 
-## Access requests
-
-A few tools need an account. When you [request access](/register.html) we keep your name, work email, organisation, role, country, optional phone number and how you plan to use the tool. We use them to set up and manage your account, to contact you about that tool, and to understand which organisations use it. We do not share them with anyone else. Ask us at any time to close your account and delete these details.
-
 ## Feedback
 
 The Feedback button in each tool sends your message, the tool and page you were on, and your email and organisation if you add them. We use these only to improve the tools and, if you left an email, to reply.
 
-Messages, access requests and feedback are delivered to us through [Formspree](https://formspree.io/legal/privacy-policy).
+Messages and feedback are delivered to us through [Formspree](https://formspree.io/legal/privacy-policy).
 
 ## Questions
 

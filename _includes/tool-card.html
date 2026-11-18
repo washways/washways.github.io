@@ -4,39 +4,22 @@
 {%- capture kwlist -%}{%- for k in kw limit: 5 -%}{%- assign kl = k | downcase | strip -%}{%- if kl != "general" and kl != "" -%}{{ k | strip }}|{%- endif -%}{%- endfor -%}{%- endcapture -%}
 {%- assign kws = kwlist | split: "|" -%}
 {%- capture searchtext -%}{{ t.app_name }} {{ t.short_description }} {{ kws | join: " " }}{%- endcapture -%}
-{%- comment -%} Tools with `registration: true` need an account: image and title lead to the request form. {%- endcomment -%}
-{%- if t.registration -%}
-  {%- capture reg_url -%}{{ '/register.html' | relative_url }}?tool={{ t.app_name | url_encode }}{%- endcapture -%}
-  {%- capture link_attrs -%}href="{{ reg_url }}" data-ww-register="{{ t.app_name | escape }}"{%- endcapture -%}
-{%- else -%}
-  {%- capture link_attrs -%}href="{{ t.app_url }}" data-ww-tool="{{ t.app_name | escape }}"{%- endcapture -%}
-{%- endif -%}
-<article class="card{% if t.registration %} is-reg{% endif %}" data-name="{{ t.app_name | downcase | escape }}" data-text="{{ searchtext | downcase | normalize_whitespace | escape }}" data-kw="|{{ kws | join: '|' | downcase | escape }}|" data-updated="{{ t.repo_updated | default: t.last_updated }}" data-featured="{% if t.featured %}1{% else %}0{% endif %}">
-  <a class="thumb" {{ link_attrs }} tabindex="-1">
+<article class="card" data-name="{{ t.app_name | downcase | escape }}" data-text="{{ searchtext | downcase | normalize_whitespace | escape }}" data-kw="|{{ kws | join: '|' | downcase | escape }}|" data-updated="{{ t.repo_updated | default: t.last_updated }}" data-featured="{% if t.featured %}1{% else %}0{% endif %}">
+  <a class="thumb" href="{{ t.app_url }}" data-ww-tool="{{ t.app_name | escape }}" tabindex="-1">
     <div class="ph">{{ t.app_name | escape }}</div>
     {%- if t.image and t.image != "" %}
     <img src="{{ t.image }}" alt="Screenshot of {{ t.app_name | escape }}" loading="lazy" decoding="async" width="1200" height="630" onerror="this.remove()">
     {%- endif %}
     {%- if t.featured %}<span class="featured">&#9733; Featured</span>{% endif %}
-    {%- if t.registration %}
-    <span class="reg-band"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3H9z"/></svg>Registration required</span>
-    {%- endif %}
   </a>
   <div class="body">
-    <h3><a {{ link_attrs }}>{{ t.app_name | escape }}</a></h3>
+    <h3><a href="{{ t.app_url }}" data-ww-tool="{{ t.app_name | escape }}">{{ t.app_name | escape }}</a></h3>
     {%- if t.short_description %}
     <p class="desc">{{ t.short_description | strip | escape }}</p>
     {%- endif %}
     {%- if kws.size > 0 %}
     <div class="chips">{% for k in kws %}<button class="chip" type="button" data-kw="{{ k | downcase | escape }}">{{ k | escape }}</button>{% endfor %}</div>
     {%- endif %}
-    <div class="actions">
-      {%- if t.registration %}
-      <a class="open" {{ link_attrs }}>Request access</a>
-      <a class="signin" href="{{ t.app_url }}" data-ww-tool="{{ t.app_name | escape }}">I have an account</a>
-      {%- else %}
-      <a class="open" href="{{ t.app_url }}" data-ww-tool="{{ t.app_name | escape }}">Open tool</a>
-      {%- endif %}
-    </div>
+    <div class="actions"><a class="open" href="{{ t.app_url }}" data-ww-tool="{{ t.app_name | escape }}">Open tool</a></div>
   </div>
 </article>

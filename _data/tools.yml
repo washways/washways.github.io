@@ -722,7 +722,6 @@
   app_name: SiteMonitor
   photo_scene: A technician checks a meter at a solar-powered water pumping station with a raised steel tank in rural Malawi.
   app_url: https://apps.washways.org/SiteMonitor/
-  registration: true
   short_description: >-
     Monitor solar and hand-pump waterpoints across Malawi with historical data
     and analytics.
@@ -1136,7 +1135,6 @@
   app_name: Institutional WASH Costing
   photo_scene: A rural Malawian primary school with a new latrine block and a handwashing station in the yard, a health centre visible down the road.
   app_url: https://apps.washways.org/InstitutionalWASHCosting/
-  registration: true
   short_description: >-
     Cost and plan WASH for schools, health facilities and markets in Malawi.
   category: costing
