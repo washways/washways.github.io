@@ -6,12 +6,17 @@ description: "Free, non-commercial and experimental online calculators, maps and
 {%- comment -%}
   The homepage: one card per tool in _data/tools.yml (edited in Washways Manager).
   Cards with `hide: true` are left out entirely; `retired: true` ones go in the
-  collapsed "Retired tools" list. Featured tools come first.
+  collapsed "Retired tools" list. Order: featured, then `list_group: economic`,
+  then the rest, then `list_group: earth-engine` (each A to Z).
 {%- endcomment -%}
 {%- assign shown = site.data.tools | where_exp: "t", "t.hide != true" | where_exp: "t", "t.app_url" -%}
 {%- assign active = shown | where_exp: "t", "t.retired != true" | sort_natural: "app_name" -%}
 {%- assign featured = active | where_exp: "t", "t.featured == true" -%}
-{%- assign others = active | where_exp: "t", "t.featured != true" -%}
+{%- assign nonfeat = active | where_exp: "t", "t.featured != true" -%}
+{%- assign economic = nonfeat | where_exp: "t", "t.list_group == 'economic'" -%}
+{%- assign gee = nonfeat | where_exp: "t", "t.list_group == 'earth-engine'" -%}
+{%- assign middle = nonfeat | where_exp: "t", "t.list_group != 'economic'" | where_exp: "t", "t.list_group != 'earth-engine'" -%}
+{%- assign others = economic | concat: middle | concat: gee -%}
 {%- assign retired = shown | where_exp: "t", "t.retired == true" | sort_natural: "app_name" -%}
 
 <section class="hero">
@@ -19,7 +24,8 @@ description: "Free, non-commercial and experimental online calculators, maps and
     <h1>Free tools for <em>water, sanitation &amp; hygiene</em></h1>
     <p>Calculators, maps and dashboards for planning, costing and monitoring WASH services. Open them in your browser and start working.</p>
     <p class="ethos-lede">This is a non-commercial, experimental project. The tools are shared openly to invite collaboration and constructive criticism: test them, question the results and <a href="{{ '/feedback.html' | relative_url }}">tell us what to improve</a>, or <a href="{{ '/contact.html' | relative_url }}">get in touch</a> to work on them together.</p>
-    <div class="facts"><span>{{ active.size }} tools</span><span>Free to use</span><span>Non-commercial</span><span>Experimental</span><span>No sign-up needed for most</span></div>
+    <p class="live-note"><span class="live-dot" aria-hidden="true"></span><span><b>Live and changing fast.</b> Many tools are under active development and are updated quickly in response to what users tell us. <a href="{{ '/feedback.html' | relative_url }}">Give feedback and see the change!</a></span></p>
+    <div class="facts"><span>{{ active.size }} tools</span><span>Free to use</span><span>Non-commercial</span><span>Experimental</span><span>Live development</span><span>No sign-up needed for most</span></div>
   </div>
 </section>
 
@@ -43,8 +49,8 @@ description: "Free, non-commercial and experimental online calculators, maps and
   </div>
 
   <section class="grid" id="grid">
-    {%- for t in featured %}{% include tool-card.html tool=t %}{% endfor -%}
-    {%- for t in others %}{% include tool-card.html tool=t %}{% endfor -%}
+    {%- assign ordered = featured | concat: others -%}
+    {%- for t in ordered %}{% include tool-card.html tool=t rank=forloop.index %}{% endfor -%}
     <p class="empty" id="empty" hidden>No tools match. <button class="chip" type="button" id="reset">Show all tools</button></p>
   </section>
 
@@ -185,7 +191,7 @@ description: "Free, non-commercial and experimental online calculators, maps and
   });
 
   var SORTS = {
-    featured: function (a, b) { return (b.dataset.featured - a.dataset.featured) || a.dataset.name.localeCompare(b.dataset.name); },
+    featured: function (a, b) { return a.dataset.rank - b.dataset.rank; },
     updated: function (a, b) { return (Date.parse(b.dataset.updated) || 0) - (Date.parse(a.dataset.updated) || 0) || a.dataset.name.localeCompare(b.dataset.name); },
     name: function (a, b) { return a.dataset.name.localeCompare(b.dataset.name); }
   };

@@ -91,6 +91,7 @@
   repo_updated: '2026-03-08'
 - repo_name: washways/CO2SavingsCalculator
   app_name: CO2 Savings Calculator
+  list_group: economic
   about: >-
     For project designers and funders exploring carbon finance. Enter the
     details of a water or energy project to get an indicative estimate of the
@@ -154,6 +155,7 @@
   repo_updated: '2025-10-12'
 - repo_name: washways/globalMARScreener
   app_name: Global MAR Screener
+  list_group: earth-engine
   about: >-
     For hydrogeologists and water planners looking for places to store water
     underground. It ranks areas by how suitable they look for recharge schemes,
@@ -198,6 +200,7 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/GlobalSoilSalinityScreener
   app_name: Global Salinity Screener
+  list_group: earth-engine
   about: >-
     For borehole programmes working where few water-quality tests exist. It
     shows where salty groundwater is more likely, to help target testing and
@@ -242,6 +245,7 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/GroundwaterDiscoveryPortal
   app_name: Groundwater Discovery Portal
+  list_group: earth-engine
   about: >-
     For anyone siting boreholes or planning groundwater studies. Pick a place to
     see its score and the indicators behind it: a quick first look before
@@ -332,6 +336,7 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/HAIcostModel
   app_name: Hospital Infection Cost Model
+  list_group: economic
   about: >-
     For health ministries, hospital managers and funders weighing up WASH in
     health facilities. Change the assumptions to see the infections, deaths and
@@ -621,6 +626,7 @@
   analytics_via: server
 - repo_name: washways/rural-sanitation-value-gap
   app_name: Rural Sanitation Value Gap
+  list_group: economic
   about: >-
     For sanitation advocates and finance teams. See, country by country, the
     gap between what is spent and what closing rural sanitation gaps would
@@ -661,6 +667,7 @@
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/sanitation-equity-performance
   app_name: Sanitation Equity & Performance
+  list_group: economic
   about: >-
     For sanitation programme designers and researchers. A simulation of
     households shows who ends up with sanitation when incomes and prices
@@ -701,6 +708,7 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/sanitation-fund-model
   app_name: Sanitation Fund Model
+  list_group: economic
   about: >-
     For financiers and programme designers exploring loans for sanitation.
     Adjust the mix of grants and loans and the repayment terms to see whether
@@ -740,6 +748,7 @@
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/sanitation-model
   app_name: Cost of Poor Sanitation
+  list_group: economic
   about: >-
     For advocates and planners making the economic case for sanitation. Get a
     headline figure for what poor sanitation costs each year, broken down so
@@ -1018,8 +1027,9 @@
   app_name: WaterPointPlanner
   about: >-
     For district water officers, NGOs and engineers planning rural water
-    projects. Sketch a scheme and get a cost, compare candidate sites, or find
-    villages far from a working water point.
+    projects. Sketch a scheme and get a cost, compare the economics of hand
+    pumps and solar-powered systems, check candidate sites, or find villages far
+    from a working water point.
   photo_scene: A newly built community water kiosk with several taps, fed by a solar-powered water tower, in a Malawian village; women and children collect water.
   app_url: https://apps.washways.org/waterpointplanner/
   short_description: >-
@@ -1058,6 +1068,7 @@
   featured: true
 - repo_name: washways/WASHCost2
   app_name: WASHCost Malawi
+  list_group: economic
   about: >-
     For ministries, district councils and partners preparing plans and budgets.
     See what it costs in each district to build services and then keep them
@@ -1099,6 +1110,7 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/WaterServicesByResults
   app_name: Water Services by Results
+  list_group: economic
   about: >-
     For government, service providers and funders setting up professional
     maintenance. Work out what a district needs, what it costs, and how
@@ -1141,6 +1153,7 @@
   repo_updated: '2026-11-17'
 - repo_name: washways/PipedWaterLifecycleCostsMalawi
   app_name: Piped Water Life-Cycle Costs
+  list_group: economic
   about: >-
     For water boards, district councils and funders. Change the assumptions to
     see how the yearly bill for each type of system shifts, and which financing
@@ -1183,6 +1196,7 @@
   repo_updated: '2026-11-12'
 - repo_name: washways/WaterTariffExplorer
   app_name: WaterTariffExplorer
+  list_group: economic
   about: >-
     For water committees, operators and district officers. Try different
     tariffs and see whether what households can pay would keep the system
@@ -1223,6 +1237,7 @@
   repo_updated: '2026-11-14'
 - repo_name: washways/InstitutionalCostingTool
   app_name: Institutional WASH Costing
+  list_group: economic
   about: >-
     For planners and partners working on water, toilets and handwashing in
     institutions. Password protected because it holds partners' data; get in
