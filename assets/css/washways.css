@@ -92,6 +92,7 @@ footer.site button:hover { color: var(--accent); }
 .card h3 a { text-decoration: none; }
 .card h3 a:hover { color: var(--accent); }
 .desc { margin: 0; color: var(--text-2); font-size: 0.87rem; line-height: 1.5; }
+.about-tool { margin: 0; padding-left: 10px; border-left: 2px solid var(--accent-2); color: var(--muted); font-size: 0.82rem; line-height: 1.5; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
 .chip { border: 0; background: var(--chip-bg); color: var(--chip-ink); border-radius: 999px; padding: 2px 9px; font: inherit; font-size: 0.72rem; cursor: pointer; }
 .chip:hover { background: var(--accent-2); color: #12151c; }

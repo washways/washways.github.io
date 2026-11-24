@@ -1,5 +1,9 @@
 - repo_name: washways/ChildWASHHealthImpacts
   app_name: Child WASH Health Impacts
+  about: >-
+    For health and WASH planners making the case for child-focused investment.
+    Pick a country and a cause, such as diarrhoea, to see which age groups carry
+    the heaviest burden in deaths and healthy years of life lost.
   photo_scene: A young mother holds her toddler on her lap at a rural health clinic in Malawi while a community health worker talks with her; a handwashing station with a tap and soap stands beside them.
   app_url: https://apps.washways.org/ChildWASHHealthImpacts/
   short_description: >-
@@ -87,6 +91,10 @@
   repo_updated: '2026-03-08'
 - repo_name: washways/CO2SavingsCalculator
   app_name: CO2 Savings Calculator
+  about: >-
+    For project designers and funders exploring carbon finance. Enter the
+    details of a water or energy project to get an indicative estimate of the
+    emissions it avoids, as a first check before a full assessment.
   photo_scene: A solar panel array powering a borehole pump and an elevated water tank in a dry rural landscape under a clear blue sky, a woman filling a jerrycan at the tap below.
   app_url: /CO2SavingsCalculator/
   short_description: >-
@@ -146,6 +154,10 @@
   repo_updated: '2025-10-12'
 - repo_name: washways/globalMARScreener
   app_name: Global MAR Screener
+  about: >-
+    For hydrogeologists and water planners looking for places to store water
+    underground. It ranks areas by how suitable they look for recharge schemes,
+    as a first screen before field investigation.
   photo_scene: Aerial drone view of a managed aquifer recharge infiltration basin filled with water, surrounded by green farmland and a dry sandy riverbed.
   app_url: /globalMARScreener/
   short_description: >-
@@ -186,6 +198,10 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/GlobalSoilSalinityScreener
   app_name: Global Salinity Screener
+  about: >-
+    For borehole programmes working where few water-quality tests exist. It
+    shows where salty groundwater is more likely, to help target testing and
+    siting. It is a screening map, not a replacement for testing.
   photo_scene: A farmer kneels to examine white salt crust on cracked soil next to a hand-dug well on a flat, dry coastal plain.
   app_url: /GlobalSoilSalinityScreener/
   short_description: >-
@@ -226,6 +242,10 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/GroundwaterDiscoveryPortal
   app_name: Groundwater Discovery Portal
+  about: >-
+    For anyone siting boreholes or planning groundwater studies. Pick a place to
+    see its score and the indicators behind it: a quick first look before
+    turning to field and survey data.
   photo_scene: A borehole drilling rig at work on red earth in the African savanna, a team of local technicians watching as water starts to flow from the new well.
   app_url: /GroundwaterDiscoveryPortal/
   short_description: >-
@@ -271,6 +291,10 @@
   repo_updated: '2026-09-07'
 - repo_name: washways/GroundwaterIntelligence
   app_name: Groundwater Intelligence
+  about: >-
+    For water ministries, hydrogeologists and programme planners in a growing
+    list of African countries. Summarise the maps by district or river basin,
+    and download ready-made country reports as PDFs.
   featured: true
   photo_scene: A hydrogeologist lowers a water level meter into a groundwater monitoring well in a rural field in Malawi, notebook in hand, hills on the horizon.
   app_url: https://apps.washways.org/GroundwaterIntelligence/
@@ -308,6 +332,10 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/HAIcostModel
   app_name: Hospital Infection Cost Model
+  about: >-
+    For health ministries, hospital managers and funders weighing up WASH in
+    health facilities. Change the assumptions to see the infections, deaths and
+    costs that better water, hygiene and infection control could avoid.
   photo_scene: A nurse washes her hands at a clean sink in a bright rural hospital ward in Africa, neatly made patient beds in the background.
   app_url: https://apps.washways.org/HAIcostModel/
   short_description: >-
@@ -344,6 +372,10 @@
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/HydroSense-Waterpoint-Observatory
   app_name: HydroSense
+  about: >-
+    For water officers and operators who need to know whether boreholes are
+    working. Sensors on the pumps report by radio, so breakdowns can be spotted
+    and fixed sooner.
   photo_scene: A hand pump borehole in a Malawian village with a small weatherproof sensor box fixed to it, women pumping water into buckets.
   app_url: https://apps.washways.org/HydroSense/
   short_description: >-
@@ -380,6 +412,10 @@
   repo_updated: '2026-06-13'
 - repo_name: washways/MalawiCDF4Chidren
   app_name: Malawi CDF for Children
+  about: >-
+    For MPs, councils and partners deciding where constituency funds go. See
+    each constituency's budget alongside where children face the greatest
+    hazards.
   photo_scene: Children in school uniforms walk along a dirt road toward a newly built primary school in rural Malawi in soft morning light.
   app_url: /MalawiCDF4Chidren/
   short_description: >-
@@ -419,6 +455,9 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/MalawiHealthNutWASH-Budget2026-2027andDHS2024
   app_name: Malawi WASH Budget & DHS Atlas
+  about: >-
+    For budget analysts, advocates and WASH and nutrition partners. Check
+    whether spending lines up with where the needs are greatest.
   photo_scene: At a rural health centre in Malawi, a nurse weighs a baby on a hanging scale while the mother watches; a clean water tap is visible outside the open door.
   app_url: /MalawiHealthNutWASH-Budget2026-2027andDHS2024/
   short_description: >-
@@ -465,6 +504,10 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/OECD-Expenditure-Explorer
   app_name: OECD Aid Explorer
+  about: >-
+    For donors, advocates and analysts tracking where aid goes. Filter by donor,
+    sector or climate tag, and see whether WASH aid reaches the countries with
+    the biggest gaps in rural services.
   photo_scene: Workers lay blue water supply pipes in a trench along a road in an African town, a new water tower in the distance.
   app_url: https://apps.washways.org/OECD-Expenditure-Explorer/
   short_description: >-
@@ -540,6 +583,10 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/PopulationEstimator
   app_name: Population Estimator
+  about: >-
+    For planners who need to know how many people a borehole, scheme or
+    programme will serve. Compare the three estimates side by side. These are
+    unofficial figures, not census results.
   app_url: https://apps.washways.org/PopulationEstimator/
   short_description: >-
     Count people and buildings in any area of Malawi for 2020-2030 from three
@@ -574,6 +621,10 @@
   analytics_via: server
 - repo_name: washways/rural-sanitation-value-gap
   app_name: Rural Sanitation Value Gap
+  about: >-
+    For sanitation advocates and finance teams. See, country by country, the
+    gap between what is spent and what closing rural sanitation gaps would
+    cost, and the child deaths it could prevent.
   photo_scene: A local mason builds the brick walls of a new latrine behind a rural homestead at sunset while a family looks on.
   app_url: /rural-sanitation-value-gap/
   short_description: >-
@@ -610,6 +661,10 @@
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/sanitation-equity-performance
   app_name: Sanitation Equity & Performance
+  about: >-
+    For sanitation programme designers and researchers. A simulation of
+    households shows who ends up with sanitation when incomes and prices
+    differ, at what cost, and with what effect on the environment.
   photo_scene: A row of village homes along a dusty path in rural Africa, some with simple pit latrines and some with improved brick toilets with handwashing stations.
   app_url: /sanitation-equity-performance/
   short_description: >-
@@ -646,6 +701,10 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/sanitation-fund-model
   app_name: Sanitation Fund Model
+  about: >-
+    For financiers and programme designers exploring loans for sanitation.
+    Adjust the mix of grants and loans and the repayment terms to see whether
+    the fund stays solvent and how many toilets it delivers.
   photo_scene: A small sanitation business in a roadside workshop where local masons cast concrete latrine slabs, finished slabs stacked ready for sale.
   app_url: /sanitation-fund-model/
   short_description: >-
@@ -681,6 +740,10 @@
   tracking_id: G-64GCB9QDB5
 - repo_name: washways/sanitation-model
   app_name: Cost of Poor Sanitation
+  about: >-
+    For advocates and planners making the economic case for sanitation. Get a
+    headline figure for what poor sanitation costs each year, broken down so
+    you can see where the losses fall.
   photo_scene: A family stands proudly beside their newly built brick latrine with a tippy-tap handwashing station in a tidy rural village yard.
   app_url: /sanitation-model/
   short_description: >-
@@ -720,6 +783,9 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/SiteMonitorServer
   app_name: SiteMonitor
+  about: >-
+    For partners managing waterpoints in Malawi. Password protected because it
+    holds partners' data; get in touch if you need access.
   photo_scene: A technician checks a meter at a solar-powered water pumping station with a raised steel tank in rural Malawi.
   app_url: https://apps.washways.org/SiteMonitor/
   short_description: >-
@@ -803,6 +869,10 @@
   retired_note: ''
 - repo_name: washways/washlink
   app_name: WASHlink
+  about: >-
+    For government and partners who want WASH data from different systems in
+    one place. A working demonstrator with made-up data, showing what a joined-up
+    view could look like on a phone.
   photo_scene: A field enumerator records details of a village water point on a smartphone while a member of the community water committee looks on, in Malawi.
   app_url: https://apps.washways.org/washlink/
   short_description: >-
@@ -946,6 +1016,10 @@
   retired_note: Scheme design and coverage-gap screening are now part of WaterPointPlanner.
 - repo_name: washways/WaterPointPlanner
   app_name: WaterPointPlanner
+  about: >-
+    For district water officers, NGOs and engineers planning rural water
+    projects. Sketch a scheme and get a cost, compare candidate sites, or find
+    villages far from a working water point.
   photo_scene: A newly built community water kiosk with several taps, fed by a solar-powered water tower, in a Malawian village; women and children collect water.
   app_url: https://apps.washways.org/waterpointplanner/
   short_description: >-
@@ -984,6 +1058,10 @@
   featured: true
 - repo_name: washways/WASHCost2
   app_name: WASHCost Malawi
+  about: >-
+    For ministries, district councils and partners preparing plans and budgets.
+    See what it costs in each district to build services and then keep them
+    running.
   photo_scene: Aerial view of a rural Malawian district with scattered villages, fields, a dirt road and a busy water point.
   app_url: https://apps.washways.org/WASHCostMalawi/
   short_description: >-
@@ -1021,6 +1099,10 @@
   repo_updated: '2026-11-11'
 - repo_name: washways/WaterServicesByResults
   app_name: Water Services by Results
+  about: >-
+    For government, service providers and funders setting up professional
+    maintenance. Work out what a district needs, what it costs, and how
+    payments for results could fund it.
   photo_scene: An Area Mechanic repairing a rural handpump in Malawi while villagers wait with buckets.
   app_url: https://apps.washways.org/WaterServicesByResults/
   short_description: >-
@@ -1059,6 +1141,10 @@
   repo_updated: '2026-11-17'
 - repo_name: washways/PipedWaterLifecycleCostsMalawi
   app_name: Piped Water Life-Cycle Costs
+  about: >-
+    For water boards, district councils and funders. Change the assumptions to
+    see how the yearly bill for each type of system shifts, and which financing
+    options could cover it.
   photo_scene: A gravity-fed piped water scheme in the Malawian hills - an intake tank on a forested slope, a pipeline running down to village tap stands, a caretaker repairing a leaking pipe joint.
   app_url: https://apps.washways.org/PipedwaterlifecyclecostsMalawi/
   short_description: >-
@@ -1097,6 +1183,10 @@
   repo_updated: '2026-11-12'
 - repo_name: washways/WaterTariffExplorer
   app_name: WaterTariffExplorer
+  about: >-
+    For water committees, operators and district officers. Try different
+    tariffs and see whether what households can pay would keep the system
+    running. Nothing you enter leaves your browser.
   photo_scene: A woman's hands paying a few coins to a tap-stand attendant in a Malawian village, jerrycans lined up in the queue behind.
   app_url: https://apps.washways.org/watertariffexplorer/
   short_description: >-
@@ -1133,6 +1223,10 @@
   repo_updated: '2026-11-14'
 - repo_name: washways/InstitutionalCostingTool
   app_name: Institutional WASH Costing
+  about: >-
+    For planners and partners working on water, toilets and handwashing in
+    institutions. Password protected because it holds partners' data; get in
+    touch if you need access.
   photo_scene: A rural Malawian primary school with a new latrine block and a handwashing station in the yard, a health centre visible down the road.
   app_url: https://apps.washways.org/InstitutionalWASHCosting/
   short_description: >-
@@ -1169,6 +1263,10 @@
   repo_updated: '2026-11-12'
 - repo_name: washways/mwi-wash-nrt
   app_name: Malawi Climate Monitoring
+  about: >-
+    For district councils, disaster-risk and WASH teams in Malawi. Updated every
+    day to flag areas at risk, so teams can prepare and target their response,
+    with situation reports ready to share.
   photo_scene: Dark rain clouds gathering over maize fields near the shore of Lake Malawi, a village on the plain below.
   app_url: https://apps.washways.org/MalawiClimateMonitoring/
   short_description: >-
@@ -1242,6 +1340,9 @@
   repo_updated: '2026-10-20'
 - repo_name: washways/GlobalClimateMonitor
   app_name: Global Climate Monitor
+  about: >-
+    For disaster-risk and WASH teams outside Malawi. The same daily early-warning
+    approach as Malawi Climate Monitoring, set up country by country.
   featured: true
   photo_scene: A district disaster officer and a farmer stand at the edge of a flooded maize field under a dramatic stormy sky in southern Africa, a river overflowing in the distance.
   app_url: https://apps.washways.org/ClimateMonitor/
