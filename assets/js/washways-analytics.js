@@ -288,7 +288,9 @@
     dock.collapse = collapse;
     document.body.appendChild(dock);
 
-    // Sit above a tool's own fixed bar at the bottom of the screen (e.g. a mobile tab bar).
+    // Sit above a tool's own fixed bar at the bottom of the screen (e.g. a mobile tab bar), or
+    // above a bottom sheet that peeks up from below the screen edge (an absolutely placed panel
+    // that runs off the bottom, e.g. the Population Estimators' search sheet on phones).
     function lift() {
       var x = spot.side === 'left' ? 30 : window.innerWidth - 30;
       var y = window.innerHeight - spot.bottom - 10;
@@ -300,9 +302,10 @@
         for (var n = stack[i]; n && n !== document.body && n !== document.documentElement; n = n.parentElement) {
           if (n === bar || n === dock || n === panel) break;
           var pos = getComputedStyle(n).position;
-          if (pos === 'fixed' || pos === 'sticky') {
-            var r = n.getBoundingClientRect();
-            if (r.height < window.innerHeight / 3) bottom = Math.max(bottom, window.innerHeight - r.top + 8);
+          var r = n.getBoundingClientRect();
+          var visible = Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0);
+          if (pos === 'fixed' || pos === 'sticky' || (pos === 'absolute' && r.bottom > window.innerHeight + 2)) {
+            if (visible < window.innerHeight / 3) bottom = Math.max(bottom, window.innerHeight - r.top + 8);
             break;
           }
         }
@@ -313,6 +316,11 @@
     lift();
     setTimeout(lift, 1500);
     window.addEventListener('resize', lift);
+    // A bottom sheet can be dragged or opened: check again once it settles.
+    var liftTimer = null;
+    function liftSoon() { clearTimeout(liftTimer); liftTimer = setTimeout(lift, 400); }
+    document.addEventListener('transitionend', liftSoon, true);
+    document.addEventListener('pointerup', liftSoon, true);
   }
 
   // ── feedback panel ──

@@ -626,6 +626,48 @@
   source_public: false
   repo_updated: '2026-10-30'
   analytics_via: server
+- repo_name: washways/GlobalPopulationEstimator
+  app_name: Global Population Estimator
+  about: >-
+    For planners anywhere who need to know how many people a water point,
+    scheme or programme will serve. Search for a place, draw around it or
+    upload a boundary, and see people and buildings today, how fast buildings
+    have grown since 2016, and projections to future years. Download the
+    results as Excel or PDF. Unofficial planning estimates, not census figures.
+  app_url: https://apps.washways.org/GlobalPopulationEstimator/
+  short_description: >-
+    How many people live here? Population and building counts for any area in
+    the world, with growth since 2016 and future projections.
+  category: population
+  categories:
+    - population
+    - buildings
+    - global
+  image: https://washways.org/assets/images/tools/globalpopulationestimator-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/GlobalPopulationEstimator
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: true
+  analytics_via: server
+  seo_configured: true
+  listed_on_tools: false
+  hide: false
+  seo_description: >-
+    Free population estimator for any area in the world: draw, search or upload
+    a boundary to count people and buildings, see building growth since 2016
+    and project future population for water and sanitation planning.
+  keywords:
+    - population
+    - buildings
+    - global
+    - planning
+    - WorldPop
+  last_updated: '2026-11-26'
+  source_public: false
+  repo_updated: '2026-11-26'
 - repo_name: washways/rural-sanitation-value-gap
   app_name: Rural Sanitation Value Gap
   list_group: economic
