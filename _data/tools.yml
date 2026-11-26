@@ -668,6 +668,50 @@
   last_updated: '2026-11-26'
   source_public: false
   repo_updated: '2026-11-26'
+- repo_name: washways/friction-distance-atlas
+  app_name: Friction Distance Atlas
+  about: >-
+    For education and health planners checking who can reach a school or
+    clinic. Tap the map or upload a list of facilities, choose walking or
+    driving and a time limit, and see the area people can reach and how many
+    live inside it. Hospitals, health posts, primary and secondary schools are
+    kept separate. Export the data and a summary report. Planning estimates,
+    not official catchments.
+  app_url: https://apps.washways.org/friction-distance-atlas/
+  short_description: >-
+    How far is the nearest school or clinic? Walking and driving travel-time
+    catchments, and how many people live within reach.
+  category: population
+  categories:
+    - access
+    - schools
+    - health
+  image: https://washways.org/assets/images/tools/friction-distance-atlas-preview.jpg
+  image_size: 1200x630
+  source_url: https://github.com/washways/friction-distance-atlas
+  docs_url: ''
+  license: ''
+  status: active
+  maintainer: washways
+  analytics_installed: true
+  analytics_via: server
+  seo_configured: true
+  listed_on_tools: false
+  hide: false
+  seo_description: >-
+    Free travel-time catchment tool: map walking and driving access to schools
+    and health facilities anywhere, upload facility lists and estimate the
+    population within a chosen travel time for education and health planning.
+  keywords:
+    - travel time
+    - accessibility
+    - schools
+    - health facilities
+    - catchment
+    - population
+  last_updated: '2026-11-26'
+  source_public: false
+  repo_updated: '2026-11-26'
 - repo_name: washways/rural-sanitation-value-gap
   app_name: Rural Sanitation Value Gap
   list_group: economic
